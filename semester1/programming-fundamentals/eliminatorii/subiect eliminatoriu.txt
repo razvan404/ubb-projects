@@ -1,0 +1,15 @@
+Scurte descrieri
+
+Sortari
+ -selectie: pt fiecare element cauti prima data in dreapta lui cel mai mic element si dupa faci swap
+ -selectie directa: pt fiecare element cauti in dreapta lui un element mai mic si faci swap
+ -insertie: pt fiecare elementi cauti in stanga lui locul unde se potriveste (elementele din stanga sunt deja sortate)
+ -bubble: cat timp sirul nu este sortat cauti 2 elemente vecine care nu sunt ordonate si le schimbi
+ -quick: iei pivot ultimul element si sortezi recursiv elementele mai mici decat pivotul si cele mai mari sau egale, dupa returnezi lista ordonata
+ -merge: sortezi recursiv elemente din stanga mijlocului si cele din dreapta lui, dupa le interclasezi
+
+Cautari
+ -secvential: parcurgi sirul si cand gasesti element mai mic sau egal (egal la neordonat), poz primeste pozitia lui
+ -succesiv: iei un i = 0, cat timp elementul cautat e mai mare decat l[i] si i < lungimea listei, i creste
+ -binar(recursiv): iei mijlocul, daca el <= l[m] cauti intre left si mijl, altfel intre mijl si right, right - left <= 1 ai solutie
+ -binar(iterativ): cat timp right - left > 1 iei mijlocu, daca el <= l[m] cauti intre left si mijl, altfel intre mijl si right

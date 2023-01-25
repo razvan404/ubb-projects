@@ -1,0 +1,15 @@
+mancare;Ro;food;En
+mananca;Ro;eat;En
+mananca;Ro;mange;Fr
+mar;Ro;apple;En
+cauta;Ro;find;En
+eat;En;mananca;Ro
+mange;Fr;mananca;En
+find;En;cauta;Ro
+caine;Ro;dog;En
+pisica;Ro;cat;En
+mere;Ro;merre;Fr
+Ana;Ro;Ana;En
+apples;En;merre;Fr
+pisica;Ro;chat;Fr
+pee;En;poo;Ro

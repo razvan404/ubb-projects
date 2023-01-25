@@ -1,0 +1,9 @@
+Artoht;Armin24;Rock;22.01.2022
+Artohc;Armin23;Jazz;21.01.2022
+Martin Jones;Alabama;Jazz;22.01.2022
+Martinus Jonny;Balamuc;Pop;20.01.2022
+Martin Jones;Alabama;Jazz;22.01.2022
+Martinus Jonny;Balamuc;Pop;20.01.2022
+Martin Jones;Alabama;Jazz;02.02.2022
+Martin Jones;Alabama;Jazz;22.01.2022
+Martinus Jonny;Balamuc;Pop;20.01.2022

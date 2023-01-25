@@ -1,0 +1,118 @@
+     1                                  ; B 
+     2                                  bits 32
+     3                                  global start        
+     4                                  
+     5                                  extern exit, scanf, printf, fopen, fprintf, fclose     
+     6                                  import exit msvcrt.dll
+     7                                  import scanf msvcrt.dll
+     8                                  import printf msvcrt.dll
+     9                                  import fopen msvcrt.dll
+    10                                  import fprintf msvcrt.dll
+    11                                  import fclose msvcrt.dll   
+    12                                  
+    13                                  segment data use32 class=data
+    14 00000000 00000000                    n dd 0
+    15 00000004 476976652074686520-         text_n db 'Give the length of the array: ', 0
+    15 0000000D 6C656E677468206F66-
+    15 00000016 207468652061727261-
+    15 0000001F 793A2000           
+    16 00000023 256400                      format_n db '%d', 0
+    17 00000026 00000000                    curent dd 0
+    18 0000002A 476976652074686520-         text_array db 'Give the array: ', 0
+    18 00000033 61727261793A2000   
+    19 0000003B 256400                      format_curent db '%d', 0
+    20 0000003E 25642000                    format_fprint db '%d ', 0
+    21 00000042 0A00                        next_line db 10, 0
+    22 00000044 00000000                    x dd 0
+    23 00000048 04000000                    patru dd 4
+    24 0000004C 6965736972652E7478-         file_name db 'iesire.txt', 0
+    24 00000055 7400               
+    25 00000057 7700                        write_mode db 'w', 0
+    26 00000059 FFFFFFFF                    descr dd -1
+    27 0000005D 00000000                    copy_ecx dd 0
+    28 00000061 9DFFFFFF                    right_bound dd -99
+    29 00000065 99D4FFFF                    left_bound dd -11111
+    30                                      
+    31                                  segment code use32 class=code
+    32                                      start:
+    33                                      
+    34                                      open_file:
+    35 00000000 68[57000000]                    push dword write_mode
+    36 00000005 68[4C000000]                    push dword file_name
+    37 0000000A FF15[00000000]                  call [fopen]
+    38 00000010 83C408                          add esp, 8
+    39 00000013 A3[59000000]                    mov dword[descr], eax
+    40 00000018 83F800                          cmp eax, 0
+    41 0000001B 0F84DC000000                    je final
+    42                                      
+    43                                      read_n:
+    44 00000021 68[04000000]                    push dword text_n
+    45 00000026 FF15[00000000]                  call [printf]
+    46 0000002C 83C404                          add esp, 4
+    47 0000002F 68[00000000]                    push dword n
+    48 00000034 68[23000000]                    push dword format_n
+    49 00000039 FF15[00000000]                  call [scanf]
+    50 0000003F 83C408                          add esp, 8
+    51                                      
+    52                                      array:
+    53 00000042 68[2A000000]                    push dword text_array
+    54 00000047 FF15[00000000]                  call [printf]
+    55 0000004D 83C404                          add esp, 4
+    56 00000050 8B0D[00000000]                  mov ecx, [n]
+    57 00000056 BB00000000                      mov ebx, 0
+    58 0000005B FC                              cld
+    59 0000005C E39F                            jecxz final
+    59          ******************       warning: byte data exceeds bounds [-w+number-overflow]
+    60                                          
+    61                                      read_array:
+    62 0000005E 890D[5D000000]                  mov dword[copy_ecx], ecx
+    63 00000064 68[26000000]                    push dword curent
+    64 00000069 68[3B000000]                    push dword format_curent
+    65 0000006E FF15[00000000]                  call [scanf]
+    66 00000074 A1[26000000]                    mov eax, [curent]
+    67 00000079 83C408                          add esp, 8
+    68                                          
+    69 0000007C 3B05[61000000]                  cmp eax, [right_bound]
+    70 00000082 7F48                            jg repeat_read_array
+    71                                          
+    72 00000084 3B05[65000000]                  cmp eax, [left_bound]
+    73 0000008A 7C40                            jl repeat_read_array        
+    74                                          
+    75 0000008C 99                              cdq
+    76 0000008D F73D[48000000]                  idiv dword[patru]
+    77 00000093 83FA00                          cmp edx, 0
+    78 00000096 7534                            jne repeat_read_array
+    79                                          
+    80 00000098 031D[26000000]                  add ebx, [curent]
+    81                                          
+    82 0000009E FF35[26000000]                  push dword[curent]
+    83 000000A4 68[3E000000]                    push dword format_fprint
+    84 000000A9 FF35[59000000]                  push dword[descr]
+    85 000000AF FF15[00000000]                  call [fprintf]
+    86 000000B5 83C40C                          add esp, 12
+    87                                          
+    88 000000B8 68[42000000]                    push dword next_line
+    89 000000BD FF35[59000000]                  push dword[descr]
+    90 000000C3 FF15[00000000]                  call [fprintf]
+    91 000000C9 83C40C                          add esp, 12
+    92                                          
+    93                                      repeat_read_array:
+    94 000000CC 8B0D[5D000000]                  mov ecx, dword[copy_ecx]
+    95 000000D2 E28A                            loop read_array
+    96                                          
+    97                                          
+    98                                      close_file:
+    99 000000D4 FF35[59000000]                  push dword[descr]
+   100 000000DA FF15[00000000]                  call [fclose]
+   101 000000E0 83C404                          add esp, 4
+   102                                      
+   103                                      save_x:
+   104 000000E3 891D[44000000]                  mov dword[x], ebx
+   105 000000E9 FF35[44000000]                  push dword[x]
+   106 000000EF 68[23000000]                    push dword format_n
+   107 000000F4 FF15[00000000]                  call [printf]
+   108 000000FA 83C408                          add esp, 8
+   109                                          
+   110                                      final:
+   111 000000FD 6A00                            push    dword 0   
+   112 000000FF FF15[00000000]                  call    [exit]      
