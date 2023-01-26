@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane onMouseClicked="#handleElementClicked" onMouseEntered="#handleElementEntered"
+            onMouseExited="#handleElementExited" prefHeight="50.0" prefWidth="250.0" styleClass="card"
+            xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="application.gui.controller.list.UserCardController">
+   <stylesheets>
+      <URL value="@../../css/style.css"/>
+      <URL value="@../../css/list/user-card.css"/>
+   </stylesheets>
+   <ImageView fx:id="userPhoto" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../../media/avatars/capybara.png"/>
+   </ImageView>
+   <AnchorPane layoutX="80.0" prefHeight="50.0" prefWidth="200.0" styleClass="user-info" AnchorPane.bottomAnchor="0.0"
+               AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Text fx:id="userNameText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="user-name" text="USER NAME"
+            AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="-2.0"/>
+      <Text layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0"/>
+      <Text fx:id="friendsFromText" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0"
+            text="Friends from: DD/MM/YYYY" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="5.0"/>
+      <Text fx:id="inCommonText" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Common friends: XYZ"
+            AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0"/>
+   </AnchorPane>
+</AnchorPane>

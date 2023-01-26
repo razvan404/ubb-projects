@@ -1,0 +1,61 @@
+.background {
+    -fx-background-image: url("../media/backgrounds/login-background.gif");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+
+.frame {
+    -fx-background-color: linear-gradient(to bottom right, #fff, #fefdfc);
+    -fx-effect: dropshadow(GAUSSIAN, rgba(0, 0, 0, 0.8), 15, 0, 0, 0);
+    -fx-border-radius: 40px;
+    -fx-background-radius: 40px;
+}
+
+.button {
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+    -fx-text-fill: #fff;
+    -fx-effect: dropshadow(GAUSSIAN, rgba(0, 0, 0, 0.5), 5, 0, 0, 2);
+    -fx-cursor: hand;
+}
+
+.login-button {
+    -fx-background-color: linear-gradient(to bottom, #7cb, #5a9);
+    -fx-opacity: 100%;
+}
+
+.login-button:hover, .login-button:focused {
+    -fx-background-color: linear-gradient(to bottom, #6ba, #498);
+}
+
+.register-button {
+    -fx-background-color: linear-gradient(to bottom, #f79, #d57);
+}
+
+.register-button:hover, .register-button:focused {
+    -fx-background-color: linear-gradient(to bottom, #e68, #c46);
+
+}
+
+.error-label {
+    -fx-fill: #e66;
+    -fx-font-weight: bold;
+}
+
+.register-text {
+    -fx-fill: #555;
+}
+
+.login-text {
+    -fx-fill: #555;
+}
+
+.hyperlink {
+    -fx-text-fill: #6af;
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+}
+
+.go-to-login-h-box {
+    -fx-font-size: 17px;
+}

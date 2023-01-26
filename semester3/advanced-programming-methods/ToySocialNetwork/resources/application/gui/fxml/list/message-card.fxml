@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+
+<AnchorPane prefWidth="370.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="application.gui.controller.list.MessageCardController">
+   <stylesheets>
+      <URL value="@../../css/style.css"/>
+      <URL value="@../../css/list/message-card.css"/>
+   </stylesheets>
+   <HBox fx:id="messageBox" alignment="CENTER_RIGHT" layoutX="108.0" layoutY="-2.0" AnchorPane.bottomAnchor="0.0"
+         AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <TextFlow fx:id="messageContainer" maxWidth="260.0" styleClass="text-container">
+         <Text fx:id="messageText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="message-text"
+               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis egestas dolor nulla. Aenean porttitor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis egestas dolor nulla. Aenean porttitor."/>
+      </TextFlow>
+   </HBox>
+</AnchorPane>

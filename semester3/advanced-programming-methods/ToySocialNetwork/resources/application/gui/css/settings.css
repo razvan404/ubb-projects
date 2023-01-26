@@ -1,0 +1,63 @@
+.background {
+    -fx-background-image: url("../media/backgrounds/settings-background.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+
+.frame {
+    -fx-background-color: #fff;
+    -fx-effect: dropshadow(GAUSSIAN, rgba(0, 0, 0, 0.6), 10, 0, 0, 0);
+    -fx-background-radius: 5px;
+}
+
+.button {
+    -fx-effect: dropshadow(GAUSSIAN, rgba(0, 0, 0, 0.8), 6, 0, 0, 2);
+    -fx-text-fill: #fff;
+    -fx-font-weight: bold;
+
+    -fx-border-radius: 5px;
+    -fx-background-radius: 10px;
+    -fx-cursor: hand;
+}
+
+.save-button {
+    -fx-font-size: 20px;
+    -fx-background-color: linear-gradient(to bottom right, #cbd, #98a);
+}
+
+.save-button:hover {
+    -fx-background-color: linear-gradient(to bottom right, #98a, #546);
+}
+
+.delete-button {
+    -fx-font-size: 18px;
+    -fx-background-color: linear-gradient(to bottom right, #d04, #b02);
+}
+
+.delete-button:hover {
+    -fx-background-color: linear-gradient(to bottom right, #b02, #901);
+}
+
+.avatar-text {
+    -fx-fill: #333;
+    -fx-font-weight: bolder;
+    -fx-font-size: 20px;
+}
+
+.settings-text {
+    -fx-fill: #333;
+    -fx-font-weight: bolder;
+    -fx-font-size: 25px;
+}
+
+.error-text {
+    -fx-fill: #e66;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.success-text {
+    -fx-fill: #6e6;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}

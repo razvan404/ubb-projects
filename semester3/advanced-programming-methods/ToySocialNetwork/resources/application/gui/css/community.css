@@ -1,0 +1,51 @@
+.background {
+    -fx-background-image: url("../media/backgrounds/community-background.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+
+.frame {
+    -fx-background-color: #fff;
+    -fx-effect: dropshadow(GAUSSIAN, rgba(0, 0, 0, 0.6), 10, 0, 0, 0);
+    -fx-background-radius: 5px;
+}
+
+.community-text {
+    -fx-fill: #222;
+    -fx-font-size: 25px;
+    -fx-font-weight: bolder;
+}
+
+.info-title {
+    -fx-fill: #333;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.info-count {
+    -fx-fill: #444;
+    -fx-font-size: 22px;
+    -fx-font-weight: bolder;
+}
+
+.info-button {
+    -fx-background-color: transparent;
+    -fx-background-image: url("../media/icons/community-info.png");
+    -fx-background-size: auto 80%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-cursor: hand;
+}
+
+.info-button .tooltip {
+    -fx-background-color: #234;
+    -fx-font-size: 15px;
+    -fx-translate-x: -609px;
+    /*-fx-translate-y: -55px;*/
+}
+
+.error-text {
+    -fx-fill: #e66;
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane onMouseClicked="#handleElementClicked" onMouseEntered="#handleElementEntered"
+            onMouseExited="#handleElementExited" prefHeight="50.0" prefWidth="190.0" styleClass="card"
+            xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="application.gui.controller.list.ContactCardController">
+   <stylesheets>
+      <URL value="@../../css/style.css"/>
+      <URL value="@../../css/list/contact-card.css"/>
+   </stylesheets>
+   <ImageView fx:id="userPhoto" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../../media/avatars/capybara.png"/>
+   </ImageView>
+   <AnchorPane layoutX="80.0" prefHeight="50.0" prefWidth="140.0" styleClass="user-info" AnchorPane.leftAnchor="50.0"
+               AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox alignment="CENTER_LEFT" layoutY="2.41796875" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+            AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <Text fx:id="userNameText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="user-name"
+               text="USER NAME"/>
+         <HBox alignment="CENTER_LEFT" spacing="1.0" VBox.vgrow="NEVER">
+            <Label fx:id="messageLabel" prefHeight="17.0" prefWidth="149.0" styleClass="message-text"
+                   text="Message"/>
+         </HBox>
+      </VBox>
+   </AnchorPane>
+</AnchorPane>

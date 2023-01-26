@@ -49,11 +49,28 @@
   <li>:ledger: Semester :three:
     <ul>
         <li>
-            :slot_machine: Probability Theory and Statistics
+            :slot_machine: <a href="">Probability Theory and Statistics</a>
+        </li>
+        <li>
+            :abacus: <a href="">Advanced Programming Methods</a>
+        </li>
+        <li>
+            :atom: <a href="">Computer Networks</a>
+        </li>
+        <li>
+            :card_index_dividers: <a href="">Databases</a>
+        </li>
+        <li>
+            :knot: <a href="">Functional and Logic Programming</a>
         </li>
     </ul>
   </li>
   <li>:green_book: Semester :four:
+    <ul>
+        <li>
+            :card_file_box: <a href="">Database Managment Systems
+        </li>
+    </ul>
   </li>
   <li>:blue_book: Semester :five:
   </li>

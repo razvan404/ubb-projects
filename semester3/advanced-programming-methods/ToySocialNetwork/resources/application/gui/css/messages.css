@@ -1,0 +1,48 @@
+.background {
+    -fx-background-image: url("../media/backgrounds/messages-background.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+
+.frame {
+    -fx-background-color: #fff;
+    -fx-effect: dropshadow(GAUSSIAN, rgba(0, 0, 0, 0.6), 10, 0, 0, 0);
+    -fx-background-radius: 10px;
+}
+
+.current-user {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.friends-from-text {
+    -fx-font-size: 12px;
+    -fx-font-style: italic;
+}
+
+.message-field {
+    -fx-font-size: 16px;
+    -fx-background-radius: 20px 0 0 20px
+}
+
+.message-button {
+    -fx-background-color: -fx-text-box-border, #fff;
+    -fx-background-image: url("../media/icons/messages-send.png");
+    -fx-background-size: 60% 60%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-background-radius: 0 20px 20px 0;
+    -fx-effect: dropshadow(GAUSSIAN, rgba(0, 0, 0, 0.5), 5, 0, 0, 2);
+}
+
+.profile-button {
+    -fx-background-radius: 50%;
+    -fx-background-image: url("../media/icons/messages-profile.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+}
+
+.user-photo {
+    -fx-cursor: hand;
+}

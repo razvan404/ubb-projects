@@ -1,0 +1,76 @@
+.background {
+    -fx-background-image: url("../media/backgrounds/friends-background.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+
+.frame {
+    -fx-background-color: #fff;
+    -fx-effect: dropshadow(GAUSSIAN, rgba(0, 0, 0, 0.6), 10, 0, 0, 0);
+    -fx-background-radius: 5px;
+}
+
+.friends-text {
+    -fx-fill: #222;
+    -fx-font-size: 25px;
+    -fx-font-weight: bolder;
+}
+
+.selected-text {
+    -fx-font-size: 20px;
+    -fx-font-weight: bolder;
+}
+
+.name-text {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.from-title-text {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.from-text {
+    -fx-font-size: 12px;
+    -fx-font-style: italic;
+}
+
+.error-text {
+    -fx-fill: #e66;
+    -fx-font-weight: bold;
+}
+
+.button {
+    -fx-effect: dropshadow(GAUSSIAN, rgba(0, 0, 0, 0.8), 4, 0, 0, 2);
+    -fx-text-fill: #fff;
+    -fx-font-weight: bold;
+
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-font-size: 14px;
+}
+
+.profile-button {
+    -fx-background-color: linear-gradient(to bottom right, #0c6, #0a5);
+}
+
+.profile-button:hover {
+    -fx-background-color: linear-gradient(to bottom right, #0a5, #084);
+}
+
+.message-button {
+    -fx-background-color: linear-gradient(to bottom right, #06c, #05a);
+}
+
+.message-button:hover {
+    -fx-background-color: linear-gradient(to bottom right, #05a, #048);
+}
+
+.remove-button {
+    -fx-background-color: linear-gradient(to bottom right, #c00, #a00);
+}
+
+.remove-button:hover {
+    -fx-background-color: linear-gradient(to bottom right, #a00, #800);
+}

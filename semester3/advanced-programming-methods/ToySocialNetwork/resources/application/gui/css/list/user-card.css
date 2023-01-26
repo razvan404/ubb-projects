@@ -1,0 +1,19 @@
+.card {
+    -fx-background-color: transparent;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.card:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.1);
+}
+
+.user-info {
+    -fx-background-color: transparent;
+    -fx-font-size: 12px;
+}
+
+.user-info .user-name {
+    -fx-font-weight: bolder;
+    -fx-font-size: 20px;
+}

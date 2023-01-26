@@ -1,0 +1,126 @@
+.root {
+    -fx-background-color: #fff;
+}
+
+.top-section {
+    -fx-background-color: linear-gradient(to bottom, #fff, #f8f6f4);
+    -fx-effect: dropshadow(GAUSSIAN, rgba(0, 0, 0, 0.7), 6, 0, 0, 2);
+    -fx-background-radius: 0 0 10px 10px;
+    -fx-border-radius: 0 0 10px 10px;
+}
+
+.top-section .title {
+    -fx-font-family: "Monotype Corsiva";
+    -fx-font-weight: bolder;
+    -fx-font-size: 40px;
+}
+
+.top-section .search-bar {
+    -fx-background-color: linear-gradient(to top, #fff, #f8f6f4);
+    -fx-text-fill: #333;
+    -fx-border-color: transparent;
+    -fx-border-radius: 20px;
+    -fx-effect: dropshadow(GAUSSIAN, rgba(0, 0, 0, 0.6), 3, 0, 0, 1);
+    -fx-background-radius: 30px;
+    -fx-font-size: 16px;
+}
+
+.top-section .search-bar:focused {
+    -fx-border-color: transparent;
+}
+
+.search-list {
+    -fx-background-color: rgba(255, 255, 255, 0.9);
+    -fx-effect: dropshadow(GAUSSIAN, rgba(100, 100, 100, 0.8), 6, 0, 0, 2);
+    -fx-background-radius: 0 0 5px 5px;
+}
+
+.top-section .button {
+    -fx-background-color: transparent;
+    -fx-background-size: 80% 80%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-background-radius: 0;
+    -fx-cursor: hand;
+}
+
+.top-section .button:hover {
+    -fx-background-color: rgba(200, 200, 200, 0.8);
+    -fx-cursor: hand;
+}
+
+.top-section .menu-button {
+    -fx-background-image: url("../media/icons/topbar-menu.png");
+}
+
+.tool-section {
+    -fx-background-color: #fff;
+    -fx-effect: dropshadow(GAUSSIAN, rgba(0, 0, 0, 0.2), 5, 0, 2, 0);
+    -fx-background-radius: 10px 0 0 10px;
+    -fx-border-radius: 10px 0 0 10px;
+}
+
+.tool-section .button {
+    -fx-background-color: transparent;
+    -fx-background-size: 50% 50%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-text-fill: #222;
+    -fx-font-weight: normal;
+    -fx-font-size: 14px;
+}
+
+.tool-section .button:hover {
+    -fx-background-size: 60% 60%;
+}
+
+.tool-section .h-box:hover {
+    -fx-background-color: rgba(200, 200, 200, 0.8);
+    -fx-background-radius: 10px 0 0 10px;
+    -fx-cursor: hand;
+}
+
+.tool-section .h-box:hover .button {
+    -fx-background-size: 60% 60%;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+
+.tool-section .home-button {
+    -fx-background-image: url("../media/icons/toolbar-home.png");
+}
+
+.tool-section .community-button {
+    -fx-background-image: url("../media/icons/toolbar-community.png");
+}
+
+.tool-section .friends-button {
+    -fx-background-image: url("../media/icons/toolbar-friends.png");
+}
+
+.tool-section .notifications-button {
+    -fx-background-image: url("../media/icons/toolbar-notifications.png");
+}
+
+.tool-section .messages-button {
+    -fx-background-image: url("../media/icons/toolbar-messages.png");
+}
+
+.tool-section .profile-button {
+    -fx-background-image: url("../media/icons/toolbar-profile.png");
+}
+
+.tool-section .settings-button {
+    -fx-background-image: url("../media/icons/toolbar-settings.png");
+}
+
+.tool-section .exit-button {
+    -fx-background-image: url("../media/icons/toolbar-exit.png");
+}
+
+.main-pane {
+    -fx-border-radius: 20px 0 0 0;
+    -fx-background-radius: 20px 0 0 0;
+}

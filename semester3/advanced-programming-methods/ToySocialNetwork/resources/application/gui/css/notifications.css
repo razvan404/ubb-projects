@@ -1,0 +1,17 @@
+.background {
+    -fx-background-image: url("../media/backgrounds/notifications-background.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+
+.frame {
+    -fx-background-color: #fff;
+    -fx-effect: dropshadow(GAUSSIAN, rgba(0, 0, 0, 0.6), 10, 0, 0, 0);
+    -fx-background-radius: 5px;
+}
+
+.title {
+    -fx-fill: #000;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+}

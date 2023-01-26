@@ -1,0 +1,111 @@
+.background {
+    -fx-background-image: url("../media/backgrounds/profile-background.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+
+.user-background {
+    -fx-background-color: transparent;
+    -fx-background-image: url("../media/backgrounds/user-background.png");
+    -fx-background-size: 100% 100%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-effect: dropshadow(GAUSSIAN, rgba(0, 0, 0, 0.7), 7, 0, 0, 3);
+}
+
+.profile-image-background {
+    -fx-background-color: #fff;
+    -fx-border-radius: 30%;
+    -fx-background-radius: 30%;
+}
+
+.user-name-text {
+    -fx-effect: dropshadow(GAUSSIAN, rgba(0, 0, 0, 0.8), 5, 0, 2, 2);
+    -fx-fill: #fff;
+    -fx-font-size: 40px;
+    -fx-font-weight: bolder;
+}
+
+.friends-from-text {
+    -fx-effect: dropshadow(GAUSSIAN, rgba(0, 0, 0, 0.8), 5, 0, 2, 2);
+    -fx-fill: #fff;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.friend-list-text {
+    -fx-font-size: 18px;
+    -fx-font-weight: bolder;
+    -fx-cursor: hand;
+}
+
+.in-common-text {
+    -fx-font-size: 18px;
+    -fx-font-weight: bolder;
+    -fx-cursor: hand;
+}
+
+.info-section {
+    -fx-effect: dropshadow(GAUSSIAN, rgba(0, 0, 0, 0.7), 7, 0, 0, 3);
+    -fx-background-color: #fff;
+    -fx-background-radius: 5px;
+}
+
+.description-header {
+    -fx-font-size: 18px;
+    -fx-font-weight: bolder;
+}
+
+.description-text {
+    -fx-font-size: 16px;
+    -fx-font-weight: lighter;
+}
+
+.friend-button {
+    -fx-background-color:
+            linear-gradient(#fff, #ccc),
+            radial-gradient(center 50% -40%, radius 200%, #eee 45%, #ddd 50%);
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 6px 0 6px;
+
+    -fx-cursor: hand;
+}
+
+.friend-button .label {
+    -fx-text-fill: #111;
+}
+
+.account-settings-button {
+    -fx-background-color:
+            linear-gradient(#333 0%, #222 20%, #111 100%),
+            linear-gradient(#222, #111),
+            radial-gradient(center 50% 0%, radius 100%, rgba(120, 120, 120, 0.9), rgba(255, 255, 255, 0));
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+
+
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 6px 0 6px;
+
+    -fx-cursor: hand;
+}
+
+.account-settings-button .label {
+    -fx-text-fill: #fff;
+}
+
+.community-button {
+    -fx-background-color:
+            linear-gradient(#fff, #ccc),
+            radial-gradient(center 50% -40%, radius 200%, #eee 45%, #ddd 50%);
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+
+    -fx-cursor: hand;
+}

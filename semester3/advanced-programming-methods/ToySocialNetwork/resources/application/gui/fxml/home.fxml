@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="application.gui.controller.HomeController">
+   <stylesheets>
+      <URL value="@../css/style.css"/>
+      <URL value="@../css/home.css"/>
+   </stylesheets>
+   <VBox fx:id="backgroundBox" alignment="CENTER" fillWidth="false" spacing="50.0" styleClass="background"
+         AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+         AnchorPane.topAnchor="0.0">
+      <AnchorPane prefHeight="420.0" prefWidth="405.0" styleClass="frame">
+         <AnchorPane fx:id="usersPane" layoutX="35.0" layoutY="4.0" prefHeight="120.0" prefWidth="365.0"
+                     styleClass="users-info-section" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0"
+                     AnchorPane.topAnchor="150.0">
+            <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true"
+                       AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0"
+                       AnchorPane.rightAnchor="180.0" AnchorPane.topAnchor="10.0">
+               <Image url="@../media/icons/home-users.png"/>
+            </ImageView>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="USERS"
+                  AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="20.0"/>
+            <Text fx:id="usersCount" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="count" text="XYZ"
+                  AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="130.0"/>
+         </AnchorPane>
+         <AnchorPane fx:id="friendshipsPane" layoutX="346.0" layoutY="135.0" prefHeight="120.0" prefWidth="365.0"
+                     styleClass="friendships-info-section" AnchorPane.leftAnchor="15.0"
+                     AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="285.0">
+            <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true"
+                       AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0"
+                       AnchorPane.rightAnchor="190.0" AnchorPane.topAnchor="10.0">
+               <Image url="@../media/icons/home-friendships.png"/>
+            </ImageView>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="FRIENDSHIPS"
+                  AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="20.0"/>
+            <Text fx:id="friendshipsCount" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="count" text="XYZ"
+                  AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="130.0"/>
+         </AnchorPane>
+         <AnchorPane fx:id="chatterPane" layoutX="20.0" layoutY="307.0" prefHeight="120.0" prefWidth="365.0"
+                     styleClass="chatter-info-section" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0"
+                     AnchorPane.topAnchor="15.0">
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="251.0" layoutY="11.0" pickOnBounds="true"
+                       preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0"
+                       AnchorPane.topAnchor="10.0">
+               <Image url="@../media/icons/home-network.png"/>
+            </ImageView>
+            <VBox layoutX="5.0" layoutY="10.0" AnchorPane.leftAnchor="120.0">
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="chatter" text="Chatter"/>
+               <TextFlow prefHeight="60.0" prefWidth="250.0">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="content"
+                        text="  Connect with friends and the world around you!" wrappingWidth="252.0"/>
+               </TextFlow>
+            </VBox>
+         </AnchorPane>
+      </AnchorPane>
+   </VBox>
+</AnchorPane>

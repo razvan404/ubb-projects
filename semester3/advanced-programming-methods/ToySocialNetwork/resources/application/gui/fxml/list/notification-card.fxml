@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="460.0" styleClass="card"
+            xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="application.gui.controller.list.NotificationCardController">
+   <stylesheets>
+      <URL value="@../../css/style.css"/>
+      <URL value="@../../css/list/notification-card.css"/>
+   </stylesheets>
+   <AnchorPane layoutX="5.0" styleClass="top-section" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+               AnchorPane.topAnchor="0.0">
+      <HBox alignment="CENTER" prefHeight="40.0" prefWidth="40.0" spacing="10.0" AnchorPane.leftAnchor="5.0"
+            AnchorPane.topAnchor="0.0">
+         <ImageView fx:id="notificationImage" fitHeight="40.0" fitWidth="40.0"
+                    onMouseEntered="#handleImageEntered" onMouseExited="#handleImageExited" pickOnBounds="true"
+                    preserveRatio="true">
+            <Image url="@../../media/icons/notification-info.png"/>
+         </ImageView>
+         <Text fx:id="titleText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title-text"
+               text="Notification title"/>
+      </HBox>
+      <ImageView fx:id="removeNotificationImage" fitHeight="40.0" fitWidth="40.0"
+                 onMouseClicked="#handleImageClicked" onMouseEntered="#handleImageEntered"
+                 onMouseExited="#handleImageExited" pickOnBounds="true" preserveRatio="true"
+                 styleClass="delete-button" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="0.0">
+         <Image url="@../../media/icons/notification-delete.png"/>
+      </ImageView>
+      <VBox alignment="CENTER_RIGHT" layoutX="309.0" layoutY="5.0" AnchorPane.bottomAnchor="5.0"
+            AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <Text fx:id="dateText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="date-text"
+               text="DD/MM/YYYY HH:MM:SS"/>
+      </VBox>
+   </AnchorPane>
+   <VBox alignment="CENTER_LEFT" layoutX="5.0" layoutY="40.0" prefHeight="40.0" prefWidth="300.0"
+         AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="155.0"
+         AnchorPane.topAnchor="40.0">
+      <TextFlow fx:id="messageTextFlow" prefHeight="10.0" prefWidth="315.0">
+         <Text fx:id="messageText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="message"
+               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis egestas dolor nulla. Aenean porttitor."
+               wrappingWidth="258.7236328125"/>
+      </TextFlow>
+   </VBox>
+   <Button fx:id="rejectButton" layoutX="426.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleRejectButton"
+           prefHeight="30.0" prefWidth="30.0" styleClass="reject-button" visible="false" AnchorPane.bottomAnchor="5.0"
+           AnchorPane.rightAnchor="5.0"/>
+   <Button fx:id="acceptButton" layoutX="354.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleAcceptButton"
+           prefHeight="30.0" prefWidth="30.0" styleClass="accept-button" visible="false" AnchorPane.bottomAnchor="5.0"
+           AnchorPane.rightAnchor="40.0"/>
+</AnchorPane>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="application.gui.controller.RegisterController">
+   <children>
+      <VBox alignment="CENTER" fillWidth="false" styleClass="background" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox fx:id="frameBox" alignment="CENTER" fillWidth="false" prefHeight="550.0" prefWidth="380.0" spacing="10.0" styleClass="frame">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="310.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../media/chatter.png" />
+                     </image>
+                  </ImageView>
+                  <TextFlow prefHeight="18.0" prefWidth="350.0" styleClass="error-text" textAlignment="CENTER">
+                     <children>
+                        <Text fx:id="errorText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="error-label" text="Sign up error text" />
+                     </children>
+                  </TextFlow>
+                  <AnchorPane>
+                     <children>
+                        <HBox alignment="CENTER" fillHeight="false" layoutX="5.0" layoutY="3.0" prefHeight="35.0" prefWidth="310.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <TextField fx:id="firstNameField" prefHeight="35.0" prefWidth="150.0" />
+                              <TextField fx:id="lastNameField" prefHeight="35.0" prefWidth="150.0" />
+                           </children>
+                        </HBox>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="prompt-text" text="First name" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="-10.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="prompt-text" text="Last name" AnchorPane.leftAnchor="165.0" AnchorPane.topAnchor="-10.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane>
+                     <children>
+                        <TextField fx:id="mailAddressField" layoutX="5.0" layoutY="3.0" prefHeight="35.0" prefWidth="310.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="prompt-text" text="Mail address" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="-10.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane>
+                     <children>
+                        <HBox fillHeight="false" layoutX="5.0" layoutY="3.0" prefHeight="35.0" prefWidth="310.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <PasswordField fx:id="passwordField" prefHeight="35.0" prefWidth="150.0" />
+                              <PasswordField fx:id="confirmPasswordField" prefHeight="35.0" prefWidth="150.0" />
+                           </children>
+                        </HBox>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="prompt-text" text="Password" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="-10.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="prompt-text" text="Confirm password" AnchorPane.leftAnchor="165.0" AnchorPane.topAnchor="-10.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane>
+                     <children>
+                        <DatePicker fx:id="birthDatePicker" layoutX="5.0" layoutY="3.0" prefHeight="35.0" prefWidth="310.0" styleClass="date-picker-text-field" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="prompt-text" text="Birth date" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="-10.0" />
+                     </children>
+                  </AnchorPane>
+                  <Button mnemonicParsing="false" onAction="#handleRegisterButton" prefHeight="44.0" prefWidth="310.0" styleClass="register-button" text="Sign up" textAlignment="CENTER" />
+                  <HBox alignment="CENTER" prefHeight="32.0" prefWidth="300.0" styleClass="go-to-login-h-box">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="login-text" text="Already have an account?" />
+                        <Hyperlink onAction="#handleLoginHyperlink" prefHeight="28.0" prefWidth="62.0" text="Log in!" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@../css/style.css" />
+      <URL value="@../css/login.css" />
+   </stylesheets>
+</AnchorPane>

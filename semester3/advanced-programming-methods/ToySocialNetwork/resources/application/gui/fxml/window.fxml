@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="640.0" prefWidth="800.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="application.gui.controller.WindowController">
+   <children>
+      <AnchorPane fx:id="windowPane" prefHeight="200.0" prefWidth="200.0" styleClass="window-content" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" />
+      <AnchorPane fx:id="barPane" prefHeight="40.0" prefWidth="800.0" styleClass="bar" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_RIGHT" layoutX="388.0" prefHeight="40.0" prefWidth="400.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleMinimizeButton" prefHeight="20.0" prefWidth="20.0" styleClass="minimize-button" />
+                  <Button mnemonicParsing="false" onAction="#handleMaximizeButton" prefHeight="20.0" prefWidth="20.0" styleClass="maximize-button" />
+                  <Button mnemonicParsing="false" onAction="#handleCloseButton" prefHeight="20.0" prefWidth="20.0" styleClass="close-button" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="398.0" layoutY="10.0" prefHeight="40.0" prefWidth="400.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button fx:id="refreshButton" mnemonicParsing="false" onAction="#handleRefreshButton" prefHeight="40.0" prefWidth="40.0" styleClass="refresh-button" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+   <stylesheets>
+      <URL value="@../css/style.css" />
+      <URL value="@../css/window.css" />
+   </stylesheets>
+</AnchorPane>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane fx:id="backgroundPane" prefHeight="550.0" prefWidth="800.0" styleClass="background"
+            xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="application.gui.controller.ProfileController">
+   <stylesheets>
+      <URL value="@../css/style.css"/>
+      <URL value="@../css/profile.css"/>
+   </stylesheets>
+   <VBox alignment="CENTER" fillWidth="false" layoutX="75.0" prefHeight="465.0" prefWidth="800.0" spacing="10.0"
+         AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+         AnchorPane.topAnchor="20.0">
+      <AnchorPane prefHeight="218.0" prefWidth="580.0" styleClass="user-background" VBox.vgrow="NEVER">
+         <AnchorPane prefHeight="120.0" prefWidth="120.0" styleClass="profile-image-background"
+                     AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0">
+            <ImageView fx:id="profileImage" fitHeight="120.0" fitWidth="120.0" layoutY="30.0"
+                       pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0"
+                       AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <Image url="@../media/avatars/capybara.png"/>
+            </ImageView>
+         </AnchorPane>
+         <FlowPane layoutX="157.0" layoutY="94.0" prefHeight="120.0" prefWidth="410.0">
+            <Text fx:id="userNameText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="user-name-text"
+                  text="USER NAME"/>
+            <Text fx:id="friendsFromText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="friends-from-text"
+                  text="Friends from: DD MMMM YYYY, HH:MM:SS"/>
+         </FlowPane>
+         <HBox fx:id="buttonsBox" alignment="CENTER_RIGHT" fillHeight="false" layoutX="398.0" layoutY="10.0"
+               spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0"
+               AnchorPane.topAnchor="10.0">
+            <Button fx:id="profileButton" mnemonicParsing="false" onAction="#handleButton" prefHeight="40.0"
+                    styleClass="account-settings-button">
+               <graphic>
+                  <Label fx:id="buttonLabel" text="Account settings">
+                     <graphic>
+                        <ImageView fx:id="buttonImage" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                           <Image url="@../media/icons/profile-account-settings.png"/>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+               </graphic>
+            </Button>
+            <Button fx:id="communityButton" mnemonicParsing="false" onAction="#handleFriendCommunityButton"
+                    prefHeight="40.0" prefWidth="40.0" styleClass="community-button">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@../media/icons/profile-community.png"/>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="messageButton" mnemonicParsing="false" onAction="#handleMessageButton"
+                    prefHeight="40.0" prefWidth="40.0" styleClass="community-button">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@../media/icons/profile-message.png"/>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </HBox>
+      </AnchorPane>
+      <HBox alignment="TOP_CENTER" fillHeight="false" prefHeight="284.0" prefWidth="580.0" spacing="10.0">
+         <HBox fillHeight="false">
+            <AnchorPane prefHeight="255.0" prefWidth="240.0" styleClass="info-section">
+               <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="10.0"
+                     AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="description-header"
+                        text="MEMBER SINCE"/>
+                  <Text fx:id="memberSinceText" strokeType="OUTSIDE" strokeWidth="0.0"
+                        styleClass="description-text" text="DD/MM/YYYY (xyz days)"/>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0"/>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="description-header"
+                        text="BIRTH DATE"/>
+                  <Text fx:id="birthDateText" strokeType="OUTSIDE" strokeWidth="0.0"
+                        text="DD/MM/YYYY (xyz years)"/>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0"/>
+                  <Text fx:id="biographyTitle" strokeType="OUTSIDE" strokeWidth="0.0"
+                        styleClass="description-header" text="BIOGRAPHY"/>
+                  <TextFlow prefHeight="80.0" prefWidth="250.0">
+                     <Text fx:id="biographyText" strokeType="OUTSIDE" strokeWidth="0.0"
+                           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis egestas dolor nulla. Aenean porttitor."/>
+                  </TextFlow>
+               </VBox>
+            </AnchorPane>
+         </HBox>
+         <AnchorPane prefHeight="255.0" prefWidth="360.0" styleClass="info-section" HBox.hgrow="NEVER">
+            <Text fx:id="friendsText" layoutX="5.0" layoutY="45.0" onMouseClicked="#handleFriends"
+                  strokeType="OUTSIDE" strokeWidth="0.0" styleClass="friend-list-text" text="FRIENDS"
+                  AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="9.0"/>
+            <Text fx:id="inCommonText" layoutX="84.0" layoutY="28.0" onMouseClicked="#handleCommonFriends"
+                  strokeType="OUTSIDE" strokeWidth="0.0" styleClass="friend-list-text" text="(XYZT in common)"
+                  AnchorPane.leftAnchor="90.0" AnchorPane.topAnchor="8.0"/>
+            <AnchorPane layoutX="21.0" layoutY="32.0" prefHeight="200.0" prefWidth="344.0"
+                        AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                        AnchorPane.topAnchor="32.0">
+               <ScrollPane fitToHeight="true" hbarPolicy="NEVER" prefHeight="240.0" prefWidth="390.0"
+                           AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0"
+                           AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                  <AnchorPane fx:id="friendsPane" prefHeight="211.0" prefWidth="330.0"/>
+               </ScrollPane>
+            </AnchorPane>
+         </AnchorPane>
+      </HBox>
+   </VBox>
+</AnchorPane>

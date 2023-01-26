@@ -1,0 +1,15 @@
+.card {
+    -fx-background-color: transparent;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.user-info {
+    -fx-background-color: transparent;
+    -fx-font-size: 10px;
+}
+
+.user-info .user-name {
+    -fx-font-weight: bolder;
+    -fx-font-size: 14px;
+}

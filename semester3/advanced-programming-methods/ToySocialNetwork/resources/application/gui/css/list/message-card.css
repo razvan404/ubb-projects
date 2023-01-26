@@ -1,0 +1,10 @@
+.text-container {
+    -fx-background-color: linear-gradient(to bottom left, #0a0, #080);
+    -fx-background-radius: 20px;
+    -fx-padding: 5px 10px 5px 10px;
+}
+
+.message-text {
+    -fx-fill: #fff;
+    -fx-font-size: 16px;
+}

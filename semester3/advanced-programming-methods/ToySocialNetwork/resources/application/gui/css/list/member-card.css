@@ -1,0 +1,9 @@
+.card {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+.user-name {
+    -fx-font-size: 15px;
+    -fx-font-weight: bolder;
+}

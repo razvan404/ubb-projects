@@ -1,0 +1,59 @@
+.card {
+    -fx-background-color: #fff;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(GAUSSIAN, rgba(0, 0, 0, 0.4), 5, 0, 0, 2);
+}
+
+.top-section {
+    -fx-background-color: #fff;
+    -fx-background-radius: 10px 10px 0 0;
+    -fx-effect: dropshadow(GAUSSIAN, rgba(0, 0, 0, 0.4), 3, 0, 0, 2);
+}
+
+.title-text {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.date-text {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+.message {
+    -fx-font-size: 13px;
+}
+
+.button {
+    -fx-background-radius: 50%;
+    -fx-background-color: linear-gradient(to bottom left, #fff, #ddd);
+    -fx-effect: dropshadow(GAUSSIAN, rgba(0, 0, 0, 0.8), 6, 0, 1, 1);
+    -fx-border-radius: 50%;
+    -fx-border-width: 2px;
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-cursor: hand;
+}
+
+.accept-button {
+    -fx-background-image: url("../../media/icons/notification-checkmark-green.png");
+}
+
+.accept-button:hover {
+    -fx-background-color: linear-gradient(to bottom left, #0e0, #0c0);
+    -fx-background-image: url("../../media/icons/notification-checkmark-white.png");
+}
+
+.reject-button {
+    -fx-background-image: url("../../media/icons/notification-reject-red.png");
+}
+
+.reject-button:hover {
+    -fx-background-color: linear-gradient(to bottom left, #e00, #c00);
+    -fx-background-image: url("../../media/icons/notification-reject-white.png");
+}
+
+.delete-button {
+    -fx-cursor: hand;
+}

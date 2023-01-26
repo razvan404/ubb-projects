@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="510.0" prefWidth="750.0" styleClass="background" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml" fx:controller="application.gui.controller.NotificationsController">
+   <stylesheets>
+      <URL value="@../css/style.css"/>
+      <URL value="@../css/notifications.css"/>
+   </stylesheets>
+   <VBox alignment="CENTER" fillWidth="false" prefHeight="200.0" prefWidth="100.0" spacing="15.0"
+         AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+         AnchorPane.topAnchor="0.0">
+      <AnchorPane prefHeight="55.0" prefWidth="500.0" styleClass="frame">
+         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0"
+               AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="Notifications"/>
+         </HBox>
+      </AnchorPane>
+      <AnchorPane prefHeight="408.0" prefWidth="490.0" styleClass="frame">
+         <ScrollPane fitToHeight="true" hbarPolicy="NEVER" prefHeight="400.0" prefWidth="480.0"
+                     vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0"
+                     AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="3.0">
+            <AnchorPane fx:id="notificationsPane" prefHeight="400.0" prefWidth="459.0"/>
+         </ScrollPane>
+      </AnchorPane>
+   </VBox>
+</AnchorPane>

@@ -1,0 +1,4 @@
+# Problema 1 - Proiectarea bazei de date
+
+Imaginaţi o aplicaţie simplă ce necesită o bază de date. Reprezentaţi datele aplicaţiei într-o structură relaţională şi implementaţi structura într-o bază de date Microsoft SQL Server. Baza de date trebuie să conţină cel puţin 10 tabeleşi trebuie să împlementeze cel puţin o relaţie 1-m şi cel puţin o relaţie m-n.<br><br>
+Înainte de a începe proiectarea, trimiteţi un e-mail cu tema aleasă asistentului de laborator cu subiectul pentru care doriţi să creaţi baza de date (alături de o scurtă descriere). În cazul în care există un conflict cu tema propusă de un alt coleg,are câştig de cauză cel care a trimis primul e-mail cu propunerea. 

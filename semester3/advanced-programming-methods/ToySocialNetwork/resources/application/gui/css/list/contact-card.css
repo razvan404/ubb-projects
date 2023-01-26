@@ -1,0 +1,23 @@
+.card {
+    -fx-background-color: transparent;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.card:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.1);
+}
+
+.user-name {
+    -fx-font-weight: bolder;
+    -fx-font-size: 15px;
+}
+
+.message-text {
+    -fx-font-size: 12px;
+}
+
+.message-time {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
