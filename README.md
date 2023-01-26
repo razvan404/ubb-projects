@@ -30,7 +30,7 @@
             :triangular_ruler: <a href="semester2/geometry">Geometry</a>
         </li>
         <li>
-            :card_file_box: <a href="semester2/data-structures-and-algorithms">Data Structures and Algorithms</a>
+            :link: <a href="semester2/data-structures-and-algorithms">Data Structures and Algorithms</a>
         </li>
         <li>
             :circus_tent: <a href="semester2/graph-algorithms">Graph Algorithms</a>
@@ -49,19 +49,19 @@
   <li>:ledger: Semester :three:
     <ul>
         <li>
-            :slot_machine: <a href="">Probability Theory and Statistics</a>
+            :slot_machine: <a href="semester3/probability-theory-and-statistics">Probability Theory and Statistics</a>
         </li>
         <li>
-            :abacus: <a href="">Advanced Programming Methods</a>
+            :compass: <a href="semester3/advanced-programming-methods">Advanced Programming Methods</a>
         </li>
         <li>
-            :atom: <a href="">Computer Networks</a>
+            :world_map: <a href="semester3/computer-networks">Computer Networks</a>
         </li>
         <li>
-            :card_index_dividers: <a href="">Databases</a>
+            :card_index_dividers: <a href="semester3/databases">Databases</a>
         </li>
         <li>
-            :knot: <a href="">Functional and Logic Programming</a>
+            :knot: <a href="semester3/functional-and-logic-programming">Functional and Logic Programming</a>
         </li>
     </ul>
   </li>
