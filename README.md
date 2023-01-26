@@ -19,12 +19,6 @@
         <li>
             :copyright: <a href="semester1/c-programming">C Programming</a>
         </li>
-        <li>
-            :speak_no_evil: <a href="semester1/professional-communication">Professional Communication</a>
-        </li>
-        <li>
-            :crystal_ball: <a href="other/dppd/education-psychology">Education Psychology</a>
-        </li>
     </ul>
   </li>
   <li>:orange_book: Semester :two:
@@ -49,9 +43,6 @@
         </li>
         <li>
             :otter: <a href="semester2/advanced-methods-for-solving-algorithmic-problems">Advanced Methods for Solving Algorithmic Problems</a>
-        </li>
-        <li>
-            :beginner: <a href="other/dppd/pedagogy-fundamentals">Pedagogy Fundamentals</a>
         </li>
     </ul>
   </li>
