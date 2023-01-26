@@ -1,0 +1,21 @@
+[2022-03-24 07:36:31] [info] Start Program:
+Path:"C:\Users\Razvan\Desktop\infobb\anu 1\semestru 2\programare orientata obiect\proiecte\Tema 3\Debug\Tema 3.exe"
+Arguments:
+Working directory: "C:\Users\Razvan\Desktop\infobb\anu 1\semestru 2\programare orientata obiect\proiecte\Tema 3\Tema 3\"
+Modules: Selected: C:\Users\Razvan\Desktop\infobb\anu 1\semestru 2\programare orientata obiect\proiecte\Tema 3\Debug\Tema 3.exe Excluded: 
+Sources: Selected: C:\Users\Razvan\Desktop\infobb\anu 1\semestru 2\programare orientata obiect\proiecte\Tema 3\Tema 3 Excluded: 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 0
+Export: Binary C:\Users\Razvan\AppData\Local\Temp\ozuwip5e.pid 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+
+[2022-03-24 07:36:31] [info] Module: C:\Users\Razvan\Desktop\infobb\anu 1\semestru 2\programare orientata obiect\proiecte\Tema 3\Debug\Tema 3.exe is selected because it matches selected pattern: C:\Users\Razvan\Desktop\infobb\anu 1\semestru 2\programare orientata obiect\proiecte\Tema 3\Debug\Tema 3.exe
+[2022-03-24 07:36:31] [info] ----------------------------------------------------
+[2022-03-24 07:36:31] [info] Coverage binary generated in file: C:\Users\Razvan\AppData\Local\Temp\ozuwip5e.pid
+[2022-03-24 07:36:31] [info] ----------------------------------------------------

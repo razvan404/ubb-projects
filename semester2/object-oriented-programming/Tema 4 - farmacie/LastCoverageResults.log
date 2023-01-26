@@ -1,0 +1,21 @@
+[2022-04-16 16:08:29] [info] Start Program:
+Path:"C:\Users\Razvan\Desktop\infobb\semestru 2\programare orientata obiect\proiecte\Tema 4\Debug\Tema 4.exe"
+Arguments:
+Working directory: "C:\Users\Razvan\Desktop\infobb\semestru 2\programare orientata obiect\proiecte\Tema 4\Tema 4\"
+Modules: Selected: C:\Users\Razvan\Desktop\infobb\semestru 2\programare orientata obiect\proiecte\Tema 4\Debug\Tema 4.exe Excluded: 
+Sources: Selected: C:\Users\Razvan\Desktop\infobb\semestru 2\programare orientata obiect\proiecte\Tema 4\Tema 4 Excluded: 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 0
+Export: Binary C:\Users\Razvan\AppData\Local\Temp\q2vflqr4.5xa 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+
+[2022-04-16 16:08:29] [info] Module: C:\Users\Razvan\Desktop\infobb\semestru 2\programare orientata obiect\proiecte\Tema 4\Debug\Tema 4.exe is selected because it matches selected pattern: C:\Users\Razvan\Desktop\infobb\semestru 2\programare orientata obiect\proiecte\Tema 4\Debug\Tema 4.exe
+[2022-04-16 16:08:29] [info] ----------------------------------------------------
+[2022-04-16 16:08:29] [info] Coverage binary generated in file: C:\Users\Razvan\AppData\Local\Temp\q2vflqr4.5xa
+[2022-04-16 16:08:29] [info] ----------------------------------------------------

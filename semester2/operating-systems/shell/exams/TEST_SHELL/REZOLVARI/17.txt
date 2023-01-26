@@ -1,0 +1,28 @@
+
+#!/bin/bash
+
+for p in $@
+do
+        ok=0
+        msg=`find -type d -name $p 2>/dev/null`
+        if [ "$msg" ]
+        then
+
+                rez=`ls -ld $p | cut -d " " -f3`
+                fullname=`cat /etc/passwd | grep "^$rez" | cut -d ":" -f5`
+                dim_path=`find $p -type f -exec du {} + | sort -n | head -1`
+                echo "$fullname $dim_path"
+                ok=1
+        fi
+        msg=`find -type f -name $p 2>/dev/null`
+        if [ "$msg" ]
+        then
+
+                tac $p
+                ok=1
+        fi
+        if [ $ok -eq 0 ]
+        then
+                echo "Nu exista un director sau fisier $p"
+        fi
+done

@@ -1,0 +1,29 @@
+#!/bin/bash
+
+if [ $# -ne 3 ]
+then
+        echo "3 argumente!!!!"
+        exit 0
+fi
+
+dir=$1
+n=$2
+usr=$3
+
+
+find $dir -type f -exec ls -ld {} + | grep "$usr" | awk '{print $9}' >fisiere.txt
+while read line
+do
+
+        dim=`du $line | awk '{print $1}'`
+        if [ $dim -le $n ]
+        then
+                echo "$line: "
+                cat $line | grep -E "\<[aeiou][^. \!?:;]*\>" -oh | sort | uniq -c | sort -n | tail -10 | awk '{print$}'
+                echo ""
+
+        fi
+
+done <fisiere.txt
+
+

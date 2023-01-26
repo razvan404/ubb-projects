@@ -1,0 +1,14 @@
+1. awk 'BEGIN{} {print $0} END{}' angajati.txt
+2. awk 'BEGIN{} {print NR, $0} END{}' angajati.txt
+3. awk 'BEGIN{} {print NF, $0} END{}' angajati.txt
+4. awk 'BEGIN{} {print $1, $2, $4} END{}' angajati.txt
+5. awk 'BEGIN{} {if ($1 ~ /^T/) {print $1, $2}} END{}' angajati.txt
+6. awk 'BEGIN{} {if ($3 ~ /\/3\//) {print $1, $2}} END{}' angajati.txt
+7. awk 'BEGIN{} {if ($5 == 1949) {print $0}} END{}' angajati.txt
+8. awk 'BEGIN{} {if ($5 < 2000) {print $0}} END{}' angajati.txt
+9. awk 'BEGIN{FS = ""} {if (NF > 42) {print NF, $0}} END{}' angajati.txt
+10. awk 'BEGIN{FS = " "; NR_ANG = 0} {NR_ANG++} END{ printf "Numarul total de angajati este: %d\n", NR_ANG}' angajati.txt
+11. awk 'BEGIN{FS = " "; SAL = 0} {SAL += $5} END{ printf "Suma necesara de bani pentru a plati salariile pentru o luna este: %d\n", SAL}' angajati.txt
+15. awk 'BEGIN{FS = " "; print "Nume Prenume Data nasterii Telefon Salariu"} {print $0} END{print "Numarul total de angajati:", NR}' angajati.txt
+sau
+15. awk -f"script.awk" angajati.txt 

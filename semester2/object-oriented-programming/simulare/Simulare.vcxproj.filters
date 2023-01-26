@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Qt Files">
+      <UniqueIdentifier>{4020706f-72d8-4ed6-9344-444304f6d985}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain">
+      <UniqueIdentifier>{d0f5f02c-7894-4094-b286-8c2c97d06a8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Repository">
+      <UniqueIdentifier>{24f23b42-7201-4b2e-92a3-b961fa07ebb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Service">
+      <UniqueIdentifier>{b80d3bb5-a2ef-4208-9a55-51d1fcefc2d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interface">
+      <UniqueIdentifier>{c794a9ba-67c0-4449-9d7a-7b9ebe81f2b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests">
+      <UniqueIdentifier>{99001cee-07b6-471e-ade9-9ff0b3f4c854}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Simulare.cpp">
+      <Filter>Qt Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Tests.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Repository.cpp">
+      <Filter>Repository</Filter>
+    </ClCompile>
+    <ClCompile Include="Service.cpp">
+      <Filter>Service</Filter>
+    </ClCompile>
+    <ClCompile Include="GamingStoreGUI.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="Simulare.h">
+      <Filter>Qt Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="Simulare.ui">
+      <Filter>Qt Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="Simulare.qrc">
+      <Filter>Qt Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Data.txt" />
+    <Text Include="Tests.txt">
+      <Filter>Tests</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Tests.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="Joc.hpp">
+      <Filter>Domain</Filter>
+    </ClInclude>
+    <ClInclude Include="Repository.h">
+      <Filter>Repository</Filter>
+    </ClInclude>
+    <ClInclude Include="Service.h">
+      <Filter>Service</Filter>
+    </ClInclude>
+    <ClInclude Include="GamingStoreGUI.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

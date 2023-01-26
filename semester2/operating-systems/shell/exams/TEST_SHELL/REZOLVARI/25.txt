@@ -1,0 +1,47 @@
+
+
+#!/bin/bash
+
+for p in $@
+do
+
+        msg=`finger $p 2>/dev/null`
+        if [ "$msg" ]
+        then
+                #E USER
+                cat /etc/passwd | grep "^$p" | cut -d ":" -f5
+                log=`who | grep "^$p" | wc -l`
+                if [ $log -ne 0 ]
+                then
+                        #E LOGAT
+                         echo "Nr. procese: `ps -ef | grep "^$p" | wc -l`"
+                else
+                        #NU E LOGAT
+                        echo "Last login: `last | grep "^$p" | head -1 | awk '{print $3 " " $7 " " $10}'`"
+                fi
+        fi
+        msg=`find -type f -name $p 2>/dev/null`
+        if [ "$msg" ]
+        then
+
+                #E FISIER
+                if [ "`ls -ld $p | grep "^-rw"`" ]
+                then
+                        # AM DREPTURI
+                        cat $p | sed -E "s/[^-][0-9]*\.{0,1}[0-9]*\>/ ERROR/g" >rez
+                        cat rez >$p
+                        rm rez
+                fi
+
+        fi
+        msg=`find -type d -name $p 2>/dev/null`
+        if [ "$msg" ]
+        then
+                #E DIRECTOR
+                dr=`ls -ld $p | cut -d " " -f1 | grep "^...." -oh | grep "...$" -oh`
+                echo "Director: $dr"
+
+        fi
+
+done
+

@@ -1,0 +1,50 @@
+
+#!/bin/bash
+
+if [ $# -eq 0 ]
+then
+        echo "Nr. insuficient de argumente!"
+        exit 0
+fi
+
+drepturi=$1
+echo "Permisiuni: $1"
+for p in ${@:2:$#}
+do
+
+        msg=`find -type d -name $p 2>/dev/null`
+        if [ "$msg" ]
+        then
+                #DIRECTORUL EXISTA
+                echo "Director: `pwd $p`/$p"
+                find $p -type f >fisiere.txt
+                while read line
+                do
+                        dr=`ls -ld $line | cut -d " " -f1 | grep "^...." -oh | grep "...$" -oh`
+                        if [ $dr == $drepturi ]
+                        then
+
+                                copie="$line.bak"
+                                touch $copie
+                                rm $copie
+                                cat $line >$copie
+                                chmod 400 $copie
+
+                                echo "   Fisier: `pwd $p`/$line"
+                                echo "   Permisiuni: `ls -ld $line | cut -d " " -f1`"
+                                echo "   Copie: `pwd $p`/$copie"
+                                echo "   Permisiuni: `ls -ld $copie | cut -d " " -f1`"
+                        fi
+
+                done <fisiere.txt
+
+
+        else
+                #NU EXISTA
+                echo "Director: $p"
+                echo "Directorul dat nu exista!"
+        fi
+
+done
+
+

@@ -1,0 +1,2 @@
+cat last.fake | awk 'BEGIN{FS = " "} {if ($2 == "pts/9" && $1 ~ /^t/) {print $1}} END{}' | sort | uniq
+

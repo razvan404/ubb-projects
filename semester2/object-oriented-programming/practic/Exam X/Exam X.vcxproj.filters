@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="ExamX.cpp">
+      <Filter>Qt Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Qt Files">
+      <UniqueIdentifier>{55bb544f-736b-49b4-98dc-1815d51e7407}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Repo">
+      <UniqueIdentifier>{663e6d37-d83d-4354-af2d-d428c0bde70f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Serv">
+      <UniqueIdentifier>{f4729acf-5f19-4780-9601-8bb613796434}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{2756db83-17be-4093-a37d-e88ccc1f49df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain">
+      <UniqueIdentifier>{1355f45f-8eac-480d-9595-690f6742d7be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests">
+      <UniqueIdentifier>{8c4162f3-780a-4991-8e67-bf51ec73a3e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data">
+      <UniqueIdentifier>{5e508b1b-96c3-4fa1-8c1f-e780b73beec6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI">
+      <UniqueIdentifier>{db3dec98-9e17-4ed9-8481-87f83451b6d0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="ExamX.h">
+      <Filter>Qt Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="ExamX.qrc">
+      <Filter>Qt Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="ExamX.ui">
+      <Filter>Qt Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Data.txt">
+      <Filter>Data</Filter>
+    </Text>
+    <Text Include="Tests.txt">
+      <Filter>Tests</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Tests.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="Melodie.h">
+      <Filter>Domain</Filter>
+    </ClInclude>
+    <ClInclude Include="Observer.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="QMyView.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Repo.h">
+      <Filter>Repo</Filter>
+    </ClInclude>
+    <ClInclude Include="Serv.h">
+      <Filter>Serv</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="App.cpp" />
+    <ClCompile Include="MD.cpp">
+      <Filter>Multidictionar</Filter>
+    </ClCompile>
+    <ClCompile Include="IteratorMD.cpp">
+      <Filter>Iterator Multidictionar</Filter>
+    </ClCompile>
+    <ClCompile Include="TestExtins.cpp">
+      <Filter>Teste</Filter>
+    </ClCompile>
+    <ClCompile Include="TestScurt.cpp">
+      <Filter>Teste</Filter>
+    </ClCompile>
+    <ClCompile Include="TestFunctionalitate.cpp">
+      <Filter>Teste</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MD.h">
+      <Filter>Multidictionar</Filter>
+    </ClInclude>
+    <ClInclude Include="IteratorMD.h">
+      <Filter>Iterator Multidictionar</Filter>
+    </ClInclude>
+    <ClInclude Include="TestExtins.h">
+      <Filter>Teste</Filter>
+    </ClInclude>
+    <ClInclude Include="TestScurt.h">
+      <Filter>Teste</Filter>
+    </ClInclude>
+    <ClInclude Include="TestFunctionalitate.h">
+      <Filter>Teste</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Multidictionar">
+      <UniqueIdentifier>{d3a9ee5a-6e06-4c7c-a16a-3b7e344137ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Iterator Multidictionar">
+      <UniqueIdentifier>{e459c4e3-f4cb-4913-9c0e-3a73713167dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Teste">
+      <UniqueIdentifier>{c7d77015-c6ce-41cc-bde2-a1664c532a74}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

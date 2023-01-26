@@ -1,0 +1,2 @@
+cat ps.fake | cut -d" " -f1 | sort | uniq | grep "^r" | sed -E "s@([aeiou])@\1\1@g"
+

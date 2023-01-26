@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Qt Files">
+      <UniqueIdentifier>{03667426-ccd3-4ec6-8927-756d7d4b1f0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphical User Interface">
+      <UniqueIdentifier>{4fe6245a-e6dc-4b6e-b6c5-a69074c64fb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Exceptions">
+      <UniqueIdentifier>{2a476e6c-b535-4d45-9658-2e26706489a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain">
+      <UniqueIdentifier>{ef0a8d6e-8aee-4ba9-bc41-fbd31c6891f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Repository">
+      <UniqueIdentifier>{54859399-ee0d-4fdb-8970-bb13325771bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Service">
+      <UniqueIdentifier>{752f8491-d8a2-4ffc-ac48-bee75a3a0f4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests">
+      <UniqueIdentifier>{3263f2d7-49fe-4e63-b7ef-6f673103e1eb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Pharmacy.cpp">
+      <Filter>Qt Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Validator.cpp">
+      <Filter>Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="Medicine.cpp">
+      <Filter>Domain</Filter>
+    </ClCompile>
+    <ClCompile Include="MedicineRepository.cpp">
+      <Filter>Repository</Filter>
+    </ClCompile>
+    <ClCompile Include="PharmacyService.cpp">
+      <Filter>Service</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="PharmacyGUI.cpp">
+      <Filter>Graphical User Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="RecipeGUI.cpp">
+      <Filter>Graphical User Interface</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="Pharmacy.h">
+      <Filter>Qt Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="Pharmacy.ui">
+      <Filter>Qt Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="Pharmacy.qrc">
+      <Filter>Qt Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Exceptions.hpp">
+      <Filter>Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="Validator.h">
+      <Filter>Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="Medicine.h">
+      <Filter>Domain</Filter>
+    </ClInclude>
+    <ClInclude Include="MedicineRepository.h">
+      <Filter>Repository</Filter>
+    </ClInclude>
+    <ClInclude Include="PharmacyService.h">
+      <Filter>Service</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="Undo.hpp">
+      <Filter>Service</Filter>
+    </ClInclude>
+    <ClInclude Include="PharmacyGUI.h">
+      <Filter>Graphical User Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="RecipeGUI.h">
+      <Filter>Graphical User Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Observer.hpp">
+      <Filter>Graphical User Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="QRecipeList.hpp">
+      <Filter>Graphical User Interface</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,10 @@
+11;Mate;PJ;0
+12;Maimutele galactice;MTT;1
+19;CTI;Tomi;3
+32;Shaorma cu dinti;Societate;4
+3;RoOoO;Masput Krintik;5
+5;VNC;Kut kut kut;7
+13;Castor mare;MIG;7
+29;Spray de ursi;MIG;8
+8;MLD;SCD QNP utK;9
+25;Qt is cute;CIG;10

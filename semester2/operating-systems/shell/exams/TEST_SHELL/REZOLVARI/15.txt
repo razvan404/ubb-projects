@@ -1,0 +1,30 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]
+then
+        echo "Numar insuficient de argumente!"
+        exit 1
+fi
+
+fis=$1
+touch output.txt
+rm output.txt
+
+while read n
+do
+
+        if [ $n -eq 0 ]
+        then
+                exit 0
+        else
+                prop=""
+                for (( i=1; i<=$n; i++ ))
+                do
+                        cuv=`cat <$fis | head -1`
+                        rez=`cat <$fis | sed '1d'`
+                        echo "$rez" >$fis
+                        prop="$prop $cuv"
+                done
+                echo "$prop" >>output.txt
+        fi
+done

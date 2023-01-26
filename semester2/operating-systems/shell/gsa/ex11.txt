@@ -1,0 +1,2 @@
+cat ps.fake | awk 'BEGIN{FS = " "; S = 0} {S += $2} END{AVG = S / NR; print AVG}'
+

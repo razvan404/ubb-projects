@@ -1,0 +1,14 @@
+1. sed -n 'p' angajati.txt
+2. sed -n '5,10p' angajati.txt
+3. sed -n '8,$p' angajati.txt
+4. sed -n '/Tudor/p' angajati.txt
+5. sed -n '/\<Tudor\>/p' angajati.txt
+6. sed '1,3d' angajati.txt
+7. sed '/\<Popescu\>/d' angajati.txt
+8. sed '/\<Ion\>/,/\<Tudor\>/d' angajati.txt
+9. sed '$d' angajati.txt
+10. sed '/^$/d' angajati.txt
+11. sed 's@Olga@**Olga**@' angajati.txt
+12. sed 's@19@18@g' angajati.txt
+13. sed -n 'p' angajati.txt > angajati.bak
+

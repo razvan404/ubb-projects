@@ -1,0 +1,9 @@
+#!/bin/bash
+suma=0
+for p
+do
+        numar=$(find $p -type f -name "*.c" | wc -l)
+        suma=$(($suma+numar))
+done
+echo $suma
+

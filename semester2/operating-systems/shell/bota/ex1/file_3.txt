@@ -1,0 +1,5 @@
+adie0004:x:4:600:Aricescu Dan:/home/scs/gr911/adie0004:/bin/bash
+aeie0005:x:5:600:Aricescu Emil:/home/scs/gr911/aeie0005:/bin/bash
+afie0006:x:6:600:Aricescu Florin:/home/scs/gr911/afie0006:/bin/bash
+agie0007:x:7:600:Aricescu Gabriel:/home/scs/gr911/agie0007:/bin/bash
+ahie0008:x:8:600:Aricescu Horia:/home/scs/gr911/ahie0008:/bin/bash

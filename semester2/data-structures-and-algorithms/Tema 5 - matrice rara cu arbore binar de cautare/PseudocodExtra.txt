@@ -1,0 +1,45 @@
+﻿Reprezentare
+	Triplet:
+		l: Intreg
+		c: Intreg
+		e: TElem
+
+	TAD Matrice:
+		root: Intreg
+		nrLin: Intreg
+		nrCol: Intreg
+		st: TVector de Intregi
+		dr: TVector de Intregi
+		el: TVector de Triplete
+
+	TAD Coada:
+		creeaza(coada output) 
+		adauga(coada input/output, nod input)
+		sterge(coada input/output, nod output)
+
+Subalgoritm sumaDiagonalaSecundara(mat input, j input, suma output):
+	suma ← 0
+	Daca j ≥ mat.nrCol sau j < 0:
+		@afiseaza "Nu exista acea coloana"
+	Altfel
+		creeaza(coada)
+		adauga(coada, mat.root)
+		
+		Cat timp vida(coada) = Fals, executa:
+			sterge(coada, nod)
+			Daca mat.el[nod].c = j:
+				suma ← suma + mat.el[nod].e
+			Sf Daca
+
+			Daca mat.st[nod] ≠ -1:
+				adauga(coada, st[nod])
+			Sf Daca
+
+			Daca mat.dr[nod] ≠ -1:
+				adauga(coada, dr[nod])
+			Sf Daca
+		Sf Cat timp
+	Sf Daca
+Sf Subalgoritm
+
+Complexitate timp: T(n) = n ∈ Θ(n)

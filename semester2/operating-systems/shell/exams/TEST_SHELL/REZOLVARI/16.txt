@@ -1,0 +1,39 @@
+
+#!/bin/bash
+
+if [ $# -eq 0 ]
+then
+        echo "Numar insuficient de argumente"
+        exit 1
+fi
+
+while read n
+do
+        if [ $n == "stop" ]
+        then
+                #Face ceva
+                exit 0
+        else
+                for p in $@
+                do
+                        msj=`find $p 2>/dev/null`
+                        if [ $msj ]
+                        then
+                                #Exista fisierul
+                                dim=`du $p | cut -f1`
+                                if [ $dim -eq 0 ]
+                                then
+                                        echo "Fisierul $p este vid"
+                                else
+                                        #Fisierul nu e vid
+                                        nr=`cat <$p | grep -E "\<$n\>" | wc -l`
+                                        echo "fisierul $p contine $n pe exact $nr linii"
+                                        cat <$p | grep -E "\<$n\>" | tail -1 >>$p
+                                fi
+                        else
+                                echo "Nu exista fisierul $p"
+                        fi
+                done
+        fi
+done
+

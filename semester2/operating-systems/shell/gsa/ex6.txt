@@ -1,0 +1,3 @@
+cat passwd.fake | cut -d: -f3,5 | grep "^23[0-9]:" | cut -d: -f2
+cat passwd.fake | awk 'BEGIN{FS = ":"}{if ($3 ~ /^23[0-9]$/) {print $5}}'
+

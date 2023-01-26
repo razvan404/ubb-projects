@@ -1,0 +1,2 @@
+ ps -ef | grep "^root" | sed -E "s@([^ ]* *){5}([^ ]* *).*@\2@" | sort | uniq
+

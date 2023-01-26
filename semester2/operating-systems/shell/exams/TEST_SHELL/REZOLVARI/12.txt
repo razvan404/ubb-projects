@@ -1,0 +1,45 @@
+#!/bin/bash
+
+total=0
+otr=0
+usr=0
+fls=0
+while read n
+do
+        ok=0
+        if [ $n == "stop" ]
+        then
+                echo "Procent utilizatori: $((usr*100/total))"
+                echo "Procent fisiere: $((fls*100/total))"
+                echo "Procent altele: $((otr*100/total))"
+
+                exit 0
+        fi
+
+        msg=`finger $n 2>/dev/null`
+        if [ "$msg" ]
+        then
+                #E UTILIZATOR
+                ps -ef | grep "^$n" | wc -l
+                ok=1
+                usr=$((usr+1))
+        fi
+        msg=`find -type f -name $n 2>/dev/null`
+        if [ "$msg" ]
+        then
+                #E FISIER
+                cat $n | sed "s/a/\@/g" |  sed "s/e/3/g" |  sed "s/i/\!/g" >rez
+                cat rez >$n
+                ok=1
+                fls=$((fls+1))
+        fi
+        if [ $ok -eq 0 ]
+        then
+
+                echo "Nu e nici user nici fisier"
+                otr=$((otr+1))
+        fi
+        total=$((total+1))
+
+done
+

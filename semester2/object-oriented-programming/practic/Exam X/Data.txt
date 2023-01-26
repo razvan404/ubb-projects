@@ -1,0 +1,9 @@
+11;Mate;PJ;0
+25;Qt is cute;CIG;0
+32;Shaorma cu dinti;Societate;1
+3;RoOoO;Masput Krintik;5
+8;Inca nu;SCD QNP utK;6
+19;CTI;Tomi;7
+5;MLC;Kut kut kut;7
+13;Castor mare;MIG;8
+12;Maimutele intergalactice;MTT;10

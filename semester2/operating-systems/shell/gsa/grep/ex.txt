@@ -1,0 +1,17 @@
+1. cat angajati.txt | grep "Tudor"
+2. cat angajati.txt | cut -d: -f1 | grep "\<Tudor\>"
+3. cat angajati.txt | grep "1942"
+4. cat angajati.txt | grep "1942$" | cut -d: -f1
+5. cat angajati.txt | grep " A[a-z]* [0-9]" | cut -f1 -d":"
+6. cat angajati.txt | cut -d: -f1,3 | grep ":0741" | cut -d: -f1
+7. cat angajati.txt | grep "\/3\/" | cut -f1 -d:
+8. cat angajati.txt  | grep "Floresti:" | cut -f1 -d:
+9. cat angajati.txt  | grep -v "Floresti:" | cut -f1 -d:
+10. cat angajati.txt  | grep -v "Floresti:" | grep -v "Cluj-Napoca:" | cut -f1 -d:
+11. cat angajati.txt | grep --color -E "[A-Z][a-z]{4} [A-Z]"
+12. cat angajati.txt | cut -f2 -d: | cut -f3 -d"," | grep --color "^[FS]" | sort | uniq
+13. cat angajati.txt | cut -f3 -d: | cut -f2 -d" " | grep -E "[0-9]{5}"
+14. cat angajati.txt | cut -f3 -d: | cut -f2 -d" " | grep -E "[0-9]{5}" | head -n1
+15. cat angajati.txt | grep ".*-.*-.*" | cut -f3 -d: | cut -f2 -d" " | grep -E "[0-9]{5}"
+16. cat angajati.txt | cut -f2 -d: | cut -f3 -d, | grep -c "Cluj-Napoca"
+

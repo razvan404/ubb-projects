@@ -1,0 +1,60 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]
+then
+        echo "Numar insuficient de argumente!"
+        exit 1
+fi
+
+touch numere.txt
+rm numere.txt
+
+while read n
+do
+
+        if [ $n -eq 0 ]
+        then
+                #S-AU TERMINAT DE INTRODUS NUMERE
+                exit 0
+        else
+                #LUCRAM CU NUMARUL INTRODUS
+                for p in $@
+                do
+
+                        msg=`find $p 2>/dev/null`
+                        #DACA MSG E NEVID FISIERUL EXISTA, DACA DA EROARE O REDIRECTIONEAZA IN NULL SI E VID
+                        if [ "$msg" ]
+                        then
+                                #EXISTA FISIERUL
+                                dim=`du $p | cut -f1`
+                                if [ $dim -eq 0 ]
+                                then
+                                        #FISIERUL E VID
+                                        echo "Fisierul este vid!"
+                                else
+                                        #FISIERUL NU E VID
+                                        cat <$p | grep -E -o "\<[0-9]{1,}\>" >>numere.txt
+                                        suma=0
+                                        while read line
+                                        do
+                                                suma=$((suma+line))
+                                        done <numere.txt
+                                        rm numere.txt
+                                        echo "$p: $suma"
+
+                                        if [ $suma -le $(($n-1)) ]
+                                        then
+                                                m=$(($n-$suma+1))
+                                                echo $m >>$p
+                                        fi
+                                fi
+                        else
+                                #NU EXISTA FISIERUL
+                                echo "Nu exista fisierul $p!"
+                        fi
+
+                done
+
+        fi
+done
+

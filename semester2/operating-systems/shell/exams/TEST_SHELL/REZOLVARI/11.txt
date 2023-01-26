@@ -1,0 +1,56 @@
+#!/bin/bash
+touch file_reports.info
+rm file_reports.info
+
+touch user_reports.info
+rm user_reports.info
+
+touch error_reports.info
+rm error_reports.info
+
+
+for p in $@
+do
+        ok=0
+        msg=`find -type f -name $p 2>/dev/null`
+        if [ "$msg" ]
+        then
+                #E FISIER
+                pwd $p >>file_reports.info
+                cat $p | grep -E -i -v "ana" >rezultat.txt
+                cat rezultat.txt >$p
+
+                rm rezultat.txt
+                ok=1
+        fi
+        msg=`finger $p 2>/dev/null`
+        if [ "$msg" ]
+        then
+                #E UTILIZATOR
+                nr=`ps -ef | grep -E "^$p" | wc -l`
+                echo "$p:$nr" >>user_reports.info
+                ok=1
+
+        fi
+        if [ $ok -eq 0 ]
+        then
+                #NU E NICI FILE NICI USER
+                echo $p >>error_reports.info
+        fi
+
+done
+
+
+touch file_reports.info
+touch user_reports.info
+touch error_reports.info
+
+nr_fis=`wc -l <file_reports.info`
+nr_usr=`wc -l <user_reports.info`
+nr_err=`wc -l <error_reports.info`
+total=$((nr_fis+nr_usr+nr_err))
+
+echo $((nr_fis*100/total))
+echo $((nr_usr*100/total))
+echo $((nr_err*100/total))
+

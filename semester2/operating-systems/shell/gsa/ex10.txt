@@ -1,0 +1,2 @@
+cat passwd.fake | sed "s@[^r]@@g" | sort | uniq
+

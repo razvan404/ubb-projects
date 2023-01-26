@@ -1,0 +1,85 @@
+BRADUT
+--1) Write a shell script that counts all the C source programs of the hierarchys of all the directories 
+received as an arguments in the command line.
+
+2) Write a shell script that receives as command line arguments a word (w) followed by 2 numbers (m and n) 
+followed by any number of files. Display the files that contain on the n'th line the word w at least m times.
+
+3) Write a shell script that receives as command line arguments a word w followed by any number of files. 
+The script will display the number of apparitions of the word w in each file given as argument.
+
+4) Write a shell script that receives an number n followed by any number of C source files as commnad line arguments. 
+Display on the screen a report that shows the libreries used in each file and the top n used liraries.
+
+5) Write a shell script that receives strings as command line arguments. The first 2 arguments will represent 2 
+file names (f1 and f2). The script will write into f2 all the arguments that are not a valid username from the 
+current system and will write in f2 all the fullnames and the size of there homedirectoryes of the valid useres 
+received as command line argumets sorted by the size of there home directories.
+
+6) Write a shell script that receives a filename followed by any number of strings as command line argumets. 
+The file will contain directory names. The script will take all the strings that are a valide usernames in 
+the current system and create a report that will show all the direcoties found both in the file given as the 
+first argument and in the homedirs of each user received as argument. 
+If you don't have permissions to access a user homedir display a coresponding message at the standard output.
+
+7) Write a shell script that receives a number n a word w followed by any number of files as command line arguments. 
+The script will display the nth line containtng the word w from each file.
+
+8) Write a shell script that receives a number n followed by any number of files as command line arguments. 
+The script will display all the words from each file with the frequency greater the n.
+
+9) Write a shell script that receives as command line arguments files. Display on the screen the frequency 
+of the even numbers in each of the files.
+
+ALTELE
+
+--10) Sa se scrie un script shell care va primi ca argumente oricate nume de fisiere (daca nu s-au generat fisiere va
+afisa "Numar insuficient de argumente" si isi va incheia executia). Scriptul va citi de la tastatura un nr N 
+pana la introducerea lui 0. Pentru fiecare fisier furnizat ca argument daca fisierul exista si are lungime 
+nenula va afisa numele acestuia, va determina toate nr valide din fiecare linie a fisierului, va calcula si va afisa suma
+S a acestora. Daca suma este mai mica decat nr N citit, va genera un numar M=N-S+1 si il 
+va adauga la finalul fisierului.
+
+11)Write a shell script thet will receive as command line arguments a list of possible files or usernames.
+For the arguments that are files, it will store in a file named file_report.info the full path of the file and it
+will delete all the lines containing "ana" (case insensitive). If the argument indicates an existing username
+(you can use /etc/passwd), it will store in a file named user_report.info the username and its number of processes.
+If it was not found a file/user with the value of the argument, the script will store the values in a file named
+error_report.info. At the end, the script will have tot print an info message telling what was the percentage 
+of arguments that were files, usernames or none of them.
+
+--12) Write a shell script that will read inputs from keyboard until the user writes "stop". For each input, 
+the script will have to do the following:
+-if the input is an existing user (you can use /etc/passwd) it will print the number of processes running for
+that given user (command ps)
+-if the input is a file, it will perform a replace operation as follows: a->@, e->3, i->! and it will
+overwrite the content of the file.
+-if none of them, it will print a proper message on the screen
+At the end, the script will print on the screen what percentage were users, files or none of them.
+
+--13) Se dau oricate fisiere in linia de comanda. Se verifica sa fie cel putin un fisier, 
+altfel inceiem executia. Intr-un loop se citesc numere N pana la aparitia lui 0. Pentru fiecare nr N se ia
+fiecare fisier din linia de comanda, se verifica daca exista si daca este nevid (in caz contrar se afiseaza
+un mesaj), altfel se numara toate numerele de exact N cifre din fisier si se afiseaza numele fisierului 
+si acest nr de numere. Daca N impar, sa se creeze un nr de la 1 la N (ex 123 pt N=3) si sa se adauge la finalul
+fisierului.
+
+14)Sa se afle numarul de linii comentate dintr-un fisier c++ / Sa se calculeze media liniilor din fisierele unui 
+director dat ca argument.
+
+--15)In linia de comanda se furnizeaza un fisier ce contine cate un cuvant pe fiecare rand, apoi de la tastatura se
+citesc numere pana la intalnirea lui 0. Pt fiecare nr trebuiau luate N numere din fisier, creata o propozitie cu
+ele, apoi adaugata propozitia pe o linie a unui fisier output.txt (ex pt n1=2 n2=3 n4=1 se iau primele 2 cuv
+din fisier, se creaza o propozitie, se adauga in output.txt, apoi se iau urmatoarele 3 si tot asa).
+
+--16)Sa se scrie un script shell care va primi ca argumente oricate nume de fisiere (daca nu s au furnizat se va afisa
+"Nr insuficient de argumente" si isi va incheia executia) Scriptul va citi de la tastatura cuvinte pana se introduce
+stop. Pt fiecare fisier, daca e de tip txt se va afisa numele acestuia, va det si va afisa nr total de linii in care
+cuvantul citit apare. Daca acest nr e par, va adauga ultima linie care contine cuvantul dat la finalul fisierului. 
+
+--17)Write a shell script that receive a list of arguments in command line. For all arguments that are directories the
+script display the fullname of its owner followed by the path and the size of the smallest file in its hierarchy.
+For all arguments that are files in the current directory the script will display the file with its lines in reverse
+order. All input data must be validated. Afisati mesaje de eroare.
+
+ 
