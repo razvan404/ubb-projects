@@ -68,7 +68,19 @@
   <li>:green_book: Semester :four:
     <ul>
         <li>
-            :card_file_box: <a href="">Database Managment Systems
+            :dna: <a href="semester4/artificial-intelligence">Artificial Intelligence</a>
+        </li>
+        <li>
+            :card_file_box: <a href="semester4/database-managment-systems">Database Managment Systems</a>
+        </li>
+        <li>
+            :zap: <a href="semester4/software-engineering">Software Engineering</a>
+        </li>
+        <li>
+            :art: <a href="semester4/systems-for-design-and-implementation">Systems for Design and Implementation</a>
+        </li>
+        <li>
+            :spider_web: <a href="semester4/web-programming">Web Programming</a>
         </li>
     </ul>
   </li>
