@@ -2,85 +2,88 @@
   <li>:closed_book: Semester :one:
     <ul>
         <li>
-            :microscope: <a href="semester1/algebra">Algebra</a>
+            :microscope: <a href="1st Semester/Algebra">Algebra</a>
         </li>
         <li>
-            :bar_chart: <a href="semester1/analysis">Analysis</a>
+            :bar_chart: <a href="1st Semester/Analysis">Analysis</a>
         </li>
         <li>
-            :waxing_crescent_moon: <a href="semester1/computational-logic">Computational Logic</a>
+            :waxing_crescent_moon: <a href="1st Semester/Computational Logic">Computational Logic</a>
         </li>
         <li>
-            :floppy_disk: <a href="semester1/computer-systems-architecture">Computer Systems Arhitectures</a>
+            :floppy_disk: <a href="1st Semester/Computer Systems Architecture">Computer Systems Arhitectures</a>
         </li>
         <li>
-            :baby_bottle: <a href="semester1/programming-fundamentals">Programming Fundamentals</a>
+            :baby_bottle: <a href="1st Semester/Programming Fundamentals">Programming Fundamentals</a>
         </li>
         <li>
-            :copyright: <a href="semester1/c-programming">C Programming</a>
+            :copyright: <a href="1st Semester/C Programming">C Programming</a>
+        </li>
+	  <li>
+            :speak_no_evil: <a href="1st Semester/Professional Communication">Professional Communication</a>
         </li>
     </ul>
   </li>
   <li>:orange_book: Semester :two:
     <ul>
         <li>
-            :helicopter: <a href="semester2/dynamical-systems">Dynamical Systems</a>
+            :helicopter: <a href="2nd Semester/Dynamical Systems">Dynamical Systems</a>
         </li>
         <li>
-            :triangular_ruler: <a href="semester2/geometry">Geometry</a>
+            :triangular_ruler: <a href="2nd Semester/Geometry">Geometry</a>
         </li>
         <li>
-            :link: <a href="semester2/data-structures-and-algorithms">Data Structures and Algorithms</a>
+            :link: <a href="2nd Semester/Data Structures and Algorithms">Data Structures and Algorithms</a>
         </li>
         <li>
-            :circus_tent: <a href="semester2/graph-algorithms">Graph Algorithms</a>
+            :circus_tent: <a href="2nd Semester/Graph Algorithms">Graph Algorithms</a>
         </li>
         <li>
-            :tractor: <a href="semester2/object-oriented-programming">Object Oriented Programming</a>
+            :tractor: <a href="2nd Semester/Object-Oriented Programming">Object Oriented Programming</a>
         </li>
         <li>
-            :shell: <a href="semester2/operating-systems">Operating Systems</a>
+            :shell: <a href="2nd Semester/Operating Systems">Operating Systems</a>
         </li>
         <li>
-            :otter: <a href="semester2/advanced-methods-for-solving-algorithmic-problems">Advanced Methods for Solving Algorithmic Problems</a>
+            :otter: <a href="2nd Semester/Advanced Methods for Solving Algorithmic Problems">Advanced Methods for Solving Algorithmic Problems</a>
         </li>
     </ul>
   </li>
   <li>:ledger: Semester :three:
     <ul>
         <li>
-            :slot_machine: <a href="semester3/probability-theory-and-statistics">Probability Theory and Statistics</a>
+            :slot_machine: <a href="3rd Semester/Probability Theory and Statistics">Probability Theory and Statistics</a>
         </li>
         <li>
-            :compass: <a href="semester3/advanced-programming-methods">Advanced Programming Methods</a>
+            :compass: <a href="3rd Semester/Advanced Programming Methods">Advanced Programming Methods</a>
         </li>
         <li>
-            :world_map: <a href="semester3/computer-networks">Computer Networks</a>
+            :world_map: <a href="3rd Semester/Computer Networks">Computer Networks</a>
         </li>
         <li>
-            :card_index_dividers: <a href="semester3/databases">Databases</a>
+            :card_index_dividers: <a href="3rd Semester/Databases">Databases</a>
         </li>
         <li>
-            :knot: <a href="semester3/functional-and-logic-programming">Functional and Logic Programming</a>
+            :knot: <a href="3rd Semester/Functional and Logic Programming">Functional and Logic Programming</a>
         </li>
     </ul>
   </li>
   <li>:green_book: Semester :four:
     <ul>
         <li>
-            :dna: <a href="semester4/artificial-intelligence">Artificial Intelligence</a>
+            :dna: <a href="4th Semester/Artificial Intelligence">Artificial Intelligence</a>
         </li>
         <li>
-            :card_file_box: <a href="semester4/database-managment-systems">Database Managment Systems</a>
+            :card_file_box: <a href="4th Semester/Database Managment Systems">Database Managment Systems</a>
         </li>
         <li>
-            :zap: <a href="semester4/software-engineering">Software Engineering</a>
+            :zap: <a href="4th Semester/Software Engineering">Software Engineering</a>
         </li>
         <li>
-            :art: <a href="semester4/systems-for-design-and-implementation">Systems for Design and Implementation</a>
+            :art: <a href="4th Semester/Systems for Design and Implementation">Systems for Design and Implementation</a>
         </li>
         <li>
-            :spider_web: <a href="semester4/web-programming">Web Programming</a>
+            :spider_web: <a href="4th Semester/Web Programming">Web Programming</a>
         </li>
     </ul>
   </li>
