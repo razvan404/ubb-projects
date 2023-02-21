@@ -1,0 +1,83 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13                                      ; 29. Se dau doua siruri de octeti. Sa se parcurga cel mai scurt sir dintre cele doua siruri si sa se construiasca un al treilea sir care va contine cel mai mare element de acelasi rang din cele doua siruri, iar
+    14 00000000 02010307FC02060708-         s1 db 2, 1, 3, 7, -4, 2, 6, 7, 8, 2, 15, -18, 13 ; 02 01 03 07 FC 02 06 07 08 02 0F EE 0D
+    14 00000009 020FEE0D           
+    15                                      len1 equ $-s1                                    ; lungimea lui s1
+    16 0000000D 04010506FA0208F8            s2 db 4, 1, 5, 6, -6, 2, 8, -8                   ; 04 01 05 06 FA 02 08 F8
+    17                                      len2 equ $-s2                                    ; lungimea lui s2
+    18 00000015 00<rept>                    d times len1 + len2 db 0                         ; 04 01 05 07 FC 02 08 07 01 00 01 00 01   
+    19                                  
+    20                                  ; our code starts here
+    21                                  segment code use32 class=code
+    22                                      start:
+    23 00000000 BE00000000                      mov esi, 0                                   ; vom folosi pe esi drept contor
+    24 00000005 BB01000000                      mov ebx, 1                                   ; in ebx vom retine valoarea alternantei cu care se va completa sirul la final
+    25 0000000A BA0D000000                      mov edx, len1
+    26 0000000F 83FA08                          cmp edx, len2                                ; comparam lungimea primului sir cu al doilea
+    27 00000012 7D02                            jge first
+    28 00000014 720C                            jb second
+    29                                          
+    30                                          first:                                       ; daca primul sir este mai mare, eax <- dimensiunea sirului mai scurt (S1) | ecx <- dimensiunea sirului mai lung (S2)
+    31 00000016 B908000000                          mov ecx, len2
+    32 0000001B B80D000000                          mov eax, len1
+    33 00000020 EB0A                                jmp repeta
+    34                                              
+    35                                          second:                                      ; daca al doilea sir este mai mare, eax <- dimensiunea sirului mai scurt (S2) | ecx <- dimensiunea sirului mai lung (S1)
+    36 00000022 B90D000000                          mov ecx, len1
+    37 00000027 B808000000                          mov eax, len2
+    38                                          
+    39                                          repeta:
+    40 0000002C 39C6                                cmp esi, eax                             ; comparam esi cu eax pentru a vedea care dintre cerintele enuntului trebuie facute
+    41 0000002E 7202                                jb task1
+    42 00000030 7D2F                                jge task2
+    43                                          
+    44                                          task1:                                       ; pentru prima cerinta, comparam elementele de pe pozitia esi din ambele siruri, iar pe cel mare il vom atasa sirului d
+    45 00000032 8A96[0D000000]                      mov dl, [s2 + esi]
+    46 00000038 3896[00000000]                      cmp [s1 + esi], dl
+    47 0000003E 7D02                                jge fromS1
+    48 00000040 7C0F                                jl fromS2
+    49                                          
+    50                                          fromS1:                                      ; daca elementul de pe pozitia esi din primul sir este mai mare, il vom atasa sirului d
+    51 00000042 8A96[00000000]                      mov dl, [s1 + esi]
+    52 00000048 8896[15000000]                      mov [d + esi], dl
+    53 0000004E 46                                  inc esi
+    54 0000004F EB2A                                jmp end_repeta
+    55                                          
+    56                                          fromS2:                                      ; daca elementul de pe pozitia esi din al doilea sir este mai mare, il vom atasa sirului d
+    57 00000051 8A96[0D000000]                      mov dl, [s2 + esi]
+    58 00000057 8896[15000000]                      mov [d + esi], dl
+    59 0000005D 46                                  inc esi
+    60 0000005E 47                                  inc edi
+    61 0000005F EB1A                                jmp end_repeta
+    62                                          
+    63                                          task2:                                       ; pentru a doua cerinta, vom atasa sirului d elementul 1 sau 0, in functie de pozitia la care am ajuns
+    64 00000061 899E[15000000]                      mov [d + esi], ebx                       ; atasam pe ebx pe sirul d
+    65 00000067 46                                  inc esi
+    66 00000068 83FB00                              cmp ebx, 0                               ; comparam pe ebx cu 0 sa vedem ce urmeaza sa atasam
+    67 0000006B 7602                                jbe become1
+    68 0000006D 7F07                                jg become0
+    69                                          
+    70                                          become1:                                     ; daca ebx este 0, atunci o sa devina 1
+    71 0000006F BB01000000                          mov ebx, 1
+    72 00000074 EB05                                jmp end_repeta
+    73                                  
+    74                                          become0:                                     ; daca ebx este 1, atunci o sa devina 0
+    75 00000076 BB00000000                          mov ebx, 0        
+    76                                          
+    77                                          end_repeta:
+    78 0000007B E2AF                                loop repeta
+    79                                          
+    80                                      end:
+    81 0000007D 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    82 0000007F FF15[00000000]                  call    [exit]       ; call exit to terminate the program

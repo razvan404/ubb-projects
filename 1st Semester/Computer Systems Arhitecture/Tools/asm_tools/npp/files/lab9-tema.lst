@@ -1,0 +1,96 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13                                      ; 29. Se dau doua siruri de octeti. Sa se parcurga cel mai scurt sir dintre cele doua siruri si sa se construiasca un al treilea sir care va contine cel mai mare element de acelasi rang din cele doua siruri, iar
+    14 00000000 02010307FC02060708-         s1 db 2, 1, 3, 7, -4, 2, 6, 7, 8, 2, 15, -18, 13 ; 02 01 03 07 FC 02 06 07 08 02 0F EE 0D
+    14 00000009 020FEE0D           
+    15                                      len1 equ $-s1                                    ; lungimea lui s1
+    16 0000000D 04010506FA0208F8            s2 db 4, 1, 5, 6, -6, 2, 8, -8                   ; 04 01 05 06 FA 02 08 F8
+    17                                      len2 equ $-s2                                    ; lungimea lui s2
+    18 00000015 00<rept>                    d times len1 + len2 db 0                         ; 04 01 05 07 FC 02 08 07 01 00 01 00 01
+    19 0000002A 02                          doi db 2    
+    20 0000002B 00000000                    mare dd 0
+    21 0000002F 00000000                    mic dd 0
+    22                                  
+    23                                  ; our code starts here
+    24                                  segment code use32 class=code
+    25                                      start:                                    
+    26 00000000 BA0D000000                      mov edx, len1                                
+    27 00000005 83FA08                          cmp edx, len2                                ; verificam lungimea carui sir este mai mare
+    28 00000008 7D02                            jge first
+    29 0000000A 7226                            jb second
+    30                                          
+    31                                          first:                                       ; in mic vom retine lungimea sirului mai scurt, iar in mare lungimea sirului mai lung | in d o sa copiam sirul s2
+    32 0000000C B908000000                          mov ecx, len2
+    33 00000011 890D[2F000000]                      mov [mic], ecx            
+    34 00000017 B80D000000                          mov eax, len1
+    35 0000001C A3[2B000000]                        mov [mare], eax          
+    36                                              
+    37 00000021 BE[0D000000]                        mov esi, s2                              ; in esi vom retine sirul mai scurt, in edi vom retine sirul rezultat, iar in ebp facem o copie a sirului mai lung
+    38 00000026 BF[15000000]                        mov edi, d
+    39 0000002B BD[00000000]                        mov ebp, s1
+    40                                              
+    41 00000030 EB24                                jmp copy_loop
+    42                                              
+    43                                          second:                                      ; in mic vom retine lungimea sirului mai scurt, iar in mare lungimea sirului mai lung | in d o sa copiam sirul s1
+    44 00000032 B90D000000                          mov ecx, len1
+    45 00000037 890D[2F000000]                      mov [mic], ecx
+    46 0000003D B808000000                          mov eax, len2
+    47 00000042 A3[2B000000]                        mov [mare], eax
+    48                                              
+    49 00000047 BE[00000000]                        mov esi, s1                              ; in esi vom retine sirul mai scurt, in edi vom retine sirul rezultat, iar in ebp facem o copie a sirului mai lung
+    50 0000004C BF[15000000]                        mov edi, d
+    51 00000051 BD[0D000000]                        mov ebp, s2
+    52                                              
+    53                                          copy_loop:                                   ; copiam in d sirul mai lung
+    54 00000056 AC                                  lodsb
+    55 00000057 AA                                  stosb   
+    56                                              
+    57                                          end_copy_loop:
+    58 00000058 E2FC                                loop copy_loop
+    59                                    
+    60 0000005A 89EE                            mov esi, ebp                                 ; acum cu ajutorul esi vom parcurge sirul mai lung pe dimensiunea sirului mai scurt
+    61 0000005C BF[15000000]                    mov edi, d
+    62 00000061 8B0D[2F000000]                  mov ecx, [mic]                           
+    63                                          
+    64                                          repeta:                                      ; verificam daca un element din sirul mai lung este mai mare decat un element din sirul mai scurt de pe aceeasi pozitie
+    65 00000067 AC                                  lodsb
+    66 00000068 4E                                  dec esi
+    67 00000069 A6                                  cmpsb                            
+    68 0000006A 7F02                                jg task
+    69 0000006C 7E02                                jle end_repeta
+    70                                              
+    71                                          task:                                        ; daca este, vom pune in d acel element
+    72 0000006E 4F                                  dec edi        
+    73 0000006F AA                                  stosb
+    74                                              
+    75                                          end_repeta:
+    76 00000070 E2F5                                loop repeta
+    77                                                          
+    78 00000072 B001                            mov al, 1    
+    79 00000074 8B0D[2B000000]                  mov ecx, [mare]
+    80 0000007A 2B0D[2F000000]                  sub ecx, [mic]
+    81                                              
+    82                                          repeta2:                                     ; pentru a doua cerinta, vom atasa sirului d elementul 1 sau 0, in functie de pozitia la care am ajuns 
+    83 00000080 AA                                  stosb                         
+    84 00000081 0401                                add al, 1
+    85 00000083 B400                                mov ah, 0
+    86 00000085 F635[2A000000]                      div byte[doi]
+    87 0000008B 88E0                                mov al, ah
+    88                                              
+    89                                          end_repeta2:
+    90 0000008D E2F1                                loop repeta2
+    91                                  
+    92                                          
+    93                                      end:
+    94 0000008F 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    95 00000091 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

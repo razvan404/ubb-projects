@@ -1,0 +1,22 @@
+     1                                  bits 32
+     2                                  global start        
+     3                                  
+     4                                  extern exit, printf
+     5                                  import exit msvcrt.dll
+     6                                  import printf msvcrt.dll
+     7                                  
+     8                                  segment data use32 class=data
+     9 00000000 303132333435363738-         Tabela db '0123456789ABCDEF'
+     9 00000009 39414243444546     
+    10 00000010 256400                      format db '%d', 0
+    11                                  segment code use32 class=code
+    12                                      start:
+    13 00000000 B800000000                      mov EAX, 0
+    14 00000005 B005                            mov AL, 5
+    15 00000007 BB[00000000]                    mov EBX, Tabela
+    16 0000000C 36D7                            SS XLAT
+    17 0000000E 50                              push EAX
+    18 0000000F 68[10000000]                    push format
+    19 00000014 FF15[00000000]                  call [printf]
+    20 0000001A 6A00                            push    dword 0   
+    21 0000001C FF15[00000000]                  call    [exit]     

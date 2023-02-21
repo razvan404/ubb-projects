@@ -1,0 +1,24 @@
+     1                                  bits 32
+     2                                  
+     3                                  global start
+     4                                  
+     5                                  extern exit, printf, scanf, strlen
+     6                                  import exit msvcrt.dll
+     7                                  import printf msvcrt.dll
+     8                                  import scanf msvcrt.dll
+     9                                  import strlen msvcrt.dll
+    10                                  
+    11                                  segment data use32 class=data
+    12 00000000 256400                      format db '%d', 0
+    13                                  segment code use32 class=code
+    14                                      start:
+    15 00000000 B805000000                      mov eax, 5
+    16 00000005 50                              push eax
+    17 00000006 FF3424                          push dword [esp]
+    18 00000009 68[00000000]                    push dword format
+    19 0000000E FF15[00000000]                  call [printf]
+    20                                          
+    21                                      final:
+    22 00000014 6A00                            push dword 0
+    23 00000016 FF15[00000000]                  call [exit]
+    24                                         

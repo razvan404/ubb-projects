@@ -1,0 +1,56 @@
+     1                                  bits 32 
+     2                                  global start        
+     3                                  
+     4                                  extern exit, printf, scanf               
+     5                                  import exit msvcrt.dll    
+     6                                  import printf msvcrt.dll    
+     7                                  import scanf msvcrt.dll     
+     8                                  
+     9                                  segment data use32 class=data
+    10                                      ; 21. Sa se citeasca de la tastatura doua numere a si b de tip word. Sa se afiseze in baza 16 numarul c de tip dword pentru care partea low este suma celor doua numere, iar
+    11                                      ; partea high este diferenta celor doua numere. Exemplu:
+    12                                      ;   a = 574, b = 136
+    13                                      ;   c = 01B602C6h
+    14                                      ;  574 - 136 = 01B6h
+    15                                      ;  574 + 136 = 02C6h
+    16 00000000 0000                        a dw 0
+    17 00000002 0000                        b dw 0
+    18 00000004 00000000                    c dd 0
+    19 00000008 61203D2000                  amesaj db "a = ", 0
+    20 0000000D 62203D2000                  bmesaj db "b = ", 0
+    21 00000012 256400                      readformat db "%d", 0
+    22 00000015 63203D203025586800          printformat db "c = 0%Xh", 0
+    23                                      
+    24                                  segment code use32 class=code
+    25                                      start:
+    26                                          citire_a: ;citim primul numar | printf(amesaj); scanf(readformat, a)
+    27 00000000 68[08000000]                        push dword amesaj
+    28 00000005 FF15[00000000]                      call [printf]
+    29 0000000B 83C404                              add esp, 4
+    30 0000000E 68[00000000]                        push dword a
+    31 00000013 68[12000000]                        push dword readformat
+    32 00000018 FF15[00000000]                      call [scanf]
+    33 0000001E 83C408                              add esp, 4 * 2
+    34                                          citire_b: ;citim al doilea numar | printf(bmesaj); scanf(readformat, b)
+    35 00000021 68[0D000000]                        push dword bmesaj
+    36 00000026 FF15[00000000]                      call [printf]
+    37 0000002C 83C404                              add esp, 4 * 1
+    38 0000002F 68[02000000]                        push dword b
+    39 00000034 68[12000000]                        push dword readformat
+    40 00000039 FF15[00000000]                      call [scanf]
+    41 0000003F 83C408                              add esp, 4 * 2
+    42                                          prelucrare: ;rezolvam cerinta
+    43 00000042 66A1[00000000]                      mov ax, [a]
+    44 00000048 662B05[02000000]                    sub ax, [b]
+    45 0000004F C1C010                              rol eax, 4 * 4
+    46 00000052 66A1[00000000]                      mov ax, [a]
+    47 00000058 660305[02000000]                    add ax, [b]
+    48 0000005F A3[04000000]                        mov [c], eax      
+    49                                          afisare: ;afisam numarul | | printf(printformat, c)
+    50 00000064 FF35[04000000]                      push dword [c]
+    51 0000006A 68[15000000]                        push dword printformat 
+    52 0000006F FF15[00000000]                      call [printf]
+    53 00000075 83C408                              add esp, 4 * 2            
+    54 00000078 6A00                            push dword 0
+    55 0000007A FF15[00000000]                  call [exit]
+    56                                          

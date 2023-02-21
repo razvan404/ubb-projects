@@ -1,0 +1,81 @@
+     1                                  bits 32
+     2                                  
+     3                                  
+     4                                  global start        
+     5                                  
+     6                                  extern exit, fopen, fprintf, fclose, scanf, printf
+     7                                  import exit msvcrt.dll
+     8                                  import fopen msvcrt.dll 
+     9                                  import fprintf msvcrt.dll 
+    10                                  import scanf msvcrt.dll 
+    11                                  import fclose msvcrt.dll 
+    12                                  import printf msvcrt.dll 
+    13                                  
+    14                                  segment data use32 class=data
+    15 00000000 7700                        write db "w", 0
+    16 00000002 6F75747075742E7478-         file db "output.txt", 0
+    16 0000000B 7400               
+    17 0000000D FFFFFFFF                    descriptor dd -1
+    18 00000011 256400                      format db "%d", 0
+    19 00000014 7700                        mod_acces db "w", 0
+    20 00000016 00000000                    N dd 0
+    21 0000001A 00000000                    Curent dd 0
+    22 0000001E 00000000                    P dd 0
+    23 00000022 00000000                    I dd 0
+    24                                  segment code use32 class=code
+    25                                      start:
+    26                                          deschidere_fisier:
+    27 00000000 68[00000000]                        push dword write
+    28 00000005 68[02000000]                        push dword file
+    29 0000000A FF15[00000000]                      call [fopen]
+    30 00000010 83C408                              add ESP, 4 * 2
+    31 00000013 83F800                              cmp EAX, 0
+    32 00000016 7473                                je final
+    33 00000018 A3[0D000000]                        mov [descriptor], EAX
+    34                                              
+    35                                          citireN: ; scanf(format, n)
+    36 0000001D 68[16000000]                        push dword N
+    37 00000022 68[11000000]                        push dword format
+    38 00000027 FF15[00000000]                      call [scanf]
+    39 0000002D 83C408                              add ESP, 4 * 2
+    40                                          
+    41 00000030 8B0D[16000000]                  mov ECX, [N]
+    42 00000036 E353                            jecxz final
+    43                                              
+    44                                          rezolva:
+    45                                              citireCurent:
+    46 00000038 51                                      push ECX
+    47 00000039 68[1A000000]                            push dword Curent
+    48 0000003E 68[11000000]                            push dword format
+    49 00000043 FF15[00000000]                          call [scanf]
+    50 00000049 83C408                                  add ESP, 4 * 2  
+    51 0000004C 59                                      pop ECX
+    52                                              paritate:
+    53 0000004D A1[1A000000]                            mov EAX, [Curent]
+    54 00000052 A901000000                              test EAX, 1
+    55 00000057 7402                                    jz par
+    56 00000059 7508                                    jnz impar
+    57                                              par:
+    58 0000005B 0105[1E000000]                          add dword[P], EAX
+    59 00000061 EB06                                    jmp loop_rezolva
+    60                                              impar:
+    61 00000063 0105[22000000]                          add dword[I], EAX
+    62                                          loop_rezolva:
+    63 00000069 E2CD                                loop rezolva        
+    64                                          
+    65 0000006B A1[1E000000]                    mov EAX, [P]
+    66 00000070 2B05[22000000]                  sub EAX, [I]
+    67                                          
+    68                                          tiparire_fisier: ; fprintf(descriptor, format, var)
+    69 00000076 50                                  push dword EAX
+    70 00000077 68[11000000]                        push dword format
+    71 0000007C FF35[0D000000]                      push dword [descriptor]
+    72 00000082 FF15[00000000]                      call [fprintf]
+    73 00000088 83C40C                              add ESP, 4 * 3
+    74                                          
+    75                                          final:
+    76 0000008B FF35[0D000000]                      push dword [descriptor]
+    77 00000091 FF15[00000000]                      call [fclose]
+    78                                              
+    79 00000097 6A00                                push    dword 0     
+    80 00000099 FF15[00000000]                      call    [exit]     

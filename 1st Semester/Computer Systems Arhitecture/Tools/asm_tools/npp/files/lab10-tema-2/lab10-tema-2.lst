@@ -1,0 +1,90 @@
+     1                                  bits 32
+     2                                  
+     3                                  global start        
+     4                                  
+     5                                  extern exit              
+     6                                  import exit msvcrt.dll   
+     7                                                       
+     8                                  extern exit, fopen, fprintf, fclose, fscanf, printf
+     9                                  import exit msvcrt.dll
+    10                                  import fopen msvcrt.dll 
+    11                                  import fprintf msvcrt.dll 
+    12                                  import fscanf msvcrt.dll 
+    13                                  import fclose msvcrt.dll 
+    14                                  import printf msvcrt.dll 
+    15                                                            
+    16                                                          
+    17                                  segment data use32 class=data
+    18                                      ;21. Se dau un nume de fisier si un text (definite in segmentul de date). Textul contine litere mici, cifre si spatii. Sa se inlocuiasca toate cifrele de pe pozitii impare cu caracterul ‘X’. Sa se creeze un 
+    19 00000000 66696C652E74787400          file db "file.txt", 0
+    20 00000009 7700                        write db "w", 0
+    21 0000000B FFFFFFFF                    descriptor dd -1
+    22 0000000F 617339346372203134-         text db "as94cr 1431123 c53r41", 0 ; dupa compilare, textul va trebui sa fie "as9Xcr X4X1X2X c5XrX1"
+    22 00000018 333131323320633533-
+    22 00000021 72343100           
+    23                                      len equ $-text
+    24 00000025 257300                      format db "%s", 0
+    25 00000028 00000000                    aux dd 0
+    26                                      
+    27                                  segment code use32 class=code
+    28                                      start:
+    29                                      
+    30                                          deschidere: ;eax = fopen(file, write)
+    31 00000000 68[09000000]                        push dword write
+    32 00000005 68[00000000]                        push dword file
+    33 0000000A FF15[00000000]                      call [fopen]
+    34 00000010 83C408                              add esp, 4 * 2
+    35                                          
+    36                                          verificare_deschidere: ; verificam daca s-a deschis fisierul
+    37 00000013 83F800                              cmp eax, 0 
+    38 00000016 745C                                je final
+    39 00000018 A3[0B000000]                        mov [descriptor], eax
+    40                                          
+    41                                          parcurgere_text: ;parcurgem textul de la stanga la dreapta
+    42 0000001D FC                                  cld
+    43 0000001E B916000000                          mov ecx, len
+    44 00000023 BE[0F000000]                        mov esi, text
+    45 00000028 BF00000000                          mov edi, 0
+    46                                          
+    47                                          repeta:
+    48 0000002D AC                                  lodsb ;se salveaza in al caracterul
+    49 0000002E 3C30                                cmp al, '0' ;verificam daca este un numar
+    50 00000030 7D02                                jge numar
+    51 00000032 7C24                                jl end_repeta
+    52                                                  
+    53                                          numar: ;verificam daca este cifra
+    54 00000034 3C39                                cmp al, '9' 
+    55 00000036 7E02                                jle cifra
+    56 00000038 7F1E                                jg end_repeta
+    57                                                      
+    58                                          cifra: ;verificam daca pozitia este impara
+    59 0000003A F7C701000000                        test edi, 1 
+    60 00000040 7502                                jnz pozitie_impara
+    61 00000042 7414                                jz end_repeta
+    62                                                      
+    63                                          pozitie_impara: ;se indeplinesc toate cerintele, deci inlocuim caracterul curent cu X
+    64 00000044 893D[28000000]                      mov [aux], edi
+    65 0000004A 89F7                                mov edi, esi
+    66 0000004C B058                                mov al, 'X'
+    67 0000004E 4F                                  dec edi
+    68 0000004F AA                                  stosb ; [ES:EDI]<-AL si add EDI, 1
+    69 00000050 8B3D[28000000]                      mov edi, [aux]                 
+    70 00000056 EB00                                jmp end_repeta
+    71                                              
+    72                                          end_repeta: ;parcurgem in continuare textul, trebuie incremenetat edi
+    73 00000058 47                                  inc edi
+    74 00000059 E2D2                                loop repeta
+    75                                          
+    76                                          salvare_fisier: ;fprintf(descriptor, format, var)
+    77 0000005B 68[0F000000]                        push dword text
+    78 00000060 68[25000000]                        push dword format
+    79 00000065 FF35[0B000000]                      push dword [descriptor]
+    80 0000006B FF15[00000000]                      call [fprintf]
+    81 00000071 83C40C                              add esp, 4 * 3
+    82                                          
+    83                                          final: ;inchidem fisierul
+    84 00000074 FF35[0B000000]                      push dword [descriptor]
+    85 0000007A FF15[00000000]                      call [fclose]
+    86                                          
+    87 00000080 6A00                            push    dword 0     
+    88 00000082 FF15[00000000]                  call    [exit]      

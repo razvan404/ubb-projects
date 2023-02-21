@@ -1,0 +1,59 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13                                      ; Se dau doua siruri de caractere S1 si S2. Sa se construiasca sirul D prin concatenarea elementelor de pe pozitiile multiplu de 3 din sirul S1 cu elementele sirului S2 in ordine inversa.
+    14 00000000 2B34326138345835            s1 db '+', '4', '2', 'a', '8', '4', 'X', '5'                 ; s1 reprezinta primul sir, il vom contoriza cu ajutorul esi
+    15                                      len1 equ $-s1                                                ; in len1 vom retine lungimea sirului s1
+    16 00000008 613435                      s2 db 'a', '4', '5'                                          ; s2 reprezinta al doilea sir, il vom contoriza cu ajutorul esi
+    17                                      len2 equ $-s2                                                ; in len 2 vom retine lungimea sirului s2
+    18 0000000B 00<rept>                    d times len1 / 3 + len2 + 1 db 0                             ; d reprezinta sirul destinatie, in care vom retine solutia, il vom contoriza cu ajutorul edi
+    19 00000011 03                          trei db 3
+    20                                  
+    21                                  ; our code starts here
+    22                                  segment code use32 class=code
+    23                                      start:
+    24 00000000 BE00000000                      mov esi, 0
+    25 00000005 BF00000000                      mov edi, 0
+    26 0000000A B908000000                      mov ecx, len1                                            ; pregatim parcurgerea primului sir
+    27                                          repeta1:
+    28 0000000F 8A9E[00000000]                      mov bl, [s1 + esi]                                   ; in bl se va retine elementul la care suntem in primul sir
+    29 00000015 B800000000                          mov eax, 0
+    30 0000001A 89F0                                mov eax, esi                                         ; in eax il vom retine pe esi pentru a putea sa verificam daca restul impartirii contorului la 3 este 0
+    31                                             
+    32 0000001C F635[11000000]                      div byte[trei]                                       ; in al, ah va fi retinut catul, respectiv restul la impartirea lui ax cu 3
+    33 00000022 80FC00                              cmp ah, 0                                            ; comparam resutl impartirii lui 3 cu 0 si vom avea 2 cazuri: cand este divizibil si cand nu                         
+    34 00000025 7402                                JE divizibil                
+    35 00000027 750A                                JNE nedivizibil
+    36                                                   
+    37                                                   divizibil:                                      ; daca este divizibil, la d atasam elementul corespunzator pozitiei si incrementam pe edi si pe esi
+    38 00000029 889F[0B000000]                               mov [d + edi], bl
+    39 0000002F 47                                           inc edi
+    40 00000030 46                                           inc esi        
+    41 00000031 EB01                                     JMP end_repeta1
+    42                                                   nedivizibil:                                    ; daca nu este divizibil, doar vom incrementa pe esi
+    43 00000033 46                                           inc esi                                     
+    44                                          end_repeta1:
+    45 00000034 E2D9                            loop repeta1
+    46                                           
+    47 00000036 BE03000000                      mov esi, len2
+    48 0000003B B900000000                      mov ecx, 0                                            ; pregatim parcurgerea celui de-al doilea sir
+    49 00000040 FD                              std
+    50                                          repeta2:                                       
+    51 00000041 8A9E[08000000]                      mov bl, [s2 + esi]                                   ; in bl vom lua al 'ebp'-lea element din al doilea sir, adica al 'esi'-lea element in ordine inversa
+    52 00000047 889F[0B000000]                      mov [d + edi], bl                                    
+    53 0000004D 47                                  inc edi                                                  
+    54 0000004E 4E                                  dec esi                                              ; la d atasam elementul din bl si incremenetam pe edi si pe esi
+    55                                          end_repeta2:
+    56 0000004F E2F0                            loop repeta2 
+    57                                          
+    58 00000051 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    59 00000053 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

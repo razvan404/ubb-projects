@@ -1,0 +1,68 @@
+     1                                  bits 32
+     2                                  
+     3                                  global start        
+     4                                  
+     5                                  extern exit, printf          
+     6                                  import exit msvcrt.dll  
+     7                                  import printf msvcrt.dll  
+     8                                                          
+     9                                  
+    10                                  segment data use32 class=data
+    11                                      ;12. Se dau doua siruri de caractere de lungimi egale. Se cere sa se calculeze si sa se afiseze rezultatele intercalarii literelor, pentru cele doua intercalari posibile (literele din primul sir pe pozitii pare,
+    12 00000000 617335333124785234          S1 db 'as531$xR4'           ;S1 = primul sir
+    13                                      dimS1 equ $-S1              ;dimS1 = dimensiunea primului sir (9)
+    14 00000009 393079357A25406B4B          S2 db '90y5z%@kK'           ;S2 = cel de-al doilea sir
+    15                                      dimS2 equ $-S2              ;dimS2 = dimensiunea celui de-al doilea sir (9)
+    16 00000012 00<rept>                    ANS times dimS1 db 0        ;Ar trebui sa se afiseze: a0551%xk4%s
+    17 0000001B 257300                      print_format db '%s', 0    ;Formatul afisarii rezultatului
+    18                                  
+    19                                  segment code use32 class=code
+    20                                      start:       
+    21                                          operatie:               
+    22 00000000 FC                              cld
+    23 00000001 BF[12000000]                    mov EDI, ANS
+    24 00000006 BE[00000000]                    mov ESI, S1
+    25 0000000B B909000000                      mov ECX, dimS1
+    26 00000010 E350                            jecxz final
+    27                                          
+    28                                          repeta:
+    29 00000012 B809000000                          mov EAX, dimS1
+    30 00000017 29C8                                sub EAX, ECX
+    31 00000019 A901000000                          test EAX, 1
+    32 0000001E 7503                                jnz skip           
+    33 00000020 A4                                  movsb
+    34 00000021 EB02                                jmp end_repeta
+    35                                          skip:
+    36 00000023 46                                  inc ESI
+    37 00000024 47                                  inc EDI
+    38                                          end_repeta:
+    39 00000025 E2EB                                loop repeta
+    40                                          
+    41 00000027 BF[12000000]                    mov EDI, ANS
+    42 0000002C BE[09000000]                    mov ESI, S2
+    43 00000031 B909000000                      mov ECX, dimS2
+    44 00000036 E32A                            jecxz final
+    45                                          
+    46                                          repeta2:
+    47 00000038 B809000000                          mov EAX, dimS2
+    48 0000003D 29C8                                sub EAX, ECX
+    49 0000003F A901000000                          test EAX, 1
+    50 00000044 7403                                jz skip2 
+    51 00000046 A4                                  movsb
+    52 00000047 EB02                                jmp end_repeta2
+    53                                          skip2:
+    54 00000049 46                                  inc ESI
+    55 0000004A 47                                  inc EDI
+    56                                          end_repeta2:
+    57 0000004B E2EB                                loop repeta2
+    58                                          
+    59                                          afisare:                ;printf(print_format, ANS)
+    60 0000004D 68[12000000]                        push dword ANS
+    61 00000052 68[1B000000]                        push dword print_format
+    62 00000057 FF15[00000000]                      call [printf]
+    63 0000005D 83C408                              add ESP, 4 * 2
+    64 00000060 EB00                                jmp final        
+    65                                          
+    66                                          final:
+    67 00000062 6A00                                push    dword 0     
+    68 00000064 FF15[00000000]                      call    [exit]      

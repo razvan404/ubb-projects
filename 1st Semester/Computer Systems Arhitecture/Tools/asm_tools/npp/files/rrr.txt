@@ -1,0 +1,17 @@
+bits 32
+
+
+global start        
+
+extern exit, fopen, fprintf, fclose, scanf, printf
+import exit msvcrt.dll
+import fopen msvcrt.dll 
+import fprintf msvcrt.dll 
+import scanf msvcrt.dll 
+import fclose msvcrt.dll 
+import printf msvcrt.dll 
+
+segment data use32 class=data
+    a db 0
+segment code use32 class=code
+    start:

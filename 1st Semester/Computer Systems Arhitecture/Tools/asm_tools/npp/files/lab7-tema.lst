@@ -1,0 +1,65 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13                                      ; Se dau doua siruri de caractere S1 si S2. Sa se construiasca sirul D prin concatenarea elementelor de pe pozitiile multiplu de 3 din sirul S1 cu elementele sirului S2 in ordine inversa.
+    14 00000000 2B34326138345835            s1 db '+', '4', '2', 'a', '8', '4', 'X', '5' ; esi
+    15                                      len1 equ $-s1
+    16 00000008 613435                      s2 db 'a', '4', '5'     ; esi
+    17                                      len2 equ $-s2
+    18 0000000B 00<rept>                    d times len1 + len2 db 0 ; edi
+    19 00000016 03                          trei db 3
+    20                                  
+    21                                  ; our code starts here
+    22                                  segment code use32 class=code
+    23                                      start:
+    24 00000000 BE00000000                      mov esi, 0
+    25 00000005 BF00000000                      mov edi, 0
+    26 0000000A B90B000000                      mov ecx, len1 + len2
+    27                                          repeta:
+    28 0000000F 83FE08                              cmp esi, len1
+    29 00000012 7C02                                JL task1
+    30 00000014 7D29                                JGE task2
+    31                                                   
+    32                                                  task1:
+    33 00000016 8A9E[00000000]                              mov bl, [s1 + esi]
+    34 0000001C B800000000                                  mov eax, 0
+    35 00000021 89F0                                        mov eax, esi
+    36 00000023 B400                                        mov ah, 0
+    37 00000025 F635[16000000]                              div byte[trei] ; ax / 3 = al (cat) si ah (rest)
+    38 0000002B 80FC00                                      cmp ah, 0
+    39 0000002E 7402                                        JE divizibil
+    40 00000030 750A                                        JNE nedivizibil
+    41                                                    
+    42                                                          divizibil:
+    43 00000032 889F[0B000000]                                      mov [d + edi], bl
+    44 00000038 47                                                  inc edi
+    45 00000039 46                                                  inc esi        
+    46 0000003A EB1E                                                JMP end_repeta
+    47                                                          nedivizibil:
+    48 0000003C 46                                                  inc esi
+    49 0000003D EB1B                                                JMP end_repeta
+    50                                                  task2:
+    51 0000003F BB03000000                                  mov ebx, len2
+    52 00000044 83EB01                                      sub ebx, 1
+    53 00000047 83C308                                      add ebx, len1
+    54 0000004A 29F3                                        sub ebx, esi
+    55                                                   
+    56 0000004C 8A83[08000000]                              mov al, [s2 + ebx]
+    57 00000052 8887[0B000000]                              mov [d + edi], al
+    58 00000058 47                                          inc edi
+    59 00000059 46                                          inc esi
+    60                                                  
+    61                                          end_repeta:
+    62 0000005A E2B3                            loop repeta   
+    63                                          
+    64 0000005C 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    65 0000005E FF15[00000000]                  call    [exit]       ; call exit to terminate the program

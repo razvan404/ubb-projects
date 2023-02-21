@@ -1,0 +1,53 @@
+     1                                  bits 32
+     2                                  global intercalare
+     3                                  
+     4                                  segment code use32 class=code public
+     5                                      intercalare:
+     6                                          ; [ESP +  0] == adresa de revenire
+     7                                          ; [ESP +  4] == offset ANS
+     8                                          ; [ESP +  8] == offset S1
+     9                                          ; [ESP + 12] == offset S2
+    10                                          ; [ESP + 16] == offset dimS1
+    11                                          ; [ESP + 20] == offset dimS2
+    12                                          
+    13 00000000 FC                              cld
+    14 00000001 8B7C2404                        mov EDI, [ESP + 4]
+    15 00000005 8B742408                        mov ESI, [ESP + 8]
+    16 00000009 8B4C2410                        mov ECX, [ESP + 16]
+    17 0000000D E338                            jecxz final
+    18                                          
+    19                                          repeta:
+    20 0000000F 8B442410                            mov EAX, [ESP + 16]
+    21 00000013 29C8                                sub EAX, ECX
+    22 00000015 A901000000                          test EAX, 1
+    23 0000001A 7504                                jnz skip
+    24 0000001C AC                                  lodsb            
+    25 0000001D A4                                  movsb
+    26 0000001E EB02                                jmp end_repeta
+    27                                          skip:
+    28 00000020 46                                  inc ESI
+    29 00000021 47                                  inc EDI
+    30                                          end_repeta:
+    31 00000022 E2EB                                loop repeta
+    32                                          
+    33 00000024 8B7C2404                        mov EDI, [ESP + 4]
+    34 00000028 8B74240C                        mov ESI, [ESP + 12]
+    35 0000002C 8B4C2414                        mov ECX, [ESP + 20]
+    36 00000030 E315                            jecxz final
+    37                                          
+    38                                          repeta2:
+    39 00000032 8B442414                            mov EAX, [ESP + 20]
+    40 00000036 29C8                                sub EAX, ECX
+    41 00000038 A901000000                          test EAX, 1
+    42 0000003D 7404                                jz skip2 
+    43 0000003F AC                                  lodsb
+    44 00000040 A4                                  movsb
+    45 00000041 EB02                                jmp end_repeta2
+    46                                          skip2:
+    47 00000043 46                                  inc ESI
+    48 00000044 47                                  inc EDI
+    49                                          end_repeta2:
+    50 00000045 E2EB                                loop repeta2
+    51                                          
+    52                                          final:
+    53 00000047 C3                                  ret

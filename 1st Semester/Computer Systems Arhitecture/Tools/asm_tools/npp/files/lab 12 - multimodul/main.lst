@@ -1,0 +1,72 @@
+     1                                  bits 32
+     2                                  
+     3                                  global start        
+     4                                  
+     5                                  extern exit, printf          
+     6                                  import exit msvcrt.dll  
+     7                                  import printf msvcrt.dll  
+     8                                  extern intercalare
+     9                                                          
+    10                                  
+    11                                  segment data use32 class=data
+    12                                      ;12. Se dau doua siruri de caractere de lungimi egale. Se cere sa se calculeze si sa se afiseze rezultatele intercalarii literelor, pentru cele doua intercalari posibile (literele din primul sir pe pozitii pare,
+    13 00000000 52657A756C74617475-         print_format db 'Rezultatul intercalarii literelor dintre cele doua siruri date este: "%s"', 0    ; Formatul afisarii rezultatului
+    13 00000009 6C20696E7465726361-
+    13 00000012 6C61726969206C6974-
+    13 0000001B 6572656C6F72206469-
+    13 00000024 6E7472652063656C65-
+    13 0000002D 20646F756120736972-
+    13 00000036 757269206461746520-
+    13 0000003F 657374653A20222573-
+    13 00000048 2200               
+    14 0000004A 43656C6520646F7561-         not_equal_dimensions_error_format db 'Cele doua siruri nu au aceeasi dimensiune sau dimensiunile sunt egale cu 0!', 0
+    14 00000053 20736972757269206E-
+    14 0000005C 752061752061636565-
+    14 00000065 6173692064696D656E-
+    14 0000006E 7369756E6520736175-
+    14 00000077 2064696D656E736975-
+    14 00000080 6E696C652073756E74-
+    14 00000089 206567616C65206375-
+    14 00000092 20302100           
+    15 00000096 494A6C347640204B53-         S1 db 'IJl4v@ KSR!'              ; S1 = primul sir
+    15 0000009F 5221               
+    16                                      dimS1 equ $-S1                   ; dimS1 = dimensiunea primului sir (11)
+    17 000000A1 6B205A6F326521416C-         S2 db 'k Zo2e!AlCp'              ; S2 = cel de-al doilea sir
+    17 000000AA 4370               
+    18                                      dimS2 equ $-S2                   ; dimS2 = dimensiunea celui de-al doilea sir (11)
+    19 000000AC 00<rept>                    ANS times dimS1 db 0             ; In ANS o sa retinem sirul rezultat
+    20                                  
+    21                                  segment code use32 class=code
+    22                                      start:
+    23                                          verificare_eroare:           ; Verificam ca cele doua siruri sa nu aiba aceeasi dimensiune sau sa nu aiba 0, in caz contrar se va afisa pe ecran un mesaj de eroare
+    24 00000000 B80B000000                          mov EAX, dimS1
+    25 00000005 BB0B000000                          mov EBX, dimS2
+    26 0000000A 83F800                              cmp EAX, 0               ; Verificam daca dimensiunea unuia dintre siruri este 0
+    27 0000000D 7434                                je eroare
+    28 0000000F 39D8                                cmp EAX, EBX
+    29 00000011 7530                                jnz eroare               ; Verificam daca sirurile au dimensiuni diferite           
+    30                                              
+    31                                          operatie:                    ; Apelam functia de intercalare din modul: intercalare(ANS, S1, S2, dimS1, dimS2)
+    32 00000013 6A0B                                push dword dimS2
+    33 00000015 6A0B                                push dword dimS1
+    34 00000017 68[A1000000]                        push dword S2
+    35 0000001C 68[96000000]                        push dword S1
+    36 00000021 68[AC000000]                        push dword ANS
+    37 00000026 E8(00000000)                        call intercalare
+    38 0000002B 83C414                              add ESP, 4 * 5
+    39                                          
+    40                                          afisare:                     ; Apelam functia de afisare: printf(print_format, ANS)
+    41 0000002E 68[AC000000]                        push dword ANS
+    42 00000033 68[00000000]                        push dword print_format
+    43 00000038 FF15[00000000]                      call [printf]
+    44 0000003E 83C408                              add ESP, 4 * 2
+    45 00000041 EB0E                                jmp final                ; Ne asiguram ca programul se va incheia, fara sa afiseze vreun fel de eroare
+    46                                              
+    47                                          eroare:                      ; In cazul in care dam de una dintre erorile de mai sus, vom afisa un mesaj
+    48 00000043 68[4A000000]                        push dword not_equal_dimensions_error_format
+    49 00000048 FF15[00000000]                      call [printf]
+    50 0000004E 83C404                              add ESP, 4 * 1
+    51                                           
+    52                                          final:     
+    53 00000051 6A00                                push    dword 0     
+    54 00000053 FF15[00000000]                      call    [exit]      
