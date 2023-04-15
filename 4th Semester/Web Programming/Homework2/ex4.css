@@ -1,0 +1,62 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    float: left;
+}
+
+.sprite {
+    background: url("media/sprite-bar.png");
+    display: block;
+
+    width: 84px;
+    height: 84px;
+}
+
+.facebook {
+    background-position: 0 84px;
+}
+
+.flickr {
+    background-position: -84px 84px;
+}
+
+.basketball {
+    background-position: -168px 84px;
+}
+
+.google {
+    background-position: -252px 84px;
+}
+
+.linkedin {
+    background-position: -336px 84px;
+}
+
+.pinterest {
+    background-position: -420px 84px;
+}
+
+.wifi {
+    background-position: -504px 84px;
+}
+
+.skype {
+    background-position: -588px 84px;
+}
+
+.twitter {
+    background-position: -672px 84px;
+}
+
+.youtube {
+    background-position: -840px 84px;
+}
+
+.facebook:hover, .flickr:hover, .basketball:hover, .google:hover, .linkedin:hover, .pinterest:hover,
+.wifi:hover, .skype:hover, .twitter:hover, .youtube:hover {
+    background-position-y: 0;
+}

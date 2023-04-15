@@ -1,0 +1,24 @@
+#main-view {
+    border: 2px solid black;
+    width: 500px;
+    font-size: 18px;
+    background-color: yellow;
+
+    display: inline-block;
+}
+
+.domnitor {
+    width: 160px;
+    height: 200px;
+}
+
+.container {
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+
+}
+
+.nume-domnior {
+    position: relative;
+}

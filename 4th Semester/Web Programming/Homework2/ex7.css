@@ -1,0 +1,43 @@
+* {
+    margin: 10;
+    padding: 10;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 40px;
+    padding-left: 166px;
+}
+
+ul li {
+    position: relative;
+    min-height: 10px;
+    min-width: 200px;
+    max-width: 50%;
+    border-radius: 50px;
+    border: 2px solid black;
+    padding: 40px;
+    text-align: center;
+}
+
+ul li::before {
+    content: "";
+    position: absolute;
+    width: 156px;
+    height: 166px;
+    top: 0;
+    left: 0;
+    transform: translate(-166px, -30px);
+}
+
+.bob::before {
+    background: url('media/alice-bob.jpg') 0px 0px;
+}
+
+.alice::before {
+    background: url('media/alice-bob.jpg') 166px 0px;
+}

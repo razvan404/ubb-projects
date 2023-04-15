@@ -1,0 +1,21 @@
+#main-view {
+    border: solid;
+    width: 580px;
+    font-size: 18px;
+}
+
+.domnitor {
+    width: 180px;
+    height: 200px;
+    border: 30px cyan solid;
+}
+
+.container {
+    margin: 20px;
+    display: inline-block;
+}
+
+.nume-domnior {
+    text-align: center;
+    transform: translateY(-47px);
+}

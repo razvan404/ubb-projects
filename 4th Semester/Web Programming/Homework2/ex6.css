@@ -1,0 +1,28 @@
+#main-view {
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    grid-row-gap: 16px;
+    grid-column-gap: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.square {
+    background: url("media/square.jpg");
+    background-size: 48px;
+    letter-spacing: 40px;
+    font-size: 18px;
+
+    width: 100%;
+    height: 100%;
+}
+
+#nume, #prenume {
+    width: 980px;
+    height: 40px;
+}
+
+#cnp {
+    width: 652px;
+    height: 40px;
+}

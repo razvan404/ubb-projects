@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.header {
+    background-color: red;
+    height: 100px;
+    width: 100%;
+
+    text-align: center;
+}
+
+.navbar {
+    background-color: yellow;
+    height: 25px;
+    width: 100%;
+
+    text-align: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+}
+
+.main-view {
+    background-color: green;
+
+    min-height: calc(100vh - 225px);
+    width: 100%;
+}
+
+.main-view h1, .main-view p {
+    padding: 2%;
+}
+
+.footer {
+    background-color: pink;
+
+    height: 100px;
+    width: 100%;
+
+    text-align: center;
+}

@@ -1,0 +1,19 @@
+.parent-div {
+    border: 1px solid;
+    display: inline-flex;
+    align-items: center;
+}
+
+.text-div {
+    text-align: center;
+    width: 200px;
+}
+
+.image-div {
+    align-items: center;
+    width: 200px;
+}
+
+.image-div > img {
+    max-width: 200px;
+}
