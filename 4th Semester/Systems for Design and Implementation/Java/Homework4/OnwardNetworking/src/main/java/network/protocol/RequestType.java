@@ -1,0 +1,7 @@
+package network.protocol;
+
+public enum RequestType {
+    LOGIN, LOGOUT, FIND_RIDES, FIND_EMPTY_SEATS_ON_RIDE,
+    FIND_RIDES_BY_DEST_AND_DEPART, FIND_RESERVATIONS_BY_RIDE,
+    CREATE_RESERVATION
+}
