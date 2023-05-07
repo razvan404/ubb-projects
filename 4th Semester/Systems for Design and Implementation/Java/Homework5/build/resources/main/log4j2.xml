@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info">
+    <Appenders>
+        <File name="log" fileName="target/OT-Logs.log" append="true">
+            <PatternLayout pattern="%d{DATE} %-5level %class{36} %L %M - %msg%n"/>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="trace">
+            <AppenderRef ref="log"/>
+        </Root>
+    </Loggers>
+</Configuration>

@@ -1,0 +1,24 @@
+﻿using System;
+
+namespace OnwardTravel.Models
+{
+    [Serializable]
+    public class Ride : Entity<Guid>
+    {
+        public string Destination { get; }
+        public DateTime Departure { get; }
+
+        public Ride(Guid guid, string destination, DateTime departure)
+            : base(guid)
+        {
+            Destination = destination;
+            Departure = departure;
+        }
+
+        public Ride(string destination, DateTime departure)
+        {
+            Destination = destination;
+            Departure = departure;
+        }
+    }
+}
