@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+	<startup>
+		<supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.8" />
+	</startup>
+	<connectionStrings>
+		<clear/>
+		<add name="ContestsDB" providerName="" connectionString="Data Source=RAZVAN\SQLEXPRESS;Initial Catalog=Contests;Integrated Security=True"/>
+	</connectionStrings>
+	<appSettings>
+		<clear/>
+		<add key="ParentTable" value="Coordinators"/>
+		<add key="ParentIDColumn" value="coordinator_id"/>
+		<add key="ChildTable" value="Students"/>
+		<add key="ChildIDColumn" value="student_id"/>
+		<add key="ChildColumns" value="name,school,coordinator_id"/>
+		<add key="ChildParameters" value="@name,@school,@coordinator_id"/>
+		<add key="ChildUpdateQuery" value="UPDATE Students SET name = @name, school = @school WHERE student_id = @student_id"/>
+		<add key="ChildDeleteQuery" value="DELETE FROM Students WHERE student_id = @student_id"/>
+	</appSettings>
+</configuration>
