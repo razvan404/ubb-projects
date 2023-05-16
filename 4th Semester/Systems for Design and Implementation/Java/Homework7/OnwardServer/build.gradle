@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'OnwardTravel'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project (':OnwardModels')
+    implementation project (':OnwardServices')
+    implementation project (':OnwardPersistence')
+    implementation project (':OnwardNetworking')
+    implementation project (':OnwardUtils')
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+application {
+    mainClass = 'server.StartRpcServer'
+}
+
+test {
+    useJUnitPlatform()
+}

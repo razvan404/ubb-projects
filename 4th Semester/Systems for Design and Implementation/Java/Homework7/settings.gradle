@@ -1,0 +1,10 @@
+rootProject.name = "Homework7"
+include 'OnwardClient'
+include 'OnwardModels'
+include 'OnwardNetworking'
+include 'OnwardPersistence'
+include 'OnwardServer'
+include 'OnwardServices'
+include 'OnwardUtils'
+include 'RestServices'
+
