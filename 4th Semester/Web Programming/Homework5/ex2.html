@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Validate Inputs</title>
+    <style>
+        .form-style {
+           display: flex;
+           flex-direction: column;
+           width: 400px;
+           border: 1px solid black;
+        }
+        .invalid-input {
+            border: 1px solid red;
+        }
+    </style>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js" defer></script>
+    <script type="text/javascript" src="ex2.js" defer></script>
+</head>
+<body>
+    <form id="myForm" action="javascript:void(0);">
+        <fieldset class="form-style">
+            <legend>Cool form</legend>
+
+            <label for="nameInput">Name:</label>
+            <input
+                    id="nameInput"
+                    type="text"
+                    placeholder="Enter your name..."
+                    onfocus="setOkStyle(this)" /><br>
+
+            <label for="birthInput">Birth date:</label>
+            <input
+                    id="birthInput"
+                    type="date"
+                    onfocus="setOkStyle(this)" /><br>
+
+            <label for="ageInput">Age:</label>
+            <input
+                    id="ageInput"
+                    type="number"
+                    placeholder="Enter your age..."
+                    onfocus="setOkStyle(this)" /><br>
+
+            <label for="mailInput">Mail:</label>
+            <input
+                    id="mailInput"
+                    type="email"
+                    placeholder="Enter your email..."
+                    onfocus="setOkStyle(this)" /><br>
+
+            <input type="submit" onclick="handleFormButtonPressed()" />
+        </fieldset>
+    </form>
+</body>
+</html>

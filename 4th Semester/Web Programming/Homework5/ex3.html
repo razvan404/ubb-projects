@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Memory Game</title>
+    <style>
+        .card {
+            border: 3px black solid;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            font-size: 50px;
+            font-weight: bold;
+            color: black;
+        }
+        img {
+            width: 100px;
+            height: 100px;
+        }
+        .covered {
+            opacity: 0;
+            border-color: black;
+        }
+        .uncovered {
+            opacity: 1;
+        }
+        .wrong {
+            border-color: red;
+            color: red;
+        }
+        .right {
+            border-color: green;
+            color: green;
+        }
+    </style>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js" defer></script>
+    <script type="text/javascript" src="ex3.js" defer></script>
+</head>
+<body>
+    <table id="game-board">
+        <tr>
+            <td class="card"><p>1</p></td>
+            <td class="card"><p>2</p></td>
+            <td class="card"><p>3</p></td>
+            <td class="card"><p>4</p></td>
+        </tr>
+        <tr>
+            <td class="card"><p>3</p></td>
+            <td class="card"><p>2</p></td>
+            <td class="card"><p>1</p></td>
+            <td class="card"><p>4</p></td>
+        </tr>
+    </table>
+    <br /><br />
+    <table id="game-board-images">
+        <tr>
+            <td class="card"><div><img src="media/profi/Bufnea-Darius.jpg" alt="bufny"></div></td>
+            <td class="card"><div><img src="media/profi/Boian-Rares.jpg" alt="rares" /></div></td>
+            <td class="card"><div><img src="media/profi/Vancea-Alexandru.jpg" alt="vancea" /></div></td>
+            <td class="card"><div><img src="media/profi/Diosan-Laura.jpg" alt="lauras" /></div></td>
+        </tr>
+        <tr>
+            <td class="card"><div><img src="media/profi/Vancea-Alexandru.jpg" alt="vancea" /></div></td>
+            <td class="card"><div><img src="media/profi/Boian-Rares.jpg" alt="rares" /></div></td>
+            <td class="card"><div><img src="media/profi/Bufnea-Darius.jpg" alt="bufny" /></div></td>
+            <td class="card"><div><img src="media/profi/Diosan-Laura.jpg" alt="lauras" /></div></td>
+        </tr>
+    </table>
+</body>
+</html>

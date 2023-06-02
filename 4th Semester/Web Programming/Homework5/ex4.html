@@ -1,0 +1,110 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sortable Tables</title>
+    <style>
+        table {
+            border: 2px solid black;
+        }
+        td, th {
+            border: 2px solid black;
+            text-align: center;
+            font-size: 24px;
+            padding: 12px;
+        }
+    </style>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js" defer></script>
+    <script type="text/javascript" src="ex4.js" defer></script>
+</head>
+<body>
+    <table id="horizontal-table">
+        <tr>
+            <th>Oras</th>
+
+            <td>Arad</td>
+            <td>Brasov</td>
+            <td>Bucuresti</td>
+            <td>Cluj-Napoca</td>
+            <td>Oradea</td>
+            <td>Timisoara</td>
+        </tr>
+        <tr>
+            <th>Locuitori</th>
+
+            <td>160000</td>
+            <td>254000</td>
+            <td>1830000</td>
+            <td>325000</td>
+            <td>196000</td>
+            <td>508000</td>
+        </tr>
+        <tr>
+            <th>Dimensiune (km^2)</th>
+            <td>46.2</td>
+            <td>267.3</td>
+            <td>239.0</td>
+            <td>179.5</td>
+            <td>115.6</td>
+            <td>130.0</td>
+        </tr>
+        <tr>
+            <th>Densitate (locuitori / km^2)</th>
+
+            <td>1461</td>
+            <td>852</td>
+            <td>8260</td>
+            <td>1808</td>
+            <td>1858</td>
+            <td>2556</td>
+        </tr>
+    </table>
+    <br /><br />
+    <table id="vertical-table">
+        <tr>
+            <th>Oras</th>
+            <th>Locuitori</th>
+            <th>Dimensiune (km^2)</th>
+            <th>Densitate (locuitori / km^2)</th>
+        </tr>
+        <tr>
+            <td>Arad</td>
+            <td>160000</td>
+            <td>46.2</td>
+            <td>1461</td>
+        </tr>
+        <tr>
+            <td>Brasov</td>
+            <td>254000</td>
+            <td>267.3</td>
+            <td>852</td>
+        </tr>
+        <tr>
+            <td>Bucuresti</td>
+            <td>1830000</td>
+            <td>239.0</td>
+            <td>8260</td>
+        </tr>
+        <tr>
+            <td>Cluj-Napoca</td>
+            <td>325000</td>
+            <td>179.5</td>
+            <td>1808</td>
+        </tr>
+        <tr>
+            <td>Oradea</td>
+            <td>196000</td>
+            <td>115.6</td>
+            <td>1858</td>
+        </tr>
+        <tr>
+            <td>Timisoara</td>
+            <td>508000</td>
+            <td>130.0</td>
+            <td>2556</td>
+        </tr>
+    </table>
+</body>
+</html>
