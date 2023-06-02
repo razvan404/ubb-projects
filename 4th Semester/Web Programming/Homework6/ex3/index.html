@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Updates</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" defer></script>
+    <script type="application/javascript" src="script.js" defer></script>
+    <style>
+        body {
+            display: flex;
+            height: 220px;
+            gap: 20px;
+        }
+        legend {
+            font-size: 30px;
+            font-weight: bold;
+        }
+        #userIds {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Users</legend>
+        <select id="userIds" multiple size="8"></select>
+    </fieldset>
+    <fieldset>
+        <legend>Update Options</legend>
+        <form id="updateForm" action="#"></form>
+    </fieldset>
+</body>
+</html>

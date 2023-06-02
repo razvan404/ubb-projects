@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+    <script type="application/javascript" src="script.js" defer></script>
+    <style>
+        table, td {
+            border: 1px solid black;
+        }
+        td {
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            text-align: center;
+            font-weight: bold;
+            font-size: 30px;
+        }
+        #helperText {
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            width: 325px;
+        }
+        .content {
+            width: 325px;
+            font-weight: bold;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset class="content">
+        <legend>Tic Tac Toe vs Computer</legend>
+        <p id="helperText"></p>
+        <table id="table">
+            <tr><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td></tr>
+        </table>
+    </fieldset>
+</body>
+</html>

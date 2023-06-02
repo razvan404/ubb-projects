@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebooks</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+    <script type="application/javascript" src="script.js" defer></script>
+    <style>
+        #filterNotebooks select, #filterNotebooks input {
+            font-size: 20px;
+        }
+        #notebooksTable, #notebooksTable td, #notebooksTable th {
+            border: 1px black solid;
+            font-size: 22px;
+        }
+        #clearFilters {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form id="filterNotebooks">
+        <select>
+            <option value="producer">Producer</option>
+            <option value="cpu">CPU</option>
+            <option value="ram">RAM</option>
+            <option value="memory">Memory</option>
+            <option value="gpu">GPU</option>
+        </select>
+        <input type="text" size="44" placeholder="Filtering value" />
+        <input type="submit" value="Filter" />
+    </form>
+    <table id="notebooksTable"></table>
+    <br>
+    <button id="clearFilters">Clear filters</button>
+</body>
+</html>

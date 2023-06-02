@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+    <script type="application/javascript" src="script1.js" defer></script>
+    <style>
+        body {
+            font-size: 30px;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+        }
+        #prev, #next {
+            width: 49%;
+        }
+        table, th, td {
+            border: 1px black solid;
+            font-size: 20px;
+        }
+        table {
+            height: 150px;
+        }
+        fieldset {
+            width: 550px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Users</legend>
+        <table id="usersTable"></table>
+        <div class="buttonsDiv">
+            <button id="prev" disabled>Prev</button>
+            <button id="next" disabled>Next</button>
+        </div>
+    </fieldset>
+</body>
+</html>
