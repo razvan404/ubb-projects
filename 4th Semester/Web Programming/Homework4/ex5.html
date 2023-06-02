@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carousel</title>
+    <style>
+        ol {
+            list-style: none;
+        }
+
+        fieldset {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #image-list li:not(:first-child) {
+            display: none;
+            opacity: 0;
+        }
+
+        #image-list img {
+            border: 2px black solid;
+        }
+
+        #image-list a {
+            display: block;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bolder;
+            text-decoration: none;
+            padding: 20px;
+            transform: translateY(-74px);
+            color: white;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        button {
+            font-size: 30px;
+            padding: 10px 20px;
+        }
+
+        #previous-button {
+            transform: translate(-560px, -420px);
+        }
+        #next-button {
+            transform: translate(600px, -420px);
+        }
+    </style>
+    <script type="text/javascript" src="ex5.js" defer></script>
+</head>
+<body>
+    <fieldset>
+        <legend>Carousel</legend>
+        <ol id="image-list">
+            <li><img src="media/carousel/image1.png" alt="image1"><a href="#">Content 1</a></li>
+            <li><img src="media/carousel/image2.png" alt="image2"><a href="#">Content 2</a></li>
+            <li><img src="media/carousel/image3.png" alt="image3"><a href="#">Content 3</a></li>
+        </ol>
+        <div>
+            <button id="previous-button"><</button>
+            <button id="next-button">></button>
+        </div>
+    </fieldset>
+</body>
+</html>
