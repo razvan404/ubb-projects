@@ -1,0 +1,3 @@
+rootProject.name = "Homework8"
+include 'backend'
+
