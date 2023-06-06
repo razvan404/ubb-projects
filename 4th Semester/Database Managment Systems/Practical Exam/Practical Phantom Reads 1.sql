@@ -1,0 +1,8 @@
+USE S11;
+GO
+
+DELETE FROM Tablouri WHERE Tid = (SELECT MAX(Tid) FROM Tablouri);
+BEGIN TRAN;
+WAITFOR DELAY '00:00:05';
+INSERT INTO Tablouri(Denumire) VALUES ('Tablou Fantoma');
+COMMIT TRAN;

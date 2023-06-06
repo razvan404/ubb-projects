@@ -1,0 +1,11 @@
+C:\Users\Razvan\Desktop\SGBD\Practical Exam\bin\Debug\Laboratory1.exe.config
+C:\Users\Razvan\Desktop\SGBD\Practical Exam\bin\Debug\Laboratory1.exe
+C:\Users\Razvan\Desktop\SGBD\Practical Exam\bin\Debug\Laboratory1.pdb
+C:\Users\Razvan\Desktop\SGBD\Practical Exam\obj\Debug\Practical.csproj.AssemblyReference.cache
+C:\Users\Razvan\Desktop\SGBD\Practical Exam\obj\Debug\Practical.csproj.SuggestedBindingRedirects.cache
+C:\Users\Razvan\Desktop\SGBD\Practical Exam\obj\Debug\Laboratory1.Properties.Resources.resources
+C:\Users\Razvan\Desktop\SGBD\Practical Exam\obj\Debug\Practical.csproj.GenerateResource.cache
+C:\Users\Razvan\Desktop\SGBD\Practical Exam\obj\Debug\Practical.csproj.CoreCompileInputs.cache
+C:\Users\Razvan\Desktop\SGBD\Practical Exam\obj\Debug\Laboratory1.exe
+C:\Users\Razvan\Desktop\SGBD\Practical Exam\obj\Debug\Laboratory1.pdb
+C:\Users\Razvan\Desktop\SGBD\Practical Exam\obj\Debug\Practical.MyGUI.resources
