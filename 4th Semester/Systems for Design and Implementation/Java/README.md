@@ -17,6 +17,10 @@ locuri disponibile. De asemenea numele clientului apare la rezultatul afișat la
 4. <i><b>Logout</b></i>.
 
 <h1><b>Versiuni</b></h1>
+<h2><b>Tema 9</b></h2>
+
+- implementarea notificării utilizatorilor folosind un broker de mesaje (<strong>ActiveMQ</strong>)
+
 <h2><b>Tema 8</b></h2>
 
 - implementarea unui <b>client WEB</b> în <b>React</b> pentru serviciile REST implementate anterior

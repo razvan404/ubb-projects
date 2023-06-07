@@ -1,0 +1,9 @@
+rootProject.name = "Homework9"
+include 'backend'
+include 'client'
+include 'models'
+include 'services'
+include 'models'
+include 'utils'
+include 'networking'
+

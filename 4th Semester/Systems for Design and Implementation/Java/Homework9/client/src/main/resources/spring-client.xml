@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean id="connectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
+        <property name="trustedPackages">
+            <list>
+                <value>chat.model</value>
+                <value>chat.notification</value>
+            </list>
+        </property>
+    </bean>
+
+
+    <bean id="topic" class="org.apache.activemq.command.ActiveMQTopic">
+        <constructor-arg value="RidesTopic"/>
+    </bean>
+
+    <bean id="converter" class="org.springframework.jms.support.converter.MappingJackson2MessageConverter">
+        <property name="targetType" value="TEXT"/>
+        <property name="typeIdPropertyName" value="_notification"/>
+    </bean>
+
+    <bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+        <constructor-arg ref="connectionFactory"/>
+        <property name="defaultDestination" ref="topic"/>
+        <property name="messageConverter" ref="converter"/>
+    </bean>
+
+    <bean id="notificationReceiver" class="ams.NotificationReceiverImpl">
+        <constructor-arg ref="jmsTemplate"/>
+    </bean>
+
+    <util:properties id="clientProps" location="classpath:client.properties"/>
+
+    <bean id="ridesServices" class="networking.protocol.AMSProxy">
+        <constructor-arg index="1" value="#{clientProps.getProperty('chat.server.port')}"/>
+        <constructor-arg index="0" value="#{clientProps.getProperty('chat.server.host')}"/>
+    </bean>
+
+    <bean id="ridesCtrl" class="ams.RidesController">
+        <constructor-arg ref="ridesServices"/>
+        <property name="receiver" ref="notificationReceiver"/>
+    </bean>
+</beans>
