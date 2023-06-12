@@ -1,0 +1,94 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.unselectable {
+  user-select: none;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.occupy-space {
+    flex: 1;
+}
+
+.gap-20 {
+    gap: 20px;
+}
+
+/* Login Page */
+
+.loginRoot {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loginPaper {
+  	padding: 32px;
+	width: 360px;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.loginSubmitButton {
+  margin-top: 16px;
+}
+
+/* Main Page */
+
+.mainRoot {
+  display: flex;
+}
+
+.mainAppBar {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+.mainDrawer {
+  width: 240px;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.mainDrawerPaper {
+  width: 240px;
+}
+
+.mainDrawerContainer {
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.mainContent {
+  flex-grow: 1;
+  padding: 50px 100px;
+}
+
+.mainBottomButton {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}

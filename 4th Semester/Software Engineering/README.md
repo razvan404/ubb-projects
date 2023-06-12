@@ -1,0 +1,11 @@
+# <strong>URMARIRE BUG-URI</strong>
+
+O firma producatoare de software pune la dispozitia programatorilor si verificatorilor sai un sistem prin care acestia pot sa comunice electronic. Astfel, fiecare dintre angajatii mentionati are la dispoziție un terminal prin care: 
+- <em>verificatorul</em>  poate  înregistra  un  bug,  dându-i  o  denumire  si  o  descriere;  imediat  dupa înregistrarea bug-ului, toti  programatorii vad  lista bug-urilor  actualizata cu obiectul nou introdus;
+- <em>programatorul</em> vizualizeaza lista bug-urilor; de asemenea, programatorul poate selecta un bug din lista si poate declansa un buton prin care declara ca bug-ul a fost eliminat, caz în care bug-ul este scos din lista tuturor programatorilor.
+
+Se cere realizarea unei aplicatii (desktop sau web) cu arhitectura stratificata (presentation, business logic, data access), conform cerintelor problemei asignate/alese. Limbajul de implementare va fi un limbaj orientat obiect, la alegere dintre cele deja studiate. Interfata cu utilizatorul se recomanda a fi realizata cu un instrument vizual (ex. NetBeans, WindowBuilder, Visual Studio). 
+
+Se cere aplicarea sablonului arhitectural MVC (Model-View-Controller). Aplicatia trebuie sa exploateze o baza de date relationala prin stratul de data access. Se impune ca interactiunea cu baza de date sa se faca prin intermediul  unei  biblioteci  ORM  (Object-Relational  Mapping,  ex.  Hibernate/EclipseLink, NHibernate/Entity Framework). Proiectul trebuie sa ofere functii de tip CRUD (Create-Read-Update-Delete) pentru cel putin o entitate din domeniul problemei (clasa din Model). 
+
+Obligatoriu, toate modelele UML ale aplicației (functional, structurale, comportamentale) vor fi construite cu ajutorul unui instrument CASE (Computer Aided Software Engineering, ex. StarUML) și vor fi incluse în cadrul aceluiasi proiect, structurat adecvat, conform etapelor ciclului de viața al unui sistem soft (pentru a putea urmări aspecte legate de sincronizare). Implementarea claselor din pachetul Model poate fi realizata partial folosind o operatie de tip forward/direct engineering, aplicata cu ajutorul instrumentului CASE folosit. 
