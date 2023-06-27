@@ -74,7 +74,7 @@
             :dna: <a href="4th Semester/Artificial Intelligence">Artificial Intelligence</a>
         </li>
         <li>
-            :card_file_box: <a href="4th Semester/Database Managment Systems">Database Managment Systems</a>
+            :card_file_box: <a href="4th Semester/Database Management Systems">Database Management Systems</a>
         </li>
         <li>
             :zap: <a href="4th Semester/Software Engineering">Software Engineering</a>
