@@ -11,7 +11,7 @@
             :waxing_crescent_moon: <a href="1st Semester/Computational Logic">Computational Logic</a>
         </li>
         <li>
-            :floppy_disk: <a href="1st Semester/Computer Systems Architecture">Computer Systems Arhitectures</a>
+            :floppy_disk: <a href="1st Semester/Computer Systems Architecture">Computer Systems Architecture</a>
         </li>
         <li>
             :baby_bottle: <a href="1st Semester/Programming Fundamentals">Programming Fundamentals</a>
