@@ -1,0 +1,3 @@
+rootProject.name = 'Template'
+include 'backend'
+
