@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "untqLIdx5VKFmokyxmVVW9XFRhypyat6uvhLGB/RGAuDbw4AFZHwUpY3v15XQ0tEBscHvHnWZtfgZPL5tNAPsQ==",
+  "success": true,
+  "projectFilePath": "C:\\Git\\ubb-projects\\5th Semester\\Virtual Reality\\Project1\\RayTracer\\RayTracer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Razvan\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+    "C:\\Users\\Razvan\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
