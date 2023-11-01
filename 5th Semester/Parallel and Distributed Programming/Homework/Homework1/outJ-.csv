@@ -1,0 +1,96 @@
+Tip Matrice,Nr threads,Timp executie
+,input10_10_3.txt sequential,0.23415
+,input10_10_3.txt lines batch 4,3.58304
+,input10_10_3.txt columns batch 4,3.69763
+,input10_10_3.txt linearization batch 4,4.39763
+,input10_10_3.txt lines cyclic 4,3.53202
+,input10_10_3.txt columns cyclic 4,3.72306
+,input10_10_3.txt linearization cyclic 4,3.85835
+,input10_10000_5.txt sequential,50.92631
+,input10_10000_5.txt lines batch 2,58.82203
+,input10_10000_5.txt lines batch 4,64.13767
+,input10_10000_5.txt lines batch 8,67.39278
+,input10_10000_5.txt lines batch 16,71.12815
+,input10_10000_5.txt lines cyclic 2,66.29764
+,input10_10000_5.txt lines cyclic 4,69.18791
+,input10_10000_5.txt lines cyclic 8,74.52551
+,input10_10000_5.txt lines cyclic 16,74.69774
+,input10_10000_5.txt columns batch 2,60.9933
+,input10_10000_5.txt columns batch 4,56.89766
+,input10_10000_5.txt columns batch 8,65.46288
+,input10_10000_5.txt columns batch 16,90.58032
+,input10_10000_5.txt columns cyclic 2,54.65485
+,input10_10000_5.txt columns cyclic 4,56.76268
+,input10_10000_5.txt columns cyclic 8,58.29451
+,input10_10000_5.txt columns cyclic 16,97.20276
+,input10_10000_5.txt linearization batch 2,62.56913
+,input10_10000_5.txt linearization batch 4,48.07492
+,input10_10000_5.txt linearization batch 8,44.8279
+,input10_10000_5.txt linearization batch 16,71.5996
+,input10_10000_5.txt linearization cyclic 2,51.66897
+,input10_10000_5.txt linearization cyclic 4,59.09501
+,input10_10000_5.txt linearization cyclic 8,70.36774
+,input10_10000_5.txt linearization cyclic 16,90.28678
+,input10000_10_5.txt sequential,20.62015
+,input10000_10_5.txt lines batch 2,35.25913
+,input10000_10_5.txt lines batch 4,31.05213
+,input10000_10_5.txt lines batch 8,36.45505
+,input10000_10_5.txt lines batch 16,40.95883
+,input10000_10_5.txt lines cyclic 2,32.85674
+,input10000_10_5.txt lines cyclic 4,37.84178
+,input10000_10_5.txt lines cyclic 8,43.70375
+,input10000_10_5.txt lines cyclic 16,45.85408
+,input10000_10_5.txt columns batch 2,77.73998
+,input10000_10_5.txt columns batch 4,54.07105
+,input10000_10_5.txt columns batch 8,61.26326
+,input10000_10_5.txt columns batch 16,63.39962
+,input10000_10_5.txt columns cyclic 2,73.64938
+,input10000_10_5.txt columns cyclic 4,68.89919
+,input10000_10_5.txt columns cyclic 8,50.99933
+,input10000_10_5.txt columns cyclic 16,51.69331
+,input10000_10_5.txt linearization batch 2,30.57736
+,input10000_10_5.txt linearization batch 4,35.27326
+,input10000_10_5.txt linearization batch 8,39.24612
+,input10000_10_5.txt linearization batch 16,34.56968
+,input10000_10_5.txt linearization cyclic 2,34.48712
+,input10000_10_5.txt linearization cyclic 4,42.39018
+,input10000_10_5.txt linearization cyclic 8,54.73176
+,input10000_10_5.txt linearization cyclic 16,65.95068
+,input1000_1000_5.txt sequential,70.41027
+,input1000_1000_5.txt lines batch 2,79.12809
+,input1000_1000_5.txt lines batch 4,65.14881
+,input1000_1000_5.txt lines batch 8,113.79845
+,input1000_1000_5.txt lines batch 16,130.64853
+,input1000_1000_5.txt lines cyclic 2,79.26721
+,input1000_1000_5.txt lines cyclic 4,68.19541
+,input1000_1000_5.txt lines cyclic 8,111.76545
+,input1000_1000_5.txt lines cyclic 16,157.35632
+,input1000_1000_5.txt columns batch 2,90.91975
+,input1000_1000_5.txt columns batch 4,87.06887
+,input1000_1000_5.txt columns batch 8,115.14193
+,input1000_1000_5.txt columns batch 16,123.42222
+,input1000_1000_5.txt columns cyclic 2,85.74128
+,input1000_1000_5.txt columns cyclic 4,79.1811
+,input1000_1000_5.txt columns cyclic 8,120.44972
+,input1000_1000_5.txt columns cyclic 16,153.39926
+,input1000_1000_5.txt linearization batch 2,74.697
+,input1000_1000_5.txt linearization batch 4,69.13448
+,input1000_1000_5.txt linearization batch 8,88.06956
+,input1000_1000_5.txt linearization batch 16,161.66285
+,input1000_1000_5.txt linearization cyclic 2,63.99735
+,input1000_1000_5.txt linearization cyclic 4,57.52431
+,input1000_1000_5.txt linearization cyclic 8,97.66235
+,input1000_1000_5.txt linearization cyclic 16,201.49973
+,input10_10_3.txt block 4,2.60737
+,input1000_1000_5.txt block 2,46.54962
+,input1000_1000_5.txt block 4,47.12701
+,input1000_1000_5.txt block 8,67.18632
+,input1000_1000_5.txt block 16,95.00889
+,input10_10000_5.txt block 2,41.26479
+,input10_10000_5.txt block 4,36.22742
+,input10_10000_5.txt block 8,32.85131
+,input10_10000_5.txt block 16,42.85173
+,input10000_10_5.txt block 2,21.86757
+,input10000_10_5.txt block 4,22.63362
+,input10000_10_5.txt block 8,25.04209
+,input10000_10_5.txt block 16,25.17124
