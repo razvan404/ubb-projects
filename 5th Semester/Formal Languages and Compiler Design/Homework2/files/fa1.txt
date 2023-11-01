@@ -1,0 +1,5 @@
+States: A,B,C,D,E
+Alphabet: 0,1,.
+Transitions: A,1,B A,0,C B,0,1,B B,.,D C,.,D D,0,1,E E,0,1,E
+Start state: A
+Accept states: B,C,E

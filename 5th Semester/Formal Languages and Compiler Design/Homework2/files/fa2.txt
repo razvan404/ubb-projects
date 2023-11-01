@@ -1,0 +1,5 @@
+States: A,B,C
+Alphabet: a
+Transitions: A,a,B B,a,C C,a,A
+Start state: A
+Accept states: A
