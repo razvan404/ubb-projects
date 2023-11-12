@@ -46,10 +46,11 @@ namespace rt
         {
             // TODO: ADD CODE HERE
             var line = new Line(light.Position, point);
-            double segmentLength = (point - light.Position).Length() - 1;
+            var eps = 1e-10;
+            double segmentLength = (point - light.Position).Length() - eps;
             foreach (var geometry in geometries)
             {
-                Intersection inter = geometry.GetIntersection(line, 1, segmentLength);
+                Intersection inter = geometry.GetIntersection(line, eps, segmentLength);
                 if (inter.Visible)
                 {
                     return false;
@@ -108,7 +109,10 @@ namespace rt
                         globalColor += Color;
                     }
                     image.SetPixel(i, j, globalColor);
-                    Thread.Yield();
+                }
+                if ((i + 1) % 100 == 0)
+                {
+                    Console.WriteLine($"Line {i + 1}/{width} done!");
                 }
             }
 

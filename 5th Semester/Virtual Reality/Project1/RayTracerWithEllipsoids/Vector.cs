@@ -63,11 +63,6 @@ namespace rt
             return new Vector(v.X / k, v.Y / k, v.Z / k);
         }
 
-        public static Vector operator /(Vector v, Vector b)
-        {
-            return new Vector(v.X / b.X, v.Y / b.Y, v.Z / b.Z);
-        }
-
         public void Multiply(Vector k)
         {
             X *= k.X;

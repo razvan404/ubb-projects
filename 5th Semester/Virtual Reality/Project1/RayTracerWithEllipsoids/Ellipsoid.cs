@@ -7,6 +7,7 @@ namespace rt
     {
         private Vector Center { get; }
         private Vector SemiAxesLength { get; }
+        private Vector SemiAxesLengthSquared { get; }
         private double Radius { get; }
         
         
@@ -14,6 +15,7 @@ namespace rt
         {
             Center = center;
             SemiAxesLength = semiAxesLength;
+            SemiAxesLengthSquared = new(SemiAxesLength.X * SemiAxesLength.X, SemiAxesLength.Y * SemiAxesLength.Y, SemiAxesLength.Z * SemiAxesLength.Z);
             Radius = radius;
         }
 
@@ -21,14 +23,25 @@ namespace rt
         {
             Center = center;
             SemiAxesLength = semiAxesLength;
+            SemiAxesLengthSquared = new(SemiAxesLength.X * SemiAxesLength.X, SemiAxesLength.Y * SemiAxesLength.Y, SemiAxesLength.Z * SemiAxesLength.Z);
             Radius = radius;
+        }
+
+        private Vector linify(Vector v)
+        {
+            return new(v.X / SemiAxesLength.X, v.Y / SemiAxesLength.Y, v.Z / SemiAxesLength.Z);
+        }
+
+        private Vector normalLinify(Vector v)
+        {
+            return new(v.X / SemiAxesLengthSquared.X, v.Y / SemiAxesLengthSquared.Y, v.Z / SemiAxesLengthSquared.Z);
         }
 
         public override Intersection GetIntersection(Line line, double minDist, double maxDist)
         {
             // TODO: ADD CODE HERE
-            var dtOverE = line.Dx / SemiAxesLength;
-            var x0cOverE = (line.X0 - Center) / SemiAxesLength;
+            var dtOverE = linify(line.Dx);
+            var x0cOverE = linify(line.X0 - Center);
             double a = dtOverE.Length2();
             double b = dtOverE * x0cOverE * 2;
             double c = x0cOverE.Length2() - Radius * Radius;
@@ -44,7 +57,7 @@ namespace rt
                 t = -b / (2 * a);
                 visible = t >= minDist && t <= maxDist;
                 var position = line.CoordinateToPosition(t);
-                normal = ((position - Center) * 2 / SemiAxesLength).Normalize();
+                normal = normalLinify((position - Center) * 2).Normalize();
             }
             else if (delta > 0)
             {
@@ -54,7 +67,7 @@ namespace rt
                 visible = (t1 >= minDist && t1 <= maxDist) || (t2 >= minDist && t2 <= maxDist);
                 t = t1 >= minDist ? t1 : t2; // closest point
                 var position = line.CoordinateToPosition(t);
-                normal = ((position - Center) * 2 / SemiAxesLength).Normalize();
+                normal = normalLinify((position - Center) * 2).Normalize();
             }
             return new(valid, visible, this, line, t, normal);
         }
