@@ -1,8 +1,0 @@
-C:\Users\Razvan\Desktop\SGBD\Homework4\Concurrent Transactions C#\bin\Debug\Concurrent Transactions C#.exe.config
-C:\Users\Razvan\Desktop\SGBD\Homework4\Concurrent Transactions C#\bin\Debug\Concurrent Transactions C#.exe
-C:\Users\Razvan\Desktop\SGBD\Homework4\Concurrent Transactions C#\bin\Debug\Concurrent Transactions C#.pdb
-C:\Users\Razvan\Desktop\SGBD\Homework4\Concurrent Transactions C#\obj\Debug\Concurrent Transactions C#.csproj.AssemblyReference.cache
-C:\Users\Razvan\Desktop\SGBD\Homework4\Concurrent Transactions C#\obj\Debug\Concurrent Transactions C#.csproj.SuggestedBindingRedirects.cache
-C:\Users\Razvan\Desktop\SGBD\Homework4\Concurrent Transactions C#\obj\Debug\Concurrent Transactions C#.csproj.CoreCompileInputs.cache
-C:\Users\Razvan\Desktop\SGBD\Homework4\Concurrent Transactions C#\obj\Debug\Concurrent Transactions C#.exe
-C:\Users\Razvan\Desktop\SGBD\Homework4\Concurrent Transactions C#\obj\Debug\Concurrent Transactions C#.pdb

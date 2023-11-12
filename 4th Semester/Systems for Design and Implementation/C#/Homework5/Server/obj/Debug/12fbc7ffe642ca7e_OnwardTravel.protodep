@@ -1,2 +1,0 @@
-obj\Debug\Protos/OnwardTravel.cs \
-obj\Debug\Protos/OnwardTravelGrpc.cs: Protos/OnwardTravel.proto
