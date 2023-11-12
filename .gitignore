@@ -1,1 +1,49 @@
-**/.DS_Store
+# Visual Studio Code
+.vscode/
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.sln.docstates
+*.ipch/
+*.obj/
+*.pdb
+*.cache
+*.dll
+
+# JetBrains
+.idea/
+
+# C#
+[Dd]ebug/
+[Rr]elease/
+x64/
+[Bb]in/
+
+# Java
+target/
+*.class
+
+# C/C++
+*.out
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# JavaScript
+node_modules/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
