@@ -1,7 +1,4 @@
-﻿using System;
-using System.Runtime.InteropServices;
-
-namespace rt
+﻿namespace rt
 {
     class RayTracer
     {
@@ -109,10 +106,6 @@ namespace rt
                         globalColor += Color;
                     }
                     image.SetPixel(i, j, globalColor);
-                }
-                if ((i + 1) % 100 == 0)
-                {
-                    Console.WriteLine($"Line {i + 1}/{width} done!");
                 }
             }
 

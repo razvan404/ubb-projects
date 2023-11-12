@@ -1,11 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Em3O8tG+M/A6nChOPZznjDqOsMFbBxC/HZgrDNmjjmIkTrQVzMAKZUmArps/NByo/J5t38v2OiuAzlVhW+l47w==",
+  "dgSpecHash": "Kyg2GFJwQJYfJ0CRZ/8nFgHhHnRrZHVr6cqT92rMLoqMc9qyfiaFd5IiMmU7W3UZ/JbBtnZ80rggB2CCKBrK7g==",
   "success": true,
-  "projectFilePath": "C:\\Git\\ubb-projects\\5th Semester\\Virtual Reality\\Project1\\RayTracerWithEllipsoids\\RayTracerWithEllipsoids.csproj",
+  "projectFilePath": "/Users/Razvan/Uni/local/vr/Project1/RayTracerWithEllipsoids/RayTracerWithEllipsoids.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Razvan\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
-    "C:\\Users\\Razvan\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512"
+    "/Users/Razvan/.nuget/packages/sixlabors.imagesharp/3.0.2/sixlabors.imagesharp.3.0.2.nupkg.sha512"
   ],
   "logs": []
 }

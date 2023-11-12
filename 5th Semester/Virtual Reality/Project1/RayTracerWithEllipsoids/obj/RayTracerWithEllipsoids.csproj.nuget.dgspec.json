@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Git\\ubb-projects\\5th Semester\\Virtual Reality\\Project1\\RayTracerWithEllipsoids\\RayTracerWithEllipsoids.csproj": {}
+    "/Users/Razvan/Uni/local/vr/Project1/RayTracerWithEllipsoids/RayTracerWithEllipsoids.csproj": {}
   },
   "projects": {
-    "C:\\Git\\ubb-projects\\5th Semester\\Virtual Reality\\Project1\\RayTracerWithEllipsoids\\RayTracerWithEllipsoids.csproj": {
+    "/Users/Razvan/Uni/local/vr/Project1/RayTracerWithEllipsoids/RayTracerWithEllipsoids.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Git\\ubb-projects\\5th Semester\\Virtual Reality\\Project1\\RayTracerWithEllipsoids\\RayTracerWithEllipsoids.csproj",
+        "projectUniqueName": "/Users/Razvan/Uni/local/vr/Project1/RayTracerWithEllipsoids/RayTracerWithEllipsoids.csproj",
         "projectName": "RayTracerWithEllipsoids",
-        "projectPath": "C:\\Git\\ubb-projects\\5th Semester\\Virtual Reality\\Project1\\RayTracerWithEllipsoids\\RayTracerWithEllipsoids.csproj",
-        "packagesPath": "C:\\Users\\Razvan\\.nuget\\packages\\",
-        "outputPath": "C:\\Git\\ubb-projects\\5th Semester\\Virtual Reality\\Project1\\RayTracerWithEllipsoids\\obj\\",
+        "projectPath": "/Users/Razvan/Uni/local/vr/Project1/RayTracerWithEllipsoids/RayTracerWithEllipsoids.csproj",
+        "packagesPath": "/Users/Razvan/.nuget/packages/",
+        "outputPath": "/Users/Razvan/Uni/local/vr/Project1/RayTracerWithEllipsoids/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Razvan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/Razvan/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,9 +38,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "System.Drawing.Common": {
+            "SixLabors.ImageSharp": {
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[3.0.2, )"
             }
           },
           "imports": [
@@ -61,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.310/RuntimeIdentifierGraph.json"
         }
       }
     }
