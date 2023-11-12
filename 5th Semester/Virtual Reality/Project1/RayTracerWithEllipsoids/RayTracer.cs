@@ -1,4 +1,6 @@
-﻿namespace rt
+﻿using System;
+
+namespace rt
 {
     class RayTracer
     {
@@ -66,10 +68,10 @@
 
             for (var i = 0; i < width; i++)
             {
-                double kw = ImageToViewPlane(i, width, camera.ViewPlaneWidth);
+                var kw = ImageToViewPlane(i, width, camera.ViewPlaneWidth);
                 for (var j = 0; j < height; j++)
                 {
-                    double kh = ImageToViewPlane(j, height, camera.ViewPlaneHeight);
+                    var kh = ImageToViewPlane(j, height, camera.ViewPlaneHeight);
                     var rayVector = camera.Position + vecW + viewParallel * kw + camera.Up * kh;
                     var ray = new Line(camera.Position, rayVector);
                     var inter = FindFirstIntersection(ray, camera.FrontPlaneDistance, camera.BackPlaneDistance);

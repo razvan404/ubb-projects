@@ -1,4 +1,7 @@
-﻿namespace rt
+﻿using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.PixelFormats;
+
+namespace rt
 {
     public class Image
     {
