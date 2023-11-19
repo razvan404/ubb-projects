@@ -1,0 +1,7 @@
+name,processes,result
+sendRecv.cpp,5,96.07598
+sendRecv.cpp,9,93.99049000000001
+sendRecv.cpp,21,114.2501
+scatterGatter.cpp,4,95.42963999999998
+scatterGatter.cpp,8,91.86354000000001
+scatterGatter.cpp,20,98.59004
