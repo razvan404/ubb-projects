@@ -7,9 +7,9 @@ class UserInterface:
 
     @classmethod
     def __print_menu(cls) -> int:
-        print("1. Load finite automaton")
-        print("2. Print loaded automaton")
-        print("3. Check if a string is accepted by the automaton")
+        print("1. Load finite automatons")
+        print("2. Print loaded automatons")
+        print("3. Check if a string is accepted by the automatons")
         print("4. Find the longest accepted prefix of a string")
         print("0. Exit")
         return int(input("> "))
@@ -38,12 +38,12 @@ class UserInterface:
 
     def __print_automaton(self) -> None:
         if self._finite_automaton is None:
-            raise ValueError("No automaton loaded!")
+            raise ValueError("No automatons loaded!")
         print(self._finite_automaton)
 
     def __check_string(self) -> None:
         if self._finite_automaton is None:
-            raise ValueError("No automaton loaded!")
+            raise ValueError("No automatons loaded!")
         string = input("String: ")
         if (resp := self._finite_automaton.accepts(string)) == FiniteAutomaton.AcceptResponse.ACCEPT_BY_FINAL_STATE:
             print("String is accepted!")
@@ -52,7 +52,7 @@ class UserInterface:
 
     def __longest_prefix(self) -> None:
         if self._finite_automaton is None:
-            raise ValueError("No automaton loaded!")
+            raise ValueError("No automatons loaded!")
         string = input("String: ")
         if (longest_prefix := self._finite_automaton.longest_prefix(string)) is None:
             print("No prefix found!")

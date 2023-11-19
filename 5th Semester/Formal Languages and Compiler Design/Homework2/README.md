@@ -7,7 +7,7 @@
                 Start state: <start>
                 Accept states: <accept>
     <states> ::= <state> | <state> , <states>
-    <state> ::= A | B | C ... X | Y | Z
+    <state> ::= ID
     <alphabet> ::= <symbol> | <symbol> , <alphabet>
     <symbol> ::= <char>
     <transitions> ::= <transition> | <transition> <transitions>
@@ -24,7 +24,7 @@
             "Start state:" start
             "Accept states:" accept
     states = state | state "," states
-    state = "A" | "B" | "C" ... "X" | "Y" | "Z"
+    state = ID
     alphabet = symbol | symbol "," alphabet
     symbol = char
     transitions = transition | transition transitions
