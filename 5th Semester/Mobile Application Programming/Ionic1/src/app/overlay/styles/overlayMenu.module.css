@@ -1,0 +1,14 @@
+.menuList {
+  background-color: transparent;
+}
+
+.menuContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.menuLink {
+  background-color: transparent;
+  text-decoration: none;
+}
