@@ -6,6 +6,10 @@ export type Picture = {
   image: string;
   authorId: string | null;
   typeId: number;
+  geoloc: {
+    lat: number;
+    lng: number;
+  } | null;
 };
 
 export type PictureMini = {
@@ -27,4 +31,8 @@ export type PictureToSave = {
     dataUrl: string;
     format: string;
   };
+  geoloc: {
+    lat: number;
+    lng: number;
+  } | null;
 };

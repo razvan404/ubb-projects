@@ -35,4 +35,6 @@ model Picture {
   authorId    String?
   author      User?       @relation(fields: [authorId], references: [id])
   type        PictureType @relation(fields: [typeId], references: [id])
+  latitude    Float?
+  longitude   Float?
 }

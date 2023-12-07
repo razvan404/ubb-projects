@@ -3,6 +3,22 @@ import { PictureToSave, type Picture, type PictureMini } from "./types";
 import uploadsService from "../../raw/uploads/service";
 import * as webSockets from "../../webSockets";
 
+const dbPictureToModelPicture = (dbPicture: any): Picture => {
+  return {
+    id: dbPicture.id,
+    createdAt: dbPicture.createdAt,
+    title: dbPicture.title,
+    description: dbPicture.description,
+    image: dbPicture.image,
+    authorId: dbPicture.authorId,
+    typeId: dbPicture.typeId,
+    geoloc: {
+      lat: dbPicture.latitude,
+      lng: dbPicture.longitude,
+    },
+  };
+};
+
 export default {
   findAll: async (
     queryFilters: any,
@@ -23,18 +39,22 @@ export default {
     });
   },
   findById: async (id: string): Promise<Picture | null> => {
-    return await db.picture.findUnique({
-      where: { id },
-      select: {
-        id: true,
-        createdAt: true,
-        title: true,
-        description: true,
-        image: true,
-        authorId: true,
-        typeId: true,
-      },
-    });
+    return dbPictureToModelPicture(
+      await db.picture.findUnique({
+        where: { id },
+        select: {
+          id: true,
+          createdAt: true,
+          title: true,
+          description: true,
+          image: true,
+          authorId: true,
+          typeId: true,
+          latitude: true,
+          longitude: true,
+        },
+      })
+    );
   },
   create: async (picture: PictureToSave): Promise<PictureMini> => {
     const image = await uploadsService.save(
@@ -48,6 +68,8 @@ export default {
         image: image,
         authorId: picture.authorId,
         typeId: picture.typeId,
+        latitude: picture.geoloc?.lat,
+        longitude: picture.geoloc?.lng,
       },
       select: {
         id: true,
@@ -69,6 +91,8 @@ export default {
         description: picture.description,
         image: picture.image,
         typeId: picture.typeId,
+        latitude: picture.geoloc?.lat,
+        longitude: picture.geoloc?.lng,
       },
       select: {
         id: true,
@@ -95,6 +119,6 @@ export default {
       throw new Error("You can only delete your own pictures");
     }
     await db.picture.delete({ where: { id } });
-    webSockets.sendToUser(userId, "PICTURE_DELETED", { id: id });
+    webSockets.sendToUser(userId, "PICTURE_DELETED", { id });
   },
 };
