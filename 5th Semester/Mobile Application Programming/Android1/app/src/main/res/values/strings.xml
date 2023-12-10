@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Art Gallery</string>
+    <string name="login">Art Gallery - Login</string>
+    <string name="picturesListTitle">Your Pictures</string>
+    <string name="savePicture">Save Picture</string>
+    <string name="editPicture">Edit Picture</string>
+</resources>
