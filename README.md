@@ -1,137 +1,46 @@
-<ul>
-  <li>:closed_book: Semester :one:
-    <ul>
-        <li>
-            :microscope: <a href="1st Semester/Algebra">Algebra</a>
-        </li>
-        <li>
-            :bar_chart: <a href="1st Semester/Mathematical Analysis">Mathematical Analysis</a>
-        </li>
-        <li>
-            :waxing_crescent_moon: <a href="1st Semester/Computational Logic">Computational Logic</a>
-        </li>
-        <li>
-            :floppy_disk: <a href="1st Semester/Computer Systems Architecture">Computer Systems Architecture</a>
-        </li>
-        <li>
-            :baby_bottle: <a href="1st Semester/Programming Fundamentals">Programming Fundamentals</a>
-        </li>
-        <li>
-            :telephone_receiver: <a href="1st Semester/C Programming">C Programming</a>
-        </li>
-	  <li>
-            :speak_no_evil: <a href="1st Semester/Professional Communication">Professional Communication (in Computer Science)</a>
-        </li>
-    </ul>
-  </li>
-  <li>:orange_book: Semester :two:
-    <ul>
-        <li>
-            :helicopter: <a href="2nd Semester/Dynamical Systems">Dynamical Systems</a>
-        </li>
-        <li>
-            :triangular_ruler: <a href="2nd Semester/Geometry">Geometry</a>
-        </li>
-        <li>
-            :link: <a href="2nd Semester/Data Structures and Algorithms">Data Structures and Algorithms</a>
-        </li>
-        <li>
-            :circus_tent: <a href="2nd Semester/Graph Algorithms">Graph Algorithms</a>
-        </li>
-        <li>
-            :tractor: <a href="2nd Semester/Object-Oriented Programming">Object Oriented Programming</a>
-        </li>
-        <li>
-            :shell: <a href="2nd Semester/Operating Systems">Operating Systems</a>
-        </li>
-        <li>
-            :otter: <a href="2nd Semester/Advanced Methods for Solving Algorithmic Problems">Advanced Methods for Solving Algorithmic Problems</a>
-        </li>
-    </ul>
-  </li>
-  <li>:ledger: Semester :three:
-    <ul>
-        <li>
-            :slot_machine: <a href="3rd Semester/Probability Theory and Statistics">Probability Theory and Statistics</a>
-        </li>
-        <li>
-            :compass: <a href="3rd Semester/Advanced Programming Methods">Advanced Programming Methods</a>
-        </li>
-        <li>
-            :world_map: <a href="3rd Semester/Computer Networks">Computer Networks</a>
-        </li>
-        <li>
-            :card_index_dividers: <a href="3rd Semester/Databases">Databases</a>
-        </li>
-        <li>
-            :knot: <a href="3rd Semester/Functional and Logic Programming">Functional and Logic Programming</a>
-        </li>
-    </ul>
-  </li>
-  <li>:green_book: Semester :four:
-    <ul>
-        <li>
-            :dna: <a href="4th Semester/Artificial Intelligence">Artificial Intelligence</a>
-        </li>
-        <li>
-            :card_file_box: <a href="4th Semester/Database Management Systems">Database Management Systems</a>
-        </li>
-        <li>
-            :construction_worker: <a href="4th Semester/Software Engineering">Software Engineering</a>
-        </li>
-        <li>
-            :art: <a href="4th Semester/Systems for Design and Implementation">Systems for Design and Implementation</a>
-        </li>
-        <li>
-            :spider_web: <a href="4th Semester/Web Programming">Web Programming</a>
-        </li>
-    </ul>
-  </li>
-  <li>:blue_book: Semester :five:
-    <ul>
-        <li>
-            :black_nib: <a href="5th Semester/Formal Languages and Compiler Design">Formal Languages and Compiler Design</a>
-        </li>
-        <li>
-            :zap: <a href="5th Semester/Parallel and Distributed Programming">Parallel and Distributed Programming</a>
-        </li>
-        <li>
-            :iphone: <a href="5th Semester/Mobile Application Programming">Mobile Application Programming</a>
-        </li>
-        <li>
-            :eyes: <a href="5th Semester/Computer Vision and Deep Learning">Computer Vision and Deep Learning</a>
-        </li>
-        <li>
-            :kaaba: <a href="5th Semester/Virtual Reality">Virtual Reality</a>
-        </li>
-        <li>
-            :penguin: <a href="5th Semester/Affective Computing">Affective Computing</a>
-        </li>
-        <li>
-            :scroll: <a href="5th Semester/Research Project">Research Project</a>
-        </li>
-    </ul>
-  </li>
-  <li>:notebook: Semester :six:
-    <ul>
-        <li>
-            :chart_with_upwards_trend: <a href="6th Semester/Numerical Calculus">Numerical Calculus</a>
-        </li>
-        <li>
-            :memo: <a href="6th Semester/Software Systems Verification and Validation">Software Systems Verification and Validation</a>
-        </li>
-        <li>
-            :earth_africa: <a href="6th Semester/Artificial Intelligence Models for Climate Change">Artificial Intelligence Models for Climate Change</a>
-        </li>
-        <li>
-            :space_invader: <a href="6th Semester/Development Methods for Intelligent Systems">Development Methods for Intelligent Systems</a>
-        </li>
-        <li>
-            :briefcase: <a href="6th Semester/Software Projects Management">Software Projects Management</a>
-        </li>
-        <li>
-            :police_car: <a href="6th Semester/Academic Ethics and Integrity">Academic Ethics and Integrity (in Computer Science)</a>
-        </li>
-    </ul>
-  </li>
-</ul>
+# Babes-Bolyai University Projects
+
+## Table of contents
+
+- 📕 Semester 1
+	- 🧮 [Algebra](1st%20Semester/Algebra)
+	- 📊 [Mathematical Analysis](1st%20Semester/Mathematical%20Analysis)
+	- 🌒 [Computational Logic](1st%20Semester/Computational%20Logic)
+	- 💾 [Computer Systems Architecture](1st%20Semester/Computer%20Systems%20Architecture)
+	- 📞 [C Programming](1st%20Semester/C%20Programming)
+	- 🙊 [Professional Communication (in Computer Science)](1st%20Semester/Professional%20Communication)
+- 📙 Semester 2
+  	- 🏝️ [Dynamical Systems](2nd%20Semester/Dynamical%20Systems)
+  	- 📐 [Geometry](2nd%20Semester/Geometry)
+  	- 🔗 [Data Structures and Algorithms](2nd%20Semester/Data%20Structures%20and%20Algorithms)
+  	- 🎯 [Graph Algorithms](2nd%20Semester/Graph%20Algorithms)
+  	- 🚜 [Object-Oriented Programming](2nd%20Semester/Object-Oriented%20Programming)
+  	- 🐚 [Operating Systems](2nd%20Semester/Operating%20Systems)
+  	- 🦦 [Advanced Methods for Solving Algorithmic Problems](2nd%20Semester/Advanced%20Methods%20for%20Solving%20Algorithmic%20Problems)
+- 📒 Semester 3
+	- 🎰 [Probability Theory and Statistics](3rd%20Semester/Probability%20Theory%20and%20Statistics)
+	- 🧭 [Advanced Programming Methods](3rd%20Semester/Advanced%20Programming%20Methods)
+	- 🗺️ [Computer Networks](3rd%20Semester/Computer%20Networks)
+	- 🗂️ [Databases](3rd%20Semester/Databases)
+	- 🪢 [Functional and Logic Programming](3rd%20Semester/Functional%20and%20Logic%20Programming)
+- 📗 Semester 4
+	- 🧬 [Artificial Intelligence](4th%20Semester/Artificial%20Intelligence)
+	- 🗃️ [Database Management Systems](4th%20Semester/Database%20Management%20Systems)
+	- 👷 [Software Engineering](4th%20Semester/Software%20Engineering)
+	- 🎨 [Systems for Design and Implementation](4th%20Semester/Systems%20for%20Design%20and%20Implementation)
+	- 🕸️ [Web Programming](4th%20Semester/Web%20Programming)
+- 📘 Semester 5
+	- ⚙️ [Formal Languages and Compiler Design](5th%20Semester/Formal%20Languages%20and%20Compiler%20Design)
+	- ⚡ [Parallel and Distributed Programming](5th%20Semester/Parallel%20and%20Distributed%20Programming)
+	- 📱 [Mobile Application Programming](5th%20Semester/Mobile%20Application%20Programming)
+	- 👁️‍🗨️ [Computer Vision and Deep Learning](5th%20Semester/Computer%20Vision%20and%20Deep%20Learning)
+	- 🛰️ [Virtual Reality](5th%20Semester/Virtual%20Reality)
+	- 🐧 [Affective Computing](5th%20Semester/Affective%20Computing)
+	- 📜 [Research Project](5th%20Semester/Research%20Project)
+- 📓 Semester 6
+	- 📈 [Numerical Calculus](6th%20Semester/Numerical%20Calculus)
+ 	- 📝 [Software Systems Verification and Validation](6th%20Semester/Software%20Systems%20Verification%20and%20Validation)
+  	- 🌍 [Artificial Intelligence Models for Climate Change](6th%20Semester/Artificial%20Intelligence%20Models%20for%20Climate%20Change)
+  	- 👾 [Development Methods for Intelligent Systems](6th%20Semester/Development%20Methods%20for%20Intelligent%20Systems)
+  	- 💼 [Software Projects Management](6th%20Semester/Software%20Projects%20Management)
+  	- 🚓 [Academic Ethics and Integrity (in Computer Science)](6th%20Semester/Academic%20Ethics%20and%20Integrity)
