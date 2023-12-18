@@ -1,0 +1,10 @@
+Type,Read Threads,Worker Threads,Time
+Sequential,-,-,8.869446500000002
+Threads,1,4,19.323819999999998
+Threads,1,6,20.81318
+Threads,1,8,21.292605000000002
+Threads,1,16,21.803140000000003
+Threads,2,4,19.31909
+Threads,2,6,20.079605
+Threads,2,8,21.985515
+Threads,2,16,23.582929999999998
