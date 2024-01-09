@@ -108,7 +108,7 @@ void assignTsDataToFIP() {
 digit [0-9]
 nzdigit [1-9]
 letter [a-zA-Z_]
-number [+-]?({nzdigit}{digit}*)|"0"([.]{digit}*)?
+number ([+-]?({nzdigit}{digit}*)|"0")("."{digit}+)?
 string \"[^\"\n]*\"     
 char \'\\?.\'           
 identifier {letter}({letter}|{digit}){0,249}
