@@ -1,0 +1,92 @@
+%token MAIN LPAREN RPAREN LBRACE RBRACE SEMICOLON COMMA
+%token INT DOUBLE
+%token ASSIGN PLUS MINUS MUL DIV MOD
+%token LSHIFT RSHIFT
+%token AND OR EQ NEQ LT GT
+%token IF ELSE WHILE FOR
+%token STRUCT DOT
+%token CIN COUT
+%token CONST IDENTIFIER
+
+%%
+
+program: main_function
+main_function: INT MAIN LPAREN RPAREN LBRACE instructions RBRACE
+instructions: instructions any_instruction
+instructions: any_instruction
+any_instruction: instruction SEMICOLON
+any_instruction: special_instruction
+instruction: declaration
+instruction: assignment
+instruction: input_statement
+instruction: output_statement
+special_instruction: conditional_statement
+special_instruction: loop_statement
+special_instruction: struct_definition
+
+declaration: type declaration_sequence
+declaration_sequence: declaration_sequence COMMA declaration_term
+declaration_sequence: declaration_term
+
+declaration_term: IDENTIFIER
+declaration_term: simple_assignment
+
+type: INT
+type: DOUBLE
+type: STRUCT IDENTIFIER
+
+simple_assignment: IDENTIFIER ASSIGN expression
+assignment: accessible_term ASSIGN expression
+
+accessible_term: accessible_term DOT IDENTIFIER
+accessible_term: IDENTIFIER
+
+struct_definition: STRUCT IDENTIFIER LBRACE struct_members RBRACE declaration_sequence SEMICOLON
+struct_definition: STRUCT IDENTIFIER LBRACE struct_members RBRACE SEMICOLON
+
+struct_members: struct_members declaration SEMICOLON
+struct_members: declaration SEMICOLON
+
+expression: expression mathematical_operator expression_term
+expression: expression_term
+
+expression_term: accessible_term
+expression_term: CONST
+
+mathematical_operator: PLUS
+mathematical_operator: MINUS
+mathematical_operator: MUL
+mathematical_operator: DIV
+mathematical_operator: MOD
+
+logical_operator: AND
+logical_operator: OR
+
+relational_operator: EQ
+relational_operator: NEQ
+relational_operator: LT
+relational_operator: GT
+
+input_statement: CIN input_sequence
+input_sequence: input_sequence RSHIFT accessible_term
+input_sequence: RSHIFT accessible_term
+
+output_statement: COUT output_sequence
+output_sequence: output_sequence LSHIFT expression
+output_sequence: LSHIFT expression
+
+conditional_statement: if_statement
+if_statement: IF LPAREN conditions RPAREN LBRACE instructions RBRACE ELSE LBRACE instructions RBRACE
+if_statement: IF LPAREN conditions RPAREN LBRACE instructions RBRACE
+
+conditions: condition
+conditions: conditions logical_operator condition
+condition: expression relational_operator expression
+
+loop_statement: while_loop
+loop_statement: for_loop
+
+while_loop: WHILE LPAREN conditions RPAREN LBRACE instructions RBRACE
+for_loop: FOR LPAREN declaration SEMICOLON conditions SEMICOLON assignment RPAREN LBRACE instructions RBRACE
+
+%%
