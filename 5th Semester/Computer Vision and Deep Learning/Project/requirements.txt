@@ -1,0 +1,14 @@
+black~=23.11.0
+https://download.pytorch.org/whl/nightly/cu121/torch-2.3.0.dev20231231%2Bcu121-cp312-cp312-win_amd64.whl
+wandb~=0.16.0
+opencv-python~=4.8.1.78
+https://download.pytorch.org/whl/nightly/cu121/torchvision-0.18.0.dev20231231%2Bcu121-cp312-cp312-win_amd64.whl
+matplotlib~=3.8.1
+numpy~=1.26.2
+PyYAML~=6.0.1
+scikit-learn~=1.3.2
+gradio~=4.12.0
+torch~=2.3.0.dev20231231+cu121
+tqdm~=4.66.1
+torchvision~=0.18.0.dev20231231+cu121
+python-dotenv~=1.0.0

@@ -1,0 +1,8 @@
+segmentation:
+  experiment: 1
+  dataset_path: "data/lfw"
+  load_checkpoint: null
+  save_checkpoints_path: "saved_models"
+  plots_path: "plots"
+demo:
+  model_path: "saved_models/some_model.pt"
