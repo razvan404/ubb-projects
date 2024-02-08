@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+.item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}

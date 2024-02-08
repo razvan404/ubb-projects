@@ -1,0 +1,14 @@
+.content {
+  width: 90%;
+  height: 100%;
+}
+
+.fab {
+  position: fixed;
+  bottom: 20px;
+}
+
+.fabButton {
+  height: 70px;
+  width: 70px;
+}
