@@ -1,0 +1,342 @@
+[11:06:33.056008] Iteration 0
+Queue 0: 0 in pending.
+Queue 1: 0 in pending.
+Queue 2: 0 in pending.
+Agent 0: 3 solved cases.
+Agent 1: 3 solved cases.
+Agent 2: 3 solved cases.
+Agent 3: 3 solved cases.
+Agent 4: 3 solved cases.
+[11:06:33.106289300] Iteration 1
+Queue 0: 0 in pending.
+Queue 1: 1 in pending.
+Queue 2: 0 in pending.
+Agent 0: 6 solved cases.
+Agent 1: 6 solved cases.
+Agent 2: 6 solved cases.
+Agent 3: 6 solved cases.
+Agent 4: 5 solved cases.
+[11:06:33.137716500] Iteration 2
+Queue 0: 2 in pending.
+Queue 1: 0 in pending.
+Queue 2: 0 in pending.
+Agent 0: 8 solved cases.
+Agent 1: 8 solved cases.
+Agent 2: 7 solved cases.
+Agent 3: 8 solved cases.
+Agent 4: 7 solved cases.
+[11:06:33.169854600] Iteration 3
+Queue 0: 3 in pending.
+Queue 1: 0 in pending.
+Queue 2: 0 in pending.
+Agent 0: 10 solved cases.
+Agent 1: 10 solved cases.
+Agent 2: 11 solved cases.
+Agent 3: 10 solved cases.
+Agent 4: 10 solved cases.
+[11:06:33.201981400] Iteration 4
+Queue 0: 0 in pending.
+Queue 1: 0 in pending.
+Queue 2: 0 in pending.
+Agent 0: 13 solved cases.
+Agent 1: 13 solved cases.
+Agent 2: 13 solved cases.
+Agent 3: 12 solved cases.
+Agent 4: 13 solved cases.
+[11:06:33.234200400] Iteration 5
+Queue 0: 0 in pending.
+Queue 1: 0 in pending.
+Queue 2: 0 in pending.
+Agent 0: 15 solved cases.
+Agent 1: 15 solved cases.
+Agent 2: 16 solved cases.
+Agent 3: 14 solved cases.
+Agent 4: 16 solved cases.
+[11:06:33.264839400] Iteration 6
+Queue 0: 0 in pending.
+Queue 1: 0 in pending.
+Queue 2: 0 in pending.
+Agent 0: 18 solved cases.
+Agent 1: 18 solved cases.
+Agent 2: 19 solved cases.
+Agent 3: 17 solved cases.
+Agent 4: 19 solved cases.
+[11:06:33.295572900] Iteration 7
+Queue 0: 1 in pending.
+Queue 1: 0 in pending.
+Queue 2: 0 in pending.
+Agent 0: 20 solved cases.
+Agent 1: 20 solved cases.
+Agent 2: 21 solved cases.
+Agent 3: 20 solved cases.
+Agent 4: 20 solved cases.
+[11:06:33.326435200] Iteration 8
+Queue 0: 0 in pending.
+Queue 1: 0 in pending.
+Queue 2: 0 in pending.
+Agent 0: 22 solved cases.
+Agent 1: 22 solved cases.
+Agent 2: 23 solved cases.
+Agent 3: 22 solved cases.
+Agent 4: 23 solved cases.
+[11:06:33.357645400] Iteration 9
+Queue 0: 2 in pending.
+Queue 1: 0 in pending.
+Queue 2: 0 in pending.
+Agent 0: 24 solved cases.
+Agent 1: 23 solved cases.
+Agent 2: 25 solved cases.
+Agent 3: 24 solved cases.
+Agent 4: 26 solved cases.
+[11:06:33.389645400] Iteration 10
+Queue 0: 2 in pending.
+Queue 1: 0 in pending.
+Queue 2: 0 in pending.
+Agent 0: 25 solved cases.
+Agent 1: 25 solved cases.
+Agent 2: 27 solved cases.
+Agent 3: 27 solved cases.
+Agent 4: 28 solved cases.
+[11:06:33.420645400] Iteration 11
+Queue 0: 2 in pending.
+Queue 1: 0 in pending.
+Queue 2: 0 in pending.
+Agent 0: 29 solved cases.
+Agent 1: 28 solved cases.
+Agent 2: 29 solved cases.
+Agent 3: 29 solved cases.
+Agent 4: 30 solved cases.
+[11:06:33.451225900] Iteration 12
+Queue 0: 1 in pending.
+Queue 1: 0 in pending.
+Queue 2: 3 in pending.
+Agent 0: 32 solved cases.
+Agent 1: 29 solved cases.
+Agent 2: 31 solved cases.
+Agent 3: 33 solved cases.
+Agent 4: 33 solved cases.
+[11:06:33.482232800] Iteration 13
+Queue 0: 0 in pending.
+Queue 1: 0 in pending.
+Queue 2: 0 in pending.
+Agent 0: 35 solved cases.
+Agent 1: 33 solved cases.
+Agent 2: 34 solved cases.
+Agent 3: 36 solved cases.
+Agent 4: 37 solved cases.
+[11:06:33.513238800] Iteration 14
+Queue 0: 1 in pending.
+Queue 1: 1 in pending.
+Queue 2: 0 in pending.
+Agent 0: 37 solved cases.
+Agent 1: 36 solved cases.
+Agent 2: 37 solved cases.
+Agent 3: 38 solved cases.
+Agent 4: 40 solved cases.
+[11:06:33.544773700] Iteration 15
+Queue 0: 1 in pending.
+Queue 1: 0 in pending.
+Queue 2: 0 in pending.
+Agent 0: 41 solved cases.
+Agent 1: 39 solved cases.
+Agent 2: 40 solved cases.
+Agent 3: 41 solved cases.
+Agent 4: 43 solved cases.
+[11:06:33.575486100] Iteration 16
+Queue 0: 2 in pending.
+Queue 1: 0 in pending.
+Queue 2: 0 in pending.
+Agent 0: 43 solved cases.
+Agent 1: 42 solved cases.
+Agent 2: 43 solved cases.
+Agent 3: 43 solved cases.
+Agent 4: 45 solved cases.
+[11:06:33.607499500] Iteration 17
+Queue 0: 1 in pending.
+Queue 1: 0 in pending.
+Queue 2: 0 in pending.
+Agent 0: 46 solved cases.
+Agent 1: 44 solved cases.
+Agent 2: 45 solved cases.
+Agent 3: 47 solved cases.
+Agent 4: 48 solved cases.
+[11:06:33.638723900] Iteration 18
+Queue 0: 1 in pending.
+Queue 1: 0 in pending.
+Queue 2: 0 in pending.
+Agent 0: 49 solved cases.
+Agent 1: 48 solved cases.
+Agent 2: 47 solved cases.
+Agent 3: 50 solved cases.
+Agent 4: 51 solved cases.
+[11:06:33.669276500] Iteration 19
+Queue 0: 4 in pending.
+Queue 1: 0 in pending.
+Queue 2: 0 in pending.
+Agent 0: 51 solved cases.
+Agent 1: 50 solved cases.
+Agent 2: 50 solved cases.
+Agent 3: 51 solved cases.
+Agent 4: 54 solved cases.
+[11:06:33.701331500] Iteration 20
+Queue 0: 6 in pending.
+Queue 1: 0 in pending.
+Queue 2: 0 in pending.
+Agent 0: 53 solved cases.
+Agent 1: 52 solved cases.
+Agent 2: 53 solved cases.
+Agent 3: 55 solved cases.
+Agent 4: 56 solved cases.
+[11:06:33.733422] Iteration 21
+Queue 0: 5 in pending.
+Queue 1: 0 in pending.
+Queue 2: 1 in pending.
+Agent 0: 57 solved cases.
+Agent 1: 55 solved cases.
+Agent 2: 57 solved cases.
+Agent 3: 57 solved cases.
+Agent 4: 58 solved cases.
+[11:06:33.763966100] Iteration 22
+Queue 0: 2 in pending.
+Queue 1: 1 in pending.
+Queue 2: 1 in pending.
+Agent 0: 59 solved cases.
+Agent 1: 58 solved cases.
+Agent 2: 59 solved cases.
+Agent 3: 61 solved cases.
+Agent 4: 62 solved cases.
+[11:06:33.794966500] Iteration 23
+Queue 0: 1 in pending.
+Queue 1: 1 in pending.
+Queue 2: 0 in pending.
+Agent 0: 63 solved cases.
+Agent 1: 61 solved cases.
+Agent 2: 61 solved cases.
+Agent 3: 64 solved cases.
+Agent 4: 65 solved cases.
+[11:06:33.825978300] Iteration 24
+Queue 0: 1 in pending.
+Queue 1: 2 in pending.
+Queue 2: 0 in pending.
+Agent 0: 65 solved cases.
+Agent 1: 64 solved cases.
+Agent 2: 64 solved cases.
+Agent 3: 67 solved cases.
+Agent 4: 68 solved cases.
+[11:06:33.857136300] Iteration 25
+Queue 0: 0 in pending.
+Queue 1: 1 in pending.
+Queue 2: 1 in pending.
+Agent 0: 69 solved cases.
+Agent 1: 67 solved cases.
+Agent 2: 68 solved cases.
+Agent 3: 69 solved cases.
+Agent 4: 71 solved cases.
+[11:06:33.888132300] Iteration 26
+Queue 0: 2 in pending.
+Queue 1: 0 in pending.
+Queue 2: 0 in pending.
+Agent 0: 71 solved cases.
+Agent 1: 70 solved cases.
+Agent 2: 70 solved cases.
+Agent 3: 73 solved cases.
+Agent 4: 74 solved cases.
+[11:06:33.919131500] Iteration 27
+Queue 0: 0 in pending.
+Queue 1: 0 in pending.
+Queue 2: 4 in pending.
+Agent 0: 74 solved cases.
+Agent 1: 73 solved cases.
+Agent 2: 73 solved cases.
+Agent 3: 75 solved cases.
+Agent 4: 76 solved cases.
+[11:06:33.950742400] Iteration 28
+Queue 0: 0 in pending.
+Queue 1: 2 in pending.
+Queue 2: 4 in pending.
+Agent 0: 77 solved cases.
+Agent 1: 75 solved cases.
+Agent 2: 75 solved cases.
+Agent 3: 78 solved cases.
+Agent 4: 79 solved cases.
+[11:06:33.982745] Iteration 29
+Queue 0: 1 in pending.
+Queue 1: 1 in pending.
+Queue 2: 4 in pending.
+Agent 0: 80 solved cases.
+Agent 1: 79 solved cases.
+Agent 2: 78 solved cases.
+Agent 3: 81 solved cases.
+Agent 4: 81 solved cases.
+[11:06:34.014744300] Iteration 30
+Queue 0: 0 in pending.
+Queue 1: 3 in pending.
+Queue 2: 3 in pending.
+Agent 0: 83 solved cases.
+Agent 1: 81 solved cases.
+Agent 2: 81 solved cases.
+Agent 3: 84 solved cases.
+Agent 4: 85 solved cases.
+[11:06:34.045301500] Iteration 31
+Queue 0: 2 in pending.
+Queue 1: 0 in pending.
+Queue 2: 2 in pending.
+Agent 0: 86 solved cases.
+Agent 1: 84 solved cases.
+Agent 2: 84 solved cases.
+Agent 3: 87 solved cases.
+Agent 4: 87 solved cases.
+[11:06:34.076343400] Iteration 32
+Queue 0: 4 in pending.
+Queue 1: 0 in pending.
+Queue 2: 0 in pending.
+Agent 0: 89 solved cases.
+Agent 1: 87 solved cases.
+Agent 2: 87 solved cases.
+Agent 3: 90 solved cases.
+Agent 4: 90 solved cases.
+[11:06:34.107332300] Iteration 33
+Queue 0: 7 in pending.
+Queue 1: 0 in pending.
+Queue 2: 0 in pending.
+Agent 0: 91 solved cases.
+Agent 1: 89 solved cases.
+Agent 2: 90 solved cases.
+Agent 3: 91 solved cases.
+Agent 4: 93 solved cases.
+[11:06:34.139395700] Iteration 34
+Queue 0: 8 in pending.
+Queue 1: 0 in pending.
+Queue 2: 3 in pending.
+Agent 0: 92 solved cases.
+Agent 1: 91 solved cases.
+Agent 2: 92 solved cases.
+Agent 3: 95 solved cases.
+Agent 4: 95 solved cases.
+[11:06:34.170015] Iteration 35
+Queue 0: 7 in pending.
+Queue 1: 0 in pending.
+Queue 2: 4 in pending.
+Agent 0: 95 solved cases.
+Agent 1: 94 solved cases.
+Agent 2: 94 solved cases.
+Agent 3: 98 solved cases.
+Agent 4: 99 solved cases.
+[11:06:34.201015] Iteration 36
+Queue 0: 2 in pending.
+Queue 1: 1 in pending.
+Queue 2: 2 in pending.
+Agent 0: 99 solved cases.
+Agent 1: 97 solved cases.
+Agent 2: 100 solved cases.
+Agent 3: 99 solved cases.
+Agent 4: 100 solved cases.
+[11:06:34.232147400] Iteration 37
+Queue 0: finished.
+Queue 1: finished.
+Queue 2: finished.
+Agent 0: 100 solved cases.
+Agent 1: 100 solved cases.
+Agent 2: 100 solved cases.
+Agent 3: 100 solved cases.
+Agent 4: 100 solved cases.
