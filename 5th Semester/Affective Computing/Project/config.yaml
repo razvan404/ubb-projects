@@ -1,0 +1,16 @@
+data_source:
+  path: "data"
+dataset:
+  name: "IEMOCAP"
+dataset_specific:
+  IEMOCAP:
+    preprocessed_dir: "Preprocessed"
+    emotions: ["ang", "fru", "neu", "sad", "exc", "hap"]
+dataloader:
+  batch_size: 32
+  num_workers: 4
+models:
+  pretrained_alexnet: "https://download.pytorch.org/models/alexnet-owt-4df8aa71.pth"
+  save_location: "saved_models"
+plots:
+  save_location: "pictures"
