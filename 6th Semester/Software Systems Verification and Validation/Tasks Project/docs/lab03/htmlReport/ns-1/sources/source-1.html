@@ -1,0 +1,172 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=windows-1252"> 
+  <title>Coverage Report > TasksOperations</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">tasks.model</a>
+</div>
+
+<h1>Coverage Summary for Class: TasksOperations (tasks.model)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">TasksOperations</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    75%
+  </span>
+  <span class="absValue">
+    (3/4)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    55.2%
+  </span>
+  <span class="absValue">
+    (16/29)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package tasks.model;
+&nbsp;
+&nbsp;import javafx.collections.ObservableList;
+&nbsp;
+&nbsp;import java.util.*;
+&nbsp;
+&nbsp;public class TasksOperations
+&nbsp;{
+&nbsp;    private final ArrayList&lt;Task&gt; tasks;
+&nbsp;
+&nbsp;    public TasksOperations(ObservableList&lt;Task&gt; tasksList)
+<b class="fc">&nbsp;    {</b>
+<b class="fc">&nbsp;        tasks = new ArrayList&lt;&gt;();</b>
+<b class="fc">&nbsp;        tasks.addAll(tasksList);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public Iterable&lt;Task&gt; incoming(Date start, Date end)
+&nbsp;    {
+<b class="fc">&nbsp;        System.out.println(start);</b>
+<b class="fc">&nbsp;        System.out.println(end);</b>
+&nbsp;
+<b class="fc">&nbsp;        ArrayList&lt;Task&gt; incomingTasks = new ArrayList&lt;&gt;();</b>
+<b class="fc">&nbsp;        if (!end.before(start)) {</b>
+<b class="fc">&nbsp;            for (Task task : tasks) {</b>
+<b class="fc">&nbsp;                Date nextTime = task.nextTimeAfter(start);</b>
+<b class="fc">&nbsp;                if (nextTime != null) {</b>
+<b class="fc">&nbsp;                    if ((nextTime.before(end) || nextTime.equals(end))) {</b>
+<b class="fc">&nbsp;                        incomingTasks.add(task);</b>
+<b class="fc">&nbsp;                        System.out.println(task.getTitle());</b>
+&nbsp;                    }
+&nbsp;                }
+<b class="fc">&nbsp;            }</b>
+&nbsp;        }
+&nbsp;
+<b class="fc">&nbsp;        return incomingTasks;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public SortedMap&lt;Date, Set&lt;Task&gt;&gt; calendar(Date start, Date end)
+&nbsp;    {
+<b class="nc">&nbsp;        Iterable&lt;Task&gt; incomingTasks = this.incoming(start, end);</b>
+<b class="nc">&nbsp;        TreeMap&lt;Date, Set&lt;Task&gt;&gt; calendar = new TreeMap&lt;&gt;();</b>
+&nbsp;
+<b class="nc">&nbsp;        for (Task incomingTask : incomingTasks)</b>
+&nbsp;        {
+<b class="nc">&nbsp;            Date nextTimeAfter = incomingTask.nextTimeAfter(start);</b>
+<b class="nc">&nbsp;            while (nextTimeAfter!= null &amp;&amp; (nextTimeAfter.before(end) || nextTimeAfter.equals(end)))</b>
+&nbsp;            {
+<b class="nc">&nbsp;                if (calendar.containsKey(nextTimeAfter))</b>
+&nbsp;                {
+<b class="nc">&nbsp;                    calendar.get(nextTimeAfter).add(incomingTask);</b>
+&nbsp;                }
+&nbsp;                else
+&nbsp;                {
+<b class="nc">&nbsp;                    HashSet&lt;Task&gt; oneDateTasks = new HashSet&lt;&gt;();</b>
+<b class="nc">&nbsp;                    oneDateTasks.add(incomingTask);</b>
+<b class="nc">&nbsp;                    calendar.put(nextTimeAfter, oneDateTasks);</b>
+&nbsp;                }
+<b class="nc">&nbsp;                nextTimeAfter = incomingTask.nextTimeAfter(nextTimeAfter);</b>
+&nbsp;            }
+<b class="nc">&nbsp;        }</b>
+&nbsp;
+<b class="nc">&nbsp;        return calendar;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public List&lt;Task&gt; getTasks() {
+<b class="fc">&nbsp;        return tasks;</b>
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2024-04-19 14:07</div>
+</div>
+</body>
+</html>

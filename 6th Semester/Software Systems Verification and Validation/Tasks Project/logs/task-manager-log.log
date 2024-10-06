@@ -1,0 +1,218 @@
+2023-02-27 11:33:02 INFO  Main:36 - saved data reading
+2023-02-27 11:33:02 INFO  Main:41 - application start
+2023-02-27 11:33:03 INFO  Controller:74 - Main controller initializing
+2023-02-27 11:33:06 INFO  NewEditController:91 - new/edit window initializing
+2023-02-27 11:33:29 INFO  NewEditController:91 - new/edit window initializing
+2023-02-27 11:34:25 INFO  TaskInfoController:25 - task info window initializing
+2023-02-27 11:34:25 ERROR Controller:127 - error loading task-info.fxml
+2023-02-27 11:34:27 INFO  TaskInfoController:25 - task info window initializing
+2024-02-04 20:47:47 INFO  Main:35 - saved data reading
+2024-02-04 20:47:47 INFO  Main:40 - application start
+2024-02-04 20:47:48 INFO  Controller:74 - Main controller initializing
+2024-02-04 20:47:54 INFO  NewEditController:89 - new/edit window initializing
+2024-02-04 20:48:29 INFO  NewEditController:89 - new/edit window initializing
+2024-02-04 20:49:05 INFO  NewEditController:89 - new/edit window initializing
+2024-02-04 20:49:55 INFO  NewEditController:89 - new/edit window initializing
+2024-02-04 20:50:19 INFO  NewEditController:89 - new/edit window initializing
+2024-02-04 20:50:29 INFO  NewEditController:89 - new/edit window initializing
+2024-02-04 20:50:43 INFO  NewEditController:89 - new/edit window initializing
+2024-02-04 20:50:48 INFO  NewEditController:89 - new/edit window initializing
+2024-02-04 20:51:01 INFO  TaskInfoController:24 - task info window initializing
+2024-02-04 20:51:01 ERROR Controller:127 - error loading task-info.fxml
+2024-02-04 20:51:03 INFO  TaskInfoController:24 - task info window initializing
+2024-02-05 11:47:15 INFO  Main:35 - saved data reading
+2024-02-05 11:47:15 INFO  Main:40 - application start
+2024-02-05 11:47:17 INFO  Controller:74 - Main controller initializing
+2024-02-05 11:48:28 INFO  TaskInfoController:24 - task info window initializing
+2024-03-17 10:17:37 INFO  Main:35 - saved data reading
+2024-03-17 10:17:37 INFO  Main:40 - application start
+2024-03-17 10:17:37 INFO  Controller:74 - Main controller initializing
+2024-03-17 10:29:33 INFO  Main:35 - saved data reading
+2024-03-17 10:29:33 INFO  Main:40 - application start
+2024-03-17 10:29:33 INFO  Controller:74 - Main controller initializing
+2024-03-17 10:31:12 INFO  Main:35 - saved data reading
+2024-03-17 10:31:12 INFO  Main:40 - application start
+2024-03-17 10:31:13 INFO  Controller:74 - Main controller initializing
+2024-03-17 10:31:30 INFO  NewEditController:89 - new/edit window initializing
+2024-03-17 10:36:12 INFO  Main:35 - saved data reading
+2024-03-17 10:36:12 INFO  Main:40 - application start
+2024-03-17 10:36:13 INFO  Controller:74 - Main controller initializing
+2024-03-17 10:38:43 INFO  Main:35 - saved data reading
+2024-03-17 10:38:43 INFO  Main:40 - application start
+2024-03-17 10:38:43 INFO  Controller:74 - Main controller initializing
+2024-03-17 10:38:58 INFO  Main:35 - saved data reading
+2024-03-17 10:38:58 INFO  Main:40 - application start
+2024-03-17 10:38:58 INFO  Controller:74 - Main controller initializing
+2024-03-17 10:39:11 INFO  Main:35 - saved data reading
+2024-03-17 10:39:11 INFO  Main:40 - application start
+2024-03-17 10:39:12 INFO  Controller:74 - Main controller initializing
+2024-03-17 22:40:42 INFO  Main:35 - saved data reading
+2024-03-17 22:40:42 INFO  Main:40 - application start
+2024-03-17 22:40:42 INFO  Controller:74 - Main controller initializing
+2024-03-17 22:40:51 INFO  TaskInfoController:24 - task info window initializing
+2024-03-17 22:40:51 ERROR Controller:127 - error loading task-info.fxml
+2024-03-17 22:40:54 INFO  TaskInfoController:24 - task info window initializing
+2024-03-17 22:40:54 ERROR Controller:127 - error loading task-info.fxml
+2024-03-17 22:40:54 INFO  TaskInfoController:24 - task info window initializing
+2024-03-17 22:40:54 ERROR Controller:127 - error loading task-info.fxml
+2024-03-17 22:40:54 INFO  TaskInfoController:24 - task info window initializing
+2024-03-17 22:40:54 ERROR Controller:127 - error loading task-info.fxml
+2024-03-17 22:40:55 INFO  TaskInfoController:24 - task info window initializing
+2024-03-17 22:40:55 ERROR Controller:127 - error loading task-info.fxml
+2024-03-17 22:58:36 INFO  Main:35 - saved data reading
+2024-03-17 22:58:36 INFO  Main:40 - application start
+2024-03-17 22:58:37 INFO  Controller:74 - Main controller initializing
+2024-03-17 22:58:38 INFO  TaskInfoController:24 - task info window initializing
+2024-03-17 22:58:38 ERROR Controller:127 - error loading task-info.fxml
+2024-03-17 22:58:39 INFO  TaskInfoController:24 - task info window initializing
+2024-03-17 22:58:39 ERROR Controller:127 - error loading task-info.fxml
+2024-03-17 23:00:33 INFO  Main:35 - saved data reading
+2024-03-17 23:00:33 INFO  Main:40 - application start
+2024-03-17 23:00:33 INFO  Controller:74 - Main controller initializing
+2024-03-17 23:00:35 INFO  TaskInfoController:24 - task info window initializing
+2024-03-17 23:00:35 ERROR Controller:127 - error loading task-info.fxml
+2024-03-17 23:00:36 INFO  TaskInfoController:24 - task info window initializing
+2024-03-17 23:00:36 ERROR Controller:127 - error loading task-info.fxml
+2024-03-17 23:00:38 INFO  TaskInfoController:24 - task info window initializing
+2024-03-17 23:00:38 ERROR Controller:127 - error loading task-info.fxml
+2024-03-17 23:01:18 INFO  Main:35 - saved data reading
+2024-03-17 23:01:18 INFO  Main:40 - application start
+2024-03-17 23:01:19 INFO  Controller:74 - Main controller initializing
+2024-03-17 23:01:20 INFO  TaskInfoController:24 - task info window initializing
+2024-03-17 23:01:20 ERROR Controller:127 - error loading task-info.fxml
+2024-03-17 23:01:21 INFO  TaskInfoController:24 - task info window initializing
+2024-03-17 23:01:21 ERROR Controller:127 - error loading task-info.fxml
+2024-03-17 23:01:32 INFO  Main:35 - saved data reading
+2024-03-17 23:01:32 INFO  Main:40 - application start
+2024-03-17 23:01:33 INFO  Controller:74 - Main controller initializing
+2024-03-17 23:01:34 INFO  TaskInfoController:24 - task info window initializing
+2024-03-17 23:01:34 ERROR Controller:127 - error loading task-info.fxml
+2024-03-17 23:02:19 INFO  Main:35 - saved data reading
+2024-03-17 23:02:19 INFO  Main:40 - application start
+2024-03-17 23:02:20 INFO  Controller:74 - Main controller initializing
+2024-03-17 23:02:21 INFO  TaskInfoController:24 - task info window initializing
+2024-03-17 23:02:21 ERROR Controller:127 - error loading task-info.fxml
+2024-03-17 23:02:24 INFO  TaskInfoController:24 - task info window initializing
+2024-03-17 23:02:24 ERROR Controller:127 - error loading task-info.fxml
+2024-03-17 23:02:25 INFO  TaskInfoController:24 - task info window initializing
+2024-03-17 23:02:25 ERROR Controller:127 - error loading task-info.fxml
+2024-03-17 23:03:19 INFO  Main:35 - saved data reading
+2024-03-17 23:03:19 INFO  Main:40 - application start
+2024-03-17 23:03:19 INFO  Controller:74 - Main controller initializing
+2024-03-17 23:03:23 INFO  TaskInfoController:24 - task info window initializing
+2024-03-17 23:03:23 ERROR Controller:127 - error loading task-info.fxml
+2024-03-17 23:03:23 INFO  TaskInfoController:24 - task info window initializing
+2024-03-17 23:03:23 ERROR Controller:127 - error loading task-info.fxml
+2024-03-17 23:03:24 INFO  TaskInfoController:24 - task info window initializing
+2024-03-17 23:03:24 ERROR Controller:127 - error loading task-info.fxml
+2024-03-17 23:03:39 INFO  Main:35 - saved data reading
+2024-03-17 23:03:39 INFO  Main:40 - application start
+2024-03-17 23:03:40 INFO  Controller:74 - Main controller initializing
+2024-03-17 23:03:42 INFO  TaskInfoController:24 - task info window initializing
+2024-03-17 23:03:42 ERROR Controller:127 - error loading task-info.fxml
+2024-03-17 23:03:43 INFO  TaskInfoController:24 - task info window initializing
+2024-03-17 23:03:43 ERROR Controller:127 - error loading task-info.fxml
+2024-03-17 23:04:48 INFO  Main:35 - saved data reading
+2024-03-17 23:04:48 INFO  Main:40 - application start
+2024-03-17 23:04:48 INFO  Controller:74 - Main controller initializing
+2024-03-17 23:04:50 INFO  Controller:116 - Hellooo
+2024-03-17 23:04:50 INFO  Controller:118 - Heloo 0
+2024-03-17 23:04:50 INFO  Controller:120 - Heloo
+2024-03-17 23:04:50 INFO  TaskInfoController:24 - task info window initializing
+2024-03-17 23:04:50 ERROR Controller:133 - error loading task-info.fxml
+2024-03-17 23:06:49 INFO  Main:35 - saved data reading
+2024-03-17 23:06:49 INFO  Main:40 - application start
+2024-03-17 23:06:50 INFO  Controller:74 - Main controller initializing
+2024-03-17 23:06:51 INFO  Controller:116 - Hellooo
+2024-03-17 23:06:51 INFO  Controller:118 - Heloo 0
+2024-03-17 23:06:51 INFO  Controller:120 - Heloo
+2024-03-17 23:06:51 INFO  TaskInfoController:24 - task info window initializing
+2024-03-17 23:06:51 ERROR Controller:133 - error loading task-info.fxml
+2024-03-17 23:07:13 INFO  Main:35 - saved data reading
+2024-03-17 23:07:13 INFO  Main:40 - application start
+2024-03-17 23:07:14 INFO  Controller:74 - Main controller initializing
+2024-03-17 23:07:15 INFO  Controller:116 - Hellooo
+2024-03-17 23:07:15 INFO  Controller:118 - Heloo 0
+2024-03-17 23:07:15 INFO  Controller:120 - Heloo
+2024-03-17 23:07:15 INFO  TaskInfoController:24 - task info window initializing
+2024-03-17 23:07:15 ERROR Controller:133 - error loading task-info.fxml
+/C:/Git/tasks-verification-and-validation/target/classes/fxml/task-info.fxml
+
+2024-03-17 23:08:59 INFO  Main:35 - saved data reading
+2024-03-17 23:08:59 INFO  Main:40 - application start
+2024-03-17 23:08:59 INFO  Controller:74 - Main controller initializing
+2024-03-17 23:09:02 INFO  Controller:116 - Hellooo
+2024-03-17 23:09:02 INFO  Controller:118 - Heloo 0
+2024-03-17 23:09:02 INFO  Controller:120 - Heloo
+2024-03-17 23:09:02 INFO  TaskInfoController:24 - task info window initializing
+2024-03-17 23:09:02 ERROR Controller:134 - error loading task-info.fxml
+/C:/Git/tasks-verification-and-validation/target/classes/fxml/task-info.fxml
+
+2024-03-17 23:10:05 INFO  Main:35 - saved data reading
+2024-03-17 23:10:05 INFO  Main:40 - application start
+2024-03-17 23:10:06 INFO  Controller:74 - Main controller initializing
+2024-03-17 23:10:08 INFO  Controller:116 - Hellooo
+2024-03-17 23:10:08 INFO  Controller:118 - Heloo 0
+2024-03-17 23:10:08 INFO  Controller:120 - Heloo
+2024-03-17 23:10:08 INFO  TaskInfoController:24 - task info window initializing
+2024-03-17 23:10:08 INFO  Controller:122 - Heloo 2
+2024-03-17 23:10:08 INFO  Controller:126 - Heloo 3
+2024-03-17 23:10:08 INFO  Controller:128 - Heloo 4
+2024-03-17 23:11:13 INFO  Main:35 - saved data reading
+2024-03-17 23:11:13 INFO  Main:40 - application start
+2024-03-17 23:11:13 INFO  Controller:74 - Main controller initializing
+2024-03-17 23:11:15 INFO  Controller:116 - Hellooo
+2024-03-17 23:11:15 INFO  Controller:118 - Heloo 0
+2024-03-17 23:11:15 INFO  Controller:120 - Heloo
+2024-03-17 23:11:15 INFO  TaskInfoController:24 - task info window initializing
+2024-03-17 23:11:15 ERROR Controller:134 - error loading task-info.fxml
+/C:/Git/tasks-verification-and-validation/target/classes/fxml/task-info.fxml
+
+2024-03-17 23:11:17 INFO  Controller:116 - Hellooo
+2024-03-17 23:11:17 INFO  Controller:118 - Heloo 0
+2024-03-17 23:11:17 INFO  Controller:120 - Heloo
+2024-03-17 23:11:17 INFO  TaskInfoController:24 - task info window initializing
+2024-03-17 23:11:17 INFO  Controller:122 - Heloo 2
+2024-03-17 23:11:17 INFO  Controller:126 - Heloo 3
+2024-03-17 23:11:17 INFO  Controller:128 - Heloo 4
+2024-03-17 23:11:30 INFO  Controller:116 - Hellooo
+2024-03-17 23:11:30 INFO  Controller:118 - Heloo 0
+2024-03-17 23:11:30 INFO  Controller:120 - Heloo
+2024-03-17 23:11:30 INFO  TaskInfoController:24 - task info window initializing
+2024-03-17 23:11:30 INFO  Controller:122 - Heloo 2
+2024-03-17 23:11:30 INFO  Controller:126 - Heloo 3
+2024-03-17 23:11:30 INFO  Controller:128 - Heloo 4
+2024-04-05 00:51:53 INFO  Main:35 - saved data reading
+2024-04-05 00:51:53 INFO  Main:40 - application start
+2024-04-05 00:51:53 INFO  Controller:74 - Main controller initializing
+2024-04-05 00:51:59 INFO  NewEditController:89 - new/edit window initializing
+2024-04-05 00:53:15 INFO  Main:35 - saved data reading
+2024-04-05 00:53:15 INFO  Main:40 - application start
+2024-04-05 00:53:16 INFO  Controller:74 - Main controller initializing
+2024-04-05 00:53:20 INFO  NewEditController:89 - new/edit window initializing
+2024-04-05 00:53:21 INFO  NewEditController:89 - new/edit window initializing
+2024-04-05 01:12:41 INFO  Main:35 - saved data reading
+2024-04-05 01:12:41 INFO  Main:40 - application start
+2024-04-05 01:12:41 INFO  Controller:74 - Main controller initializing
+2024-04-05 01:12:44 INFO  NewEditController:89 - new/edit window initializing
+2024-04-05 01:13:28 INFO  Main:35 - saved data reading
+2024-04-05 01:13:28 INFO  Main:40 - application start
+2024-04-05 01:13:28 INFO  Controller:74 - Main controller initializing
+2024-04-05 01:14:17 INFO  NewEditController:89 - new/edit window initializing
+2024-04-05 09:53:00 INFO  Main:35 - saved data reading
+2024-04-05 09:53:00 INFO  Main:40 - application start
+2024-04-05 09:53:00 INFO  Controller:74 - Main controller initializing
+2024-04-05 09:53:07 INFO  NewEditController:89 - new/edit window initializing
+2024-04-05 09:53:16 INFO  NewEditController:89 - new/edit window initializing
+2024-04-05 10:04:45 INFO  Main:35 - saved data reading
+2024-04-05 10:04:45 INFO  Main:40 - application start
+2024-04-05 10:04:45 INFO  Controller:74 - Main controller initializing
+2024-04-05 10:04:49 INFO  NewEditController:89 - new/edit window initializing
+2024-04-05 10:07:43 INFO  Main:35 - saved data reading
+2024-04-05 10:07:43 INFO  Main:40 - application start
+2024-04-05 10:07:43 INFO  Controller:74 - Main controller initializing
+2024-04-05 10:07:45 INFO  NewEditController:89 - new/edit window initializing
+2024-05-24 00:59:39 ERROR Task:45 - time below bound
+2024-05-24 00:59:39 ERROR Task:50 - interval < than 1
+2024-05-24 01:02:16 ERROR Task:45 - time below bound
+2024-05-24 01:02:16 ERROR Task:50 - interval < than 1

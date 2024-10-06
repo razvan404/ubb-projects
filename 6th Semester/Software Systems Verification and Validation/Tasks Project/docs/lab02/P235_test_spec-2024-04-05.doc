@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><title>testspec Prj235 - prir3191_BBT</title>
+<link type="text/css" rel="stylesheet" href="https://www.scs.ubbcluj.ro/testlink/gui/themes/default/css/tl_documents.css" />
+<style type="text/css" media="print">.notprintable { display:none;}</style>
+</head>
+<body>
+<div>
+<div style="float:right;">TestLink Community [configure $tlCfg-&gt;document_generator-&gt;company_name]</div>
+<div>&nbsp;</div><hr />
+<p style="text-align: center;"><img alt="TestLink logo" title="configure using $tlCfg->document_generator->company_logo"  width= height= src="https://www.scs.ubbcluj.ro/testlink/gui/themes/default/images/tl-logo-transparent-25.png" /></p></div>
+<div class="doc_title"><p>Test Specification</p></div>
+<div class="doc_title" style="text-align:left;margin: auto;"><p>Test Project: Prj235<br/>Test Suite: Prj235 - prir3191_BBT</p></div>
+<div class="summary"><p id="printedby">Printed by TestLink on 05/04/2024</p></div>
+<div class="pagefooter" id="copyright">2012 &copy; TestLink Community</div>
+<h1 class="general" style="page-break-before: always">Table Of Contents</h1><div class="toc"><p style="padding-left: 20px;"><b><a href="#toc_1">1.prir3191_BBT</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc21598">P235-41: TC1_ECP_valid</a></p><p style="padding-left: 45px;"><a href="#toc_tc21600">P235-42: TC2_ECP_invalid</a></p><p style="padding-left: 45px;"><a href="#toc_tc21602">P235-43: TC3_BVA_valid</a></p><p style="padding-left: 45px;"><a href="#toc_tc21604">P235-44: TC4_BVA_invalid</a></p></div><h1 class="doclevel" >Scope</h1>
+<div class="txtlevel"><p>Testing project for group 235</p></div>
+ <br/><a name='toc_1'></a>
+<h1 class='doclevel'>1.Test Suite : prir3191_BBT</h1>
+<div><p>Se testeaza adaugarea unui Task.</p>
+</div><a name="toc_tc21598"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case P235-41: TC1_ECP_valid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">prir3191</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>title: &quot;Doing things&quot;<br />
+startDate: 05.04.2024 10:00<br />
+endDate: null<br />
+interval: null<br />
+isActive: true<br />
+tasks: []</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >src.test.java.tasks.services.TaskIOTest.java</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >src.test.java.tasks.services.TaskIOTest.java#insertTask</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">prir3191_F01:  Adaugare Task [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc21600"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case P235-42: TC2_ECP_invalid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">prir3191</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>title: &quot;Doing things&quot;<br />
+startDate: 05.04.2024 10:00<br />
+endDate: 05.04.2024 12:00<br />
+interval: 0<br />
+isActive: true<br />
+tasks: []</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >src.test.java.tasks.services.TaskIOTest.java</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >src.test.java.tasks.services.TaskIOTest.java#insertTask</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">prir3191_F01:  Adaugare Task [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc21602"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case P235-43: TC3_BVA_valid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">prir3191</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>title: &quot;Doing things&quot;<br />
+startDate: new Date(0)<br />
+endDate: new Date(1)<br />
+interval: 3<br />
+isActive: true<br />
+tasks: []</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >src.test.java.tasks.services.TaskIOTest.java</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >src.test.java.tasks.services.TaskIOTest.java#insertTask</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">prir3191_F01:  Adaugare Task [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc21604"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case P235-44: TC4_BVA_invalid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">prir3191</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>title: &quot;Doing things&quot;<br />
+startDate: new Date(-1)<br />
+endDate: new Date(1)<br />
+interval: 3<br />
+isActive: true<br />
+tasks: []</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >src.test.java.tasks.services.TaskIOTest.java</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >src.test.java.tasks.services.TaskIOTest.java#insertTask</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">prir3191_F01:  Adaugare Task [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+
+</body>
+</html>

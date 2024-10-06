@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="115.0" y="309.0">netscape</node>
+    <node x="334.0" y="235.0">META-INF</node>
+    <node x="115.0" y="383.0">javafx</node>
+    <node x="115.0" y="531.0">org</node>
+    <node x="315.0" y="309.0">images</node>
+    <node x="469.0" y="383.0">impl</node>
+    <node x="94.5" y="235.0">tasks.controller</node>
+    <node x="366.0" y="87.0">groovyjarjarasm</node>
+    <node x="294.0" y="383.0">javax</node>
+    <node x="115.0" y="457.0">fxml</node>
+    <node x="115.0" y="13.0">toolbarButtonGraphics</node>
+    <node x="406.0" y="13.0">groovyjarjarpicocli</node>
+    <node x="504.0" y="309.0">groovy</node>
+    <node x="115.0" y="87.0">groovyjarjarantlr</node>
+    <node x="445.0" y="531.0">jdk</node>
+    <node x="90.0" y="174.5">tasks.services</node>
+    <node x="455.0" y="457.0">java</node>
+    <node x="285.0" y="457.0">com</node>
+    <node x="280.0" y="531.0">sun</node>
+    <node x="-92.0" y="383.0">tasks.view</node>
+    <node x="-98.0" y="309.0">tasks.model</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic" zoom="0.5784832451499118" showDependencies="true" x="206.5" y="254.14329268292687" />
+  <SelectedNodes>
+    <node>tasks.view</node>
+    <node>tasks.controller</node>
+    <node>tasks.services</node>
+    <node>tasks.model</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
